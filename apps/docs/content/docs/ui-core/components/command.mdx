@@ -1,0 +1,70 @@
+---
+title: Command
+description: Fast, composable command palette for your application.
+---
+
+<ComponentPreview name="command-demo" />
+
+## Usage
+
+```tsx
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Command>
+  <CommandInput placeholder="Type a command or search…" />
+  <CommandList>
+    <CommandEmpty>No results found.</CommandEmpty>
+    <CommandGroup heading="Suggestions">
+      <CommandItem>Calendar</CommandItem>
+      <CommandItem>Search Emoji</CommandItem>
+    </CommandGroup>
+  </CommandList>
+</Command>
+```
+
+## Examples
+
+### Basic
+
+A basic command palette with a search input and grouped items.
+
+<ComponentPreview name="command-basic" />
+
+### Dialog
+
+Open the command palette inside a dialog using `CommandDialog`.
+
+<ComponentPreview name="command-dialog" />
+
+### Groups
+
+Organize commands into labeled groups using `CommandGroup`.
+
+<ComponentPreview name="command-groups" />
+
+### Scrollable
+
+Use a fixed height with scroll support for long command lists.
+
+<ComponentPreview name="command-scrollable" />
+
+### Shortcuts
+
+Display keyboard shortcuts alongside command items using `CommandShortcut`.
+
+<ComponentPreview name="command-shortcuts" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/command) documentation for more information.

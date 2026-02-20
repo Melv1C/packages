@@ -1,0 +1,115 @@
+---
+title: Sidebar
+description: A composable, themeable and customizable sidebar component.
+---
+
+<ComponentPreview name="sidebar-demo" />
+
+## Usage
+
+```tsx
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupAction,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuAction,
+  SidebarMenuBadge,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
+  SidebarProvider,
+  SidebarTrigger,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<SidebarProvider>
+  <Sidebar>
+    <SidebarHeader />
+    <SidebarContent>
+      <SidebarGroup />
+    </SidebarContent>
+    <SidebarFooter />
+  </Sidebar>
+</SidebarProvider>
+```
+
+## Examples
+
+### Controlled
+
+Manage the open/closed state of the sidebar externally.
+
+<ComponentPreview name="sidebar-controlled" />
+
+### Header
+
+Add a header to the sidebar with branding or navigation.
+
+<ComponentPreview name="sidebar-header" />
+
+### Footer
+
+Add a footer to the sidebar with user info or settings.
+
+<ComponentPreview name="sidebar-footer" />
+
+### Group
+
+Organize sidebar items into labeled groups.
+
+<ComponentPreview name="sidebar-group" />
+
+### Group Action
+
+Add an action button to a sidebar group header.
+
+<ComponentPreview name="sidebar-group-action" />
+
+### Collapsible Group
+
+Make a sidebar group collapsible.
+
+<ComponentPreview name="sidebar-group-collapsible" />
+
+### Menu
+
+A full sidebar menu with items and icons.
+
+<ComponentPreview name="sidebar-menu" />
+
+### Menu Action
+
+Add inline action buttons to individual menu items.
+
+<ComponentPreview name="sidebar-menu-action" />
+
+### Menu Badge
+
+Add badges to menu items to display counts or status.
+
+<ComponentPreview name="sidebar-menu-badge" />
+
+### Collapsible Menu
+
+Add collapsible sections to the sidebar menu.
+
+<ComponentPreview name="sidebar-menu-collapsible" />
+
+### Sub Menu
+
+Nest sub-menu items using `SidebarMenuSub`.
+
+<ComponentPreview name="sidebar-menu-sub" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/sidebar) documentation for more information.

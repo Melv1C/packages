@@ -1,0 +1,88 @@
+---
+title: Button
+description: Displays a button or a component that looks like a button.
+---
+
+<ComponentPreview name="button-demo" />
+
+## Usage
+
+```tsx
+import { Button } from '@melv1c/ui-core';
+```
+
+```tsx
+<Button variant="outline">Button</Button>
+```
+
+## Examples
+
+### Size
+
+Use the `size` prop to change the size of the button.
+
+<ComponentPreview name="button-size" />
+
+### Default
+
+<ComponentPreview name="button-default" />
+
+### Outline
+
+<ComponentPreview name="button-outline" />
+
+### Secondary
+
+<ComponentPreview name="button-secondary" />
+
+### Ghost
+
+<ComponentPreview name="button-ghost" />
+
+### Destructive
+
+<ComponentPreview name="button-destructive" />
+
+### Link
+
+<ComponentPreview name="button-link" />
+
+### Icon
+
+<ComponentPreview name="button-icon" />
+
+### With Icon
+
+Remember to add the `data-icon="inline-start"` or `data-icon="inline-end"` attribute to the icon for correct spacing.
+
+<ComponentPreview name="button-with-icon" />
+
+### Rounded
+
+Use the `rounded-full` class to make the button rounded.
+
+<ComponentPreview name="button-rounded" />
+
+### Button Group
+
+Use the `ButtonGroup` component to group related buttons together.
+
+<ComponentPreview name="button-group-demo" />
+
+### As Child
+
+Use the `asChild` prop to render another element, such as a link, as a button.
+
+<ComponentPreview name="button-aschild" />
+
+## API Reference
+
+### Button
+
+| Prop      | Type                                                                                 | Default     |
+| --------- | ------------------------------------------------------------------------------------ | ----------- |
+| `variant` | `"default" \| "outline" \| "ghost" \| "destructive" \| "secondary" \| "link"`        | `"default"` |
+| `size`    | `"default" \| "xs" \| "sm" \| "lg" \| "icon" \| "icon-xs" \| "icon-sm" \| "icon-lg"` | `"default"` |
+| `asChild` | `boolean`                                                                            | `false`     |
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/button) documentation for more information.

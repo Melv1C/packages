@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+@source "../node_modules/@melv1c/ui-core";
+
+/* Import base theme structure */
+@import '@melv1c/ui-core/base.css';
+
+/* Import a theme (choose one) */
+@import '@melv1c/ui-core/themes/default.css';

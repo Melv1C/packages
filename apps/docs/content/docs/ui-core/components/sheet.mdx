@@ -1,0 +1,59 @@
+---
+title: Sheet
+description: Extends the Dialog component to display content that complements the main content of the screen.
+---
+
+<ComponentPreview name="sheet-demo" />
+
+## Usage
+
+```tsx
+import {
+  Button,
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Sheet>
+  <SheetTrigger asChild>
+    <Button variant="outline">Open</Button>
+  </SheetTrigger>
+  <SheetContent>
+    <SheetHeader>
+      <SheetTitle>Sheet Title</SheetTitle>
+      <SheetDescription>Sheet description goes here.</SheetDescription>
+    </SheetHeader>
+    <SheetFooter>
+      <SheetClose asChild>
+        <Button>Close</Button>
+      </SheetClose>
+    </SheetFooter>
+  </SheetContent>
+</Sheet>
+```
+
+## Examples
+
+### Side
+
+Control which edge the sheet slides from using the `side` prop: `top`, `right` (default), `bottom`, or `left`.
+
+<ComponentPreview name="sheet-side" />
+
+### No Close Button
+
+Hide the default close button by passing `hideCloseButton` to `SheetContent`.
+
+<ComponentPreview name="sheet-no-close-button" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/sheet) documentation for more information.

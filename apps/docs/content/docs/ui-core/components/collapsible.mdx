@@ -1,0 +1,47 @@
+---
+title: Collapsible
+description: An interactive component which expands/collapses a panel.
+---
+
+<ComponentPreview name="collapsible-demo" />
+
+## Usage
+
+```tsx
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Collapsible>
+  <CollapsibleTrigger>Toggle</CollapsibleTrigger>
+  <CollapsibleContent>Content goes here.</CollapsibleContent>
+</Collapsible>
+```
+
+## Examples
+
+### Basic
+
+A simple collapsible panel with a trigger button.
+
+<ComponentPreview name="collapsible-basic" />
+
+### File Tree
+
+Use nested collapsibles to build a file explorer tree.
+
+<ComponentPreview name="collapsible-file-tree" />
+
+### Settings
+
+Use collapsibles inside a form to progressively reveal advanced settings.
+
+<ComponentPreview name="collapsible-settings" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/collapsible) documentation for more information.

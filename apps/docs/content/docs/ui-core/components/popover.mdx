@@ -1,0 +1,50 @@
+---
+title: Popover
+description: Displays rich content in a portal, triggered by a button.
+---
+
+<ComponentPreview name="popover-demo" />
+
+## Usage
+
+```tsx
+import {
+  Button,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Popover>
+  <PopoverTrigger asChild>
+    <Button variant="outline">Open popover</Button>
+  </PopoverTrigger>
+  <PopoverContent>Place content here.</PopoverContent>
+</Popover>
+```
+
+## Examples
+
+### Basic
+
+A popover with simple text content.
+
+<ComponentPreview name="popover-basic" />
+
+### Alignments
+
+Control the alignment of the popover relative to the trigger using the `align` prop.
+
+<ComponentPreview name="popover-alignments" />
+
+### Form
+
+Use a popover to host a form, such as date pickers or filters.
+
+<ComponentPreview name="popover-form" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/popover) documentation for more information.

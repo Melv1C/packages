@@ -1,0 +1,54 @@
+---
+title: Badge
+description: Displays a badge or a component that looks like a badge.
+---
+
+<ComponentPreview name="badge-demo" />
+
+## Usage
+
+```tsx
+import { Badge } from '@melv1c/ui-core';
+```
+
+```tsx
+<Badge variant="outline">Badge</Badge>
+```
+
+## Examples
+
+### Variants
+
+Use the `variant` prop to change the variant of the badge.
+
+<ComponentPreview name="badge-variants" />
+
+### With Icon
+
+Render an icon inside the badge. Use `data-icon="inline-start"` to render the icon on the left and `data-icon="inline-end"` to render it on the right.
+
+<ComponentPreview name="badge-icon" />
+
+### Link
+
+Use the `asChild` prop to render a link as a badge.
+
+<ComponentPreview name="badge-link" />
+
+### Custom Colors
+
+Customize badge colors by adding custom classes such as `bg-blue-50 dark:bg-blue-950` to the `Badge` component.
+
+<ComponentPreview name="badge-colors" />
+
+## API Reference
+
+### Badge
+
+| Prop        | Type                                                                          | Default     |
+| ----------- | ----------------------------------------------------------------------------- | ----------- |
+| `variant`   | `"default" \| "secondary" \| "destructive" \| "outline" \| "ghost" \| "link"` | `"default"` |
+| `asChild`   | `boolean`                                                                     | `false`     |
+| `className` | `string`                                                                      | -           |
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/badge) documentation for more information.

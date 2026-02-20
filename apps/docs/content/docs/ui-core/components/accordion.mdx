@@ -1,0 +1,64 @@
+---
+title: Accordion
+description: A vertically stacked set of interactive headings that each reveal a section of content.
+---
+
+<ComponentPreview name="accordion-demo" />
+
+## Usage
+
+```tsx
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Accordion type="single" collapsible defaultValue="item-1">
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
+## Examples
+
+### Basic
+
+A basic accordion that shows one item at a time. The first item is open by default.
+
+<ComponentPreview name="accordion-basic" />
+
+### Multiple
+
+Use `type="multiple"` to allow multiple items to be open at the same time.
+
+<ComponentPreview name="accordion-multiple" />
+
+### Disabled
+
+Use the `disabled` prop on `AccordionItem` to disable individual items.
+
+<ComponentPreview name="accordion-disabled" />
+
+### Borders
+
+Add `border` to the `Accordion` and `border-b last:border-b-0` to the `AccordionItem` to add borders to the items.
+
+<ComponentPreview name="accordion-borders" />
+
+### Card
+
+Wrap the `Accordion` in a `Card` component.
+
+<ComponentPreview name="accordion-card" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/accordion) documentation for more information.

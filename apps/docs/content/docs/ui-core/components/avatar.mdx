@@ -1,0 +1,104 @@
+---
+title: Avatar
+description: An image element with a fallback for representing the user.
+---
+
+<ComponentPreview name="avatar-demo" />
+
+## Usage
+
+```tsx
+import { Avatar, AvatarFallback, AvatarImage } from '@melv1c/ui-core';
+```
+
+```tsx
+<Avatar>
+  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+  <AvatarFallback>CN</AvatarFallback>
+</Avatar>
+```
+
+## Examples
+
+### Basic
+
+A basic avatar component with an image and a fallback.
+
+<ComponentPreview name="avatar-basic" />
+
+### Badge
+
+Use the `AvatarBadge` component to add a badge to the avatar.
+
+<ComponentPreview name="avatar-badge" />
+
+### Badge with Icon
+
+You can also use an icon inside `<AvatarBadge>`.
+
+<ComponentPreview name="avatar-badge-icon" />
+
+### Avatar Group
+
+Use the `AvatarGroup` component to display a group of avatars.
+
+<ComponentPreview name="avatar-group" />
+
+### Avatar Group Count
+
+Use `<AvatarGroupCount>` to add a count to the group.
+
+<ComponentPreview name="avatar-group-count" />
+
+### Avatar Group with Icon
+
+You can also use an icon inside `<AvatarGroupCount>`.
+
+<ComponentPreview name="avatar-group-count-icon" />
+
+### Sizes
+
+Use the `size` prop to change the size of the avatar.
+
+<ComponentPreview name="avatar-size" />
+
+### Dropdown
+
+You can use the `Avatar` component as a trigger for a dropdown menu.
+
+<ComponentPreview name="avatar-dropdown" />
+
+## API Reference
+
+### Avatar
+
+| Prop        | Type                        | Default     |
+| ----------- | --------------------------- | ----------- |
+| `size`      | `"default" \| "sm" \| "lg"` | `"default"` |
+| `className` | `string`                    | -           |
+
+### AvatarBadge
+
+Displays a badge indicator on the avatar, typically positioned at the bottom right.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |
+
+### AvatarGroup
+
+Displays a group of avatars with overlapping styling.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |
+
+### AvatarGroupCount
+
+Displays a count indicator in an avatar group.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/avatar) documentation for more information.

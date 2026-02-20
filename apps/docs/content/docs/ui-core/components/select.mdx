@@ -1,0 +1,68 @@
+---
+title: Select
+description: Displays a list of options for the user to pick from — triggered by a button.
+---
+
+<ComponentPreview name="select-demo" />
+
+## Usage
+
+```tsx
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Select>
+  <SelectTrigger>
+    <SelectValue placeholder="Select a fruit" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="apple">Apple</SelectItem>
+    <SelectItem value="banana">Banana</SelectItem>
+  </SelectContent>
+</Select>
+```
+
+## Examples
+
+### Groups
+
+Use `SelectGroup` and `SelectLabel` to organize items into labeled groups.
+
+<ComponentPreview name="select-groups" />
+
+### Scrollable
+
+Use a fixed-height `SelectContent` for long option lists with scroll.
+
+<ComponentPreview name="select-scrollable" />
+
+### Disabled
+
+Use the `disabled` prop on `Select` or individual `SelectItem` components.
+
+<ComponentPreview name="select-disabled" />
+
+### Invalid
+
+Use `aria-invalid` on the trigger to show an error state.
+
+<ComponentPreview name="select-invalid" />
+
+### Align Item
+
+Control how the selected item is aligned inside the popover using `SelectContent`'s `position` and `align` props.
+
+<ComponentPreview name="select-align-item" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/select) documentation for more information.

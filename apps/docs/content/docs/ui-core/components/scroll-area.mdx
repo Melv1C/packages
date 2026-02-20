@@ -1,0 +1,34 @@
+---
+title: Scroll Area
+description: Augments native scroll functionality for custom, cross-browser styling.
+---
+
+<ComponentPreview name="scroll-area-demo" />
+
+## Usage
+
+```tsx
+import { ScrollArea, Separator } from '@melv1c/ui-core';
+```
+
+```tsx
+<ScrollArea className="h-72 w-48 rounded-md border">
+  <div className="p-4">
+    {Array.from({ length: 50 }).map((_, i) => (
+      <div key={i}>Item {i + 1}</div>
+    ))}
+  </div>
+</ScrollArea>
+```
+
+## Examples
+
+### Horizontal
+
+Use `orientation="horizontal"` for horizontal scrolling.
+
+<ComponentPreview name="scroll-area-horizontal-demo" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/scroll-area) documentation for more information.

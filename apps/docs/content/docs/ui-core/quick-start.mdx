@@ -1,0 +1,156 @@
+---
+title: Quick Start
+description: Build your first page with @melv1c/ui-core in under 5 minutes.
+icon: Zap
+---
+
+This guide walks you through building a simple settings page using @melv1c/ui-core components. Make sure you've completed the [installation](/docs/ui-core/installation) first.
+
+## Build a Settings Card
+
+Let's create a settings card with a form:
+
+```tsx title="settings-card.tsx"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@melv1c/ui-core';
+import { Button } from '@melv1c/ui-core';
+import { Input } from '@melv1c/ui-core';
+import { Label } from '@melv1c/ui-core';
+import { Switch } from '@melv1c/ui-core';
+import { Separator } from '@melv1c/ui-core';
+
+export function SettingsCard() {
+  return (
+    <Card className="w-full max-w-lg">
+      <CardHeader>
+        <CardTitle>Settings</CardTitle>
+        <CardDescription>
+          Manage your account settings and preferences.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-6">
+        <div className="space-y-2">
+          <Label htmlFor="name">Display Name</Label>
+          <Input id="name" placeholder="Your name" />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="email">Email</Label>
+          <Input id="email" type="email" placeholder="you@example.com" />
+        </div>
+
+        <Separator />
+
+        <div className="flex items-center justify-between">
+          <div className="space-y-0.5">
+            <Label htmlFor="notifications">Notifications</Label>
+            <p className="text-sm text-muted-foreground">
+              Receive email notifications.
+            </p>
+          </div>
+          <Switch id="notifications" />
+        </div>
+      </CardContent>
+      <CardFooter className="flex justify-end gap-2">
+        <Button variant="outline">Cancel</Button>
+        <Button>Save Changes</Button>
+      </CardFooter>
+    </Card>
+  );
+}
+```
+
+## Add a Dialog
+
+Wrap actions in a confirmation dialog:
+
+```tsx title="delete-dialog.tsx"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@melv1c/ui-core';
+import { Button } from '@melv1c/ui-core';
+
+export function DeleteDialog() {
+  return (
+    <AlertDialog>
+      <AlertDialogTrigger asChild>
+        <Button variant="destructive">Delete Account</Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+          <AlertDialogDescription>
+            This action cannot be undone. This will permanently delete your
+            account and remove your data.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction>Continue</AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
+}
+```
+
+## Use a Dropdown Menu
+
+```tsx title="user-menu.tsx"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@melv1c/ui-core';
+import { Button } from '@melv1c/ui-core';
+
+export function UserMenu() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline">Open Menu</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56">
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>Profile</DropdownMenuItem>
+        <DropdownMenuItem>Settings</DropdownMenuItem>
+        <DropdownMenuItem>Billing</DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>Log out</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+```
+
+## What's Next
+
+<Cards>
+  <Card title="Browse Components" href="/docs/ui-core/components">
+    See all 44+ available components with examples and API reference.
+  </Card>
+  <Card title="Theming" href="/docs/ui-core/theming">
+    Customize the look of your components with themes.
+  </Card>
+  <Card title="Internationalization" href="/docs/ui-core/i18n">
+    Add multi-language support to your app.
+  </Card>
+</Cards>

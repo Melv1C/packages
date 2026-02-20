@@ -1,0 +1,52 @@
+---
+title: Slider
+description: An input where the user selects a value from within a given range.
+---
+
+<ComponentPreview name="slider-demo" />
+
+## Usage
+
+```tsx
+import { Slider } from '@melv1c/ui-core';
+```
+
+```tsx
+<Slider defaultValue={[50]} max={100} step={1} />
+```
+
+## Examples
+
+### Controlled
+
+Control the slider value with React state.
+
+<ComponentPreview name="slider-controlled" />
+
+### Range
+
+Use two values to create a range slider.
+
+<ComponentPreview name="slider-range" />
+
+### Multiple Thumbs
+
+Use multiple values to render multiple thumbs on the slider.
+
+<ComponentPreview name="slider-multiple" />
+
+### Vertical
+
+Use `orientation="vertical"` for a vertical slider.
+
+<ComponentPreview name="slider-vertical" />
+
+### Disabled
+
+Use the `disabled` prop to prevent interaction.
+
+<ComponentPreview name="slider-disabled" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/slider) documentation for more information.

@@ -1,0 +1,72 @@
+---
+title: Carousel
+description: A carousel with motion and swipe built using Embla.
+---
+
+<ComponentPreview name="carousel-demo" />
+
+## Usage
+
+```tsx
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Carousel>
+  <CarouselContent>
+    <CarouselItem>Slide 1</CarouselItem>
+    <CarouselItem>Slide 2</CarouselItem>
+    <CarouselItem>Slide 3</CarouselItem>
+  </CarouselContent>
+  <CarouselPrevious />
+  <CarouselNext />
+</Carousel>
+```
+
+## Examples
+
+### Sizes
+
+Control the size of each slide using `basis` utility classes on `CarouselItem`.
+
+<ComponentPreview name="carousel-size" />
+
+### Spacing
+
+Control spacing between slides using padding utilities on `CarouselContent` and `CarouselItem`.
+
+<ComponentPreview name="carousel-spacing" />
+
+### Orientation
+
+Use `orientation="vertical"` to create a vertical carousel.
+
+<ComponentPreview name="carousel-orientation" />
+
+### Multiple
+
+Use `opts={{ align: "start" }}` with basis classes to show multiple slides at once.
+
+<ComponentPreview name="carousel-multiple" />
+
+### API
+
+Use the `setApi` prop and `CarouselApi` type to access the Embla carousel instance.
+
+<ComponentPreview name="carousel-api" />
+
+### Autoplay
+
+Use the `embla-carousel-autoplay` plugin for automatic slide advancement.
+
+<ComponentPreview name="carousel-plugin" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/carousel) documentation for more information.

@@ -1,0 +1,45 @@
+---
+title: Sonner
+description: An opinionated toast component for React.
+---
+
+<ComponentPreview name="sonner-demo" />
+
+## Usage
+
+```tsx
+import { Button } from '@melv1c/ui-core';
+import { toast } from 'sonner';
+```
+
+```tsx
+<Button variant="outline" onClick={() => toast('Event has been created.')}>
+  Show Toast
+</Button>
+```
+
+> The `Toaster` is provided globally by `UIKitProvider`. No need to add it manually.
+
+## Examples
+
+### Types
+
+Display different toast types: success, error, info, warning, and loading.
+
+<ComponentPreview name="sonner-types" />
+
+### Description
+
+Add a description to provide more context about the toast.
+
+<ComponentPreview name="sonner-description" />
+
+### Position
+
+Control where toasts appear using the `position` prop on `Toaster`.
+
+<ComponentPreview name="sonner-position" />
+
+## API Reference
+
+See the [Sonner](https://sonner.emilkowal.ski/) documentation for more information.

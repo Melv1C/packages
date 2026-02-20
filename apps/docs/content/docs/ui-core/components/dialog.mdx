@@ -1,0 +1,71 @@
+---
+title: Dialog
+description: A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.
+---
+
+<ComponentPreview name="dialog-demo" />
+
+## Usage
+
+```tsx
+import {
+  Button,
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Dialog>
+  <DialogTrigger asChild>
+    <Button variant="outline">Open</Button>
+  </DialogTrigger>
+  <DialogContent>
+    <DialogHeader>
+      <DialogTitle>Dialog Title</DialogTitle>
+      <DialogDescription>Dialog description goes here.</DialogDescription>
+    </DialogHeader>
+    <DialogFooter>
+      <DialogClose asChild>
+        <Button>Close</Button>
+      </DialogClose>
+    </DialogFooter>
+  </DialogContent>
+</Dialog>
+```
+
+## Examples
+
+### Close Button
+
+Use `DialogClose` inside the footer to close the dialog.
+
+<ComponentPreview name="dialog-close-button" />
+
+### No Close Button
+
+Remove the default close button by passing `hideCloseButton` to `DialogContent`.
+
+<ComponentPreview name="dialog-no-close-button" />
+
+### Scrollable Content
+
+Use `DialogContent` with a scrollable body for long content.
+
+<ComponentPreview name="dialog-scrollable-content" />
+
+### Sticky Footer
+
+Keep the footer pinned at the bottom when dialog content scrolls.
+
+<ComponentPreview name="dialog-sticky-footer" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/dialog) documentation for more information.

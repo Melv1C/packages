@@ -1,0 +1,28 @@
+{
+  "next": "Weiter",
+  "previous": "Zurück",
+  "loginForm": {
+    "title": "Anmelden bei Ihrem Konto",
+    "description": "Geben Sie Ihre Anmeldedaten ein, um auf Ihr Konto zuzugreifen",
+    "email": "E-Mail",
+    "emailPlaceholder": "name@beispiel.com",
+    "password": "Passwort",
+    "forgotPassword": "Passwort vergessen?",
+    "login": "Anmelden",
+    "loggingIn": "Anmeldung läuft...",
+    "orContinueWith": "oder fortfahren mit",
+    "noAccount": "Sie haben noch kein Konto?",
+    "signUp": "Registrieren",
+    "providers": {
+      "google": "Mit Google fortfahren",
+      "github": "Mit GitHub fortfahren",
+      "apple": "Mit Apple fortfahren",
+      "microsoft": "Mit Microsoft fortfahren",
+      "facebook": "Mit Facebook fortfahren"
+    },
+    "errors": {
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "passwordRequired": "Passwort ist erforderlich."
+    }
+  }
+}

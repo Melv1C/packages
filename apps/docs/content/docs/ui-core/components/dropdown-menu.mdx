@@ -1,0 +1,112 @@
+---
+title: Dropdown Menu
+description: Displays a menu to the user — such as a set of actions or functions — triggered by a button.
+---
+
+<ComponentPreview name="dropdown-menu-demo" />
+
+## Usage
+
+```tsx
+import {
+  Button,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<DropdownMenu>
+  <DropdownMenuTrigger asChild>
+    <Button variant="outline">Open</Button>
+  </DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>Profile</DropdownMenuItem>
+    <DropdownMenuItem>Settings</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+```
+
+## Examples
+
+### Basic
+
+A simple dropdown with a few menu items.
+
+<ComponentPreview name="dropdown-menu-basic" />
+
+### Icons
+
+Add icons to dropdown items for better visual clarity.
+
+<ComponentPreview name="dropdown-menu-icons" />
+
+### Shortcuts
+
+Display keyboard shortcuts next to items using `DropdownMenuShortcut`.
+
+<ComponentPreview name="dropdown-menu-shortcuts" />
+
+### Checkboxes
+
+Use `DropdownMenuCheckboxItem` to create toggleable menu items.
+
+<ComponentPreview name="dropdown-menu-checkboxes" />
+
+### Checkboxes with Icons
+
+Combine checkboxes and icons for richer items.
+
+<ComponentPreview name="dropdown-menu-checkboxes-icons" />
+
+### Radio Group
+
+Use `DropdownMenuRadioGroup` and `DropdownMenuRadioItem` for mutually exclusive selection.
+
+<ComponentPreview name="dropdown-menu-radio-group" />
+
+### Radio with Icons
+
+Radio group items with leading icons.
+
+<ComponentPreview name="dropdown-menu-radio-icons" />
+
+### Submenu
+
+Nest a `DropdownMenuSub` to create multi-level menus.
+
+<ComponentPreview name="dropdown-menu-submenu" />
+
+### Destructive
+
+Mark destructive actions with the `destructive` variant.
+
+<ComponentPreview name="dropdown-menu-destructive" />
+
+### Avatar
+
+Use a user avatar as the trigger for an account dropdown.
+
+<ComponentPreview name="dropdown-menu-avatar" />
+
+### Complex
+
+A complex dropdown combining groups, icons, shortcuts, and submenus.
+
+<ComponentPreview name="dropdown-menu-complex" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/dropdown-menu) documentation for more information.

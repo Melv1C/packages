@@ -1,0 +1,199 @@
+---
+title: Theming
+description: Customize the look and feel of @melv1c/ui-core components with built-in themes or create your own.
+icon: Palette
+---
+
+@melv1c/ui-core uses CSS custom properties (variables) for theming, making it easy to switch between pre-built themes or create your own.
+
+## Built-in Themes
+
+The package ships with 6 ready-to-use themes:
+
+| Theme       | Description                      | Import                               |
+| ----------- | -------------------------------- | ------------------------------------ |
+| **Default** | Clean, neutral design            | `@melv1c/ui-core/themes/default.css` |
+| **Claude**  | Warm, Anthropic-inspired palette | `@melv1c/ui-core/themes/claude.css`  |
+| **Vercel**  | Sharp, monochrome design         | `@melv1c/ui-core/themes/vercel.css`  |
+| **Twitter** | Blue-accented social theme       | `@melv1c/ui-core/themes/twitter.css` |
+| **T3Chat**  | Modern chat-inspired theme       | `@melv1c/ui-core/themes/t3chat.css`  |
+| **Doom64**  | Dark, gaming-inspired theme      | `@melv1c/ui-core/themes/doom64.css`  |
+
+## Using a Theme
+
+Import the base styles and your chosen theme in your CSS file:
+
+```css title="app.css"
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '@melv1c/ui-core/base.css';
+
+/* Pick one theme */
+@import '@melv1c/ui-core/themes/default.css';
+```
+
+To switch themes, simply change the import:
+
+```css title="app.css"
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '@melv1c/ui-core/base.css';
+
+/* Using the Claude theme instead */
+@import '@melv1c/ui-core/themes/claude.css';
+```
+
+## Dark Mode
+
+All themes include both light and dark mode support. Dark mode is automatically applied based on the `dark` class on your `<html>` element:
+
+```html
+<!-- Light mode -->
+<html>
+  ...
+</html>
+
+<!-- Dark mode -->
+<html class="dark">
+  ...
+</html>
+```
+
+## Creating a Custom Theme
+
+You can create your own theme by defining CSS custom properties. The theme system uses HSL color values.
+
+Here's the structure of a theme file:
+
+```css title="my-theme.css"
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 3.9%;
+
+  --radius: 0.5rem;
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+}
+
+.dark {
+  --background: 0 0% 3.9%;
+  --foreground: 0 0% 98%;
+
+  --card: 0 0% 3.9%;
+  --card-foreground: 0 0% 98%;
+
+  --popover: 0 0% 3.9%;
+  --popover-foreground: 0 0% 98%;
+
+  --primary: 0 0% 98%;
+  --primary-foreground: 0 0% 9%;
+
+  --secondary: 0 0% 14.9%;
+  --secondary-foreground: 0 0% 98%;
+
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63.9%;
+
+  --accent: 0 0% 14.9%;
+  --accent-foreground: 0 0% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 14.9%;
+  --input: 0 0% 14.9%;
+  --ring: 0 0% 83.1%;
+
+  --sidebar-background: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 224.3 76.3% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+}
+```
+
+## Overriding Specific Variables
+
+You don't need to define every variable. Override only the ones you want to change:
+
+```css title="app.css"
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '@melv1c/ui-core/base.css';
+@import '@melv1c/ui-core/themes/default.css';
+
+/* Override just the primary color */
+:root {
+  --primary: 262 83% 58%;
+  --primary-foreground: 0 0% 100%;
+}
+
+.dark {
+  --primary: 262 83% 68%;
+  --primary-foreground: 0 0% 0%;
+}
+```
+
+## Using Theme Variables in Your Code
+
+You can reference theme variables in your Tailwind classes or custom CSS:
+
+```tsx
+// Using Tailwind classes
+<div className="bg-primary text-primary-foreground">
+  Themed content
+</div>
+
+// In custom CSS
+.my-custom-element {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+```

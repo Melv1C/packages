@@ -1,0 +1,28 @@
+{
+  "next": "Siguiente",
+  "previous": "Anterior",
+  "loginForm": {
+    "title": "Iniciar sesión en su cuenta",
+    "description": "Introduzca sus credenciales para acceder a su cuenta",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "nombre@ejemplo.com",
+    "password": "Contraseña",
+    "forgotPassword": "¿Olvidó su contraseña?",
+    "login": "Iniciar sesión",
+    "loggingIn": "Iniciando sesión...",
+    "orContinueWith": "o continuar con",
+    "noAccount": "¿No tiene una cuenta?",
+    "signUp": "Registrarse",
+    "providers": {
+      "google": "Continuar con Google",
+      "github": "Continuar con GitHub",
+      "apple": "Continuar con Apple",
+      "microsoft": "Continuar con Microsoft",
+      "facebook": "Continuar con Facebook"
+    },
+    "errors": {
+      "invalidEmail": "Por favor, introduzca una dirección de correo electrónico válida.",
+      "passwordRequired": "La contraseña es obligatoria."
+    }
+  }
+}

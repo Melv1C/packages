@@ -1,0 +1,59 @@
+---
+title: Card
+description: Displays a card with header, content, and footer.
+---
+
+<ComponentPreview name="card-demo" />
+
+## Usage
+
+```tsx
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Card>
+  <CardHeader>
+    <CardTitle>Card Title</CardTitle>
+    <CardDescription>Card description goes here.</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p>Card content</p>
+  </CardContent>
+  <CardFooter>
+    <Button>Action</Button>
+  </CardFooter>
+</Card>
+```
+
+## Examples
+
+### Demo
+
+A login form inside a card.
+
+<ComponentPreview name="card-demo" />
+
+### Image
+
+A card with an image header.
+
+<ComponentPreview name="card-image" />
+
+### Small
+
+Use `size="sm"` for a more compact card layout.
+
+<ComponentPreview name="card-small" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/card) documentation for more information.

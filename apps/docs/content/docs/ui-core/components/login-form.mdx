@@ -1,0 +1,118 @@
+---
+title: Login Form
+description: A pre-built authentication form with email/password fields, social login providers, and full i18n support.
+---
+
+<ComponentPreview name="login-form-demo" />
+
+## Usage
+
+The `LoginForm` component requires [`UIKitProvider`](/docs/ui-core/providers) to be present in your component tree for i18n to work correctly.
+
+```tsx
+import { LoginForm, UIKitProvider } from '@melv1c/ui-core';
+```
+
+```tsx
+<UIKitProvider>
+  <LoginForm
+    onSubmit={async (email, password) => {
+      await signIn(email, password);
+    }}
+    onForgotPassword={() => router.push('/forgot-password')}
+    onSignUp={() => router.push('/sign-up')}
+  />
+</UIKitProvider>
+```
+
+### Error Handling
+
+The `onSubmit` callback can throw an error to display an error message inside the form.
+
+```tsx
+<LoginForm
+  onSubmit={async (email, password) => {
+    const result = await signIn(email, password);
+    if (!result.ok) {
+      throw new Error('Invalid email or password.');
+    }
+  }}
+/>
+```
+
+## Examples
+
+### With Social Providers
+
+Pass an array of provider names to the `providers` prop to render social login buttons.
+
+<ComponentPreview name="login-form-providers" />
+
+### Custom Title and Description
+
+Override the default title and description with custom strings.
+
+<ComponentPreview name="login-form-custom" />
+
+### Minimal
+
+Hide the forgot password link and sign-up prompt with `showForgotPassword={false}` and `showSignUp={false}`.
+
+<ComponentPreview name="login-form-minimal" />
+
+### With Error
+
+When `onSubmit` throws an error, it is caught and displayed as a destructive alert above the form fields.
+
+<ComponentPreview name="login-form-error" />
+
+## Internationalization
+
+All labels, placeholders, and validation messages are translated via the `ui` i18n namespace. The following keys are used:
+
+| Key                                 | Default (en)                                  |
+| ----------------------------------- | --------------------------------------------- |
+| `loginForm.title`                   | Login to your account                         |
+| `loginForm.description`             | Enter your credentials to access your account |
+| `loginForm.email`                   | Email                                         |
+| `loginForm.emailPlaceholder`        | name@example.com                              |
+| `loginForm.password`                | Password                                      |
+| `loginForm.forgotPassword`          | Forgot password?                              |
+| `loginForm.login`                   | Login                                         |
+| `loginForm.loggingIn`               | Logging in...                                 |
+| `loginForm.orContinueWith`          | or continue with                              |
+| `loginForm.noAccount`               | Don't have an account?                        |
+| `loginForm.signUp`                  | Sign up                                       |
+| `loginForm.errors.invalidEmail`     | Please enter a valid email address.           |
+| `loginForm.errors.passwordRequired` | Password is required.                         |
+| `loginForm.providers.google`        | Continue with Google                          |
+| `loginForm.providers.github`        | Continue with GitHub                          |
+| `loginForm.providers.apple`         | Continue with Apple                           |
+| `loginForm.providers.microsoft`     | Continue with Microsoft                       |
+| `loginForm.providers.facebook`      | Continue with Facebook                        |
+
+See the [i18n docs](/docs/ui-core/i18n) for instructions on overriding these translations.
+
+## API Reference
+
+### LoginForm
+
+| Prop                 | Type                                                         | Default | Description                                                      |
+| -------------------- | ------------------------------------------------------------ | ------- | ---------------------------------------------------------------- |
+| `onSubmit`           | `(email: string, password: string) => void \| Promise<void>` | —       | Called on form submit. Throw an error to display it in the form. |
+| `onProviderLogin`    | `(provider: LoginProvider) => void`                          | —       | Called when a social provider button is clicked                  |
+| `onForgotPassword`   | `() => void`                                                 | —       | Called when the forgot password link is clicked                  |
+| `onSignUp`           | `() => void`                                                 | —       | Called when the sign up link is clicked                          |
+| `providers`          | `LoginProvider[]`                                            | `[]`    | Social login providers to display                                |
+| `showForgotPassword` | `boolean`                                                    | `true`  | Show the forgot password link                                    |
+| `showSignUp`         | `boolean`                                                    | `true`  | Show the sign up link in the card footer                         |
+| `title`              | `string`                                                     | —       | Custom title (overrides translation)                             |
+| `description`        | `string`                                                     | —       | Custom description (overrides translation)                       |
+| `schema`             | `ZodType<LoginFormValues>`                                   | —       | Custom Zod validation schema (overrides default)                 |
+| `className`          | `string`                                                     | —       | Additional class name for the card container                     |
+
+### LoginProvider
+
+```ts
+type LoginProvider = 'google' | 'github' | 'apple' | 'microsoft' | 'facebook';
+```

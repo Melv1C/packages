@@ -1,0 +1,61 @@
+---
+title: Radio Group
+description: A set of checkable buttons — known as radio buttons — where no more than one of the buttons can be checked at a time.
+---
+
+<ComponentPreview name="radio-group-demo" />
+
+## Usage
+
+```tsx
+import { Label, RadioGroup, RadioGroupItem } from '@melv1c/ui-core';
+```
+
+```tsx
+<RadioGroup defaultValue="option-one">
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-one" id="option-one" />
+    <Label htmlFor="option-one">Option One</Label>
+  </div>
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-two" id="option-two" />
+    <Label htmlFor="option-two">Option Two</Label>
+  </div>
+</RadioGroup>
+```
+
+## Examples
+
+### Description
+
+Add a description below each radio option.
+
+<ComponentPreview name="radio-group-description" />
+
+### Disabled
+
+Use the `disabled` prop to disable individual radio items.
+
+<ComponentPreview name="radio-group-disabled" />
+
+### Invalid
+
+Use `aria-invalid` to indicate a validation error on the radio group.
+
+<ComponentPreview name="radio-group-invalid" />
+
+### Fieldset
+
+Wrap the radio group in a `Fieldset` for proper labeling.
+
+<ComponentPreview name="radio-group-fieldset" />
+
+### Choice Card
+
+Use radio items styled as choice cards for a richer selection UI.
+
+<ComponentPreview name="radio-group-choice-card" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/radio-group) documentation for more information.

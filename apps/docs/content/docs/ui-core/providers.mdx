@@ -1,0 +1,108 @@
+---
+title: Providers
+description: Configure the UIKitProvider to enable i18n, toasts, and more.
+icon: Layers
+---
+
+@melv1c/ui-core provides a root provider component that handles global configuration for your app.
+
+## UIKitProvider
+
+`UIKitProvider` wraps your app with the necessary context providers for i18n (via `I18nextProvider`) and toast notifications (via `Sonner`).
+
+```tsx title="app.tsx"
+import { UIKitProvider } from '@melv1c/ui-core';
+
+export function App({ children }: { children: React.ReactNode }) {
+  return (
+    <UIKitProvider i18nConfig="en" hasToaster>
+      {children}
+    </UIKitProvider>
+  );
+}
+```
+
+## Props
+
+| Prop               | Type                   | Default     | Description                                                      |
+| ------------------ | ---------------------- | ----------- | ---------------------------------------------------------------- |
+| `i18nConfig`       | `string \| I18nConfig` | `'en'`      | Language configuration. Pass a locale string or a config object. |
+| `hasToaster`       | `boolean`              | `false`     | Whether to render the Sonner toast provider.                     |
+| `loadingComponent` | `React.ReactNode`      | `undefined` | Component to show while the i18n instance is loading.            |
+| `children`         | `React.ReactNode`      | —           | Your application content.                                        |
+
+## i18nConfig Options
+
+### Simple locale string
+
+```tsx
+<UIKitProvider i18nConfig="fr">{children}</UIKitProvider>
+```
+
+### Config object with overrides
+
+```tsx
+<UIKitProvider
+  i18nConfig={{
+    locale: 'en',
+    overrides: {
+      loginForm: {
+        title: 'Welcome',
+      },
+    },
+  }}
+>
+  {children}
+</UIKitProvider>
+```
+
+### Bring your own i18n instance
+
+```tsx
+<UIKitProvider i18nConfig={{ instance: myI18nInstance }}>
+  {children}
+</UIKitProvider>
+```
+
+## Toaster Configuration
+
+When `hasToaster` is `true`, the provider renders a `<Toaster />` component from [Sonner](https://sonner.emilkowal.dev/). You can then trigger toasts anywhere in your app:
+
+```tsx
+import { toast } from 'sonner';
+
+function MyComponent() {
+  return <Button onClick={() => toast.success('Settings saved!')}>Save</Button>;
+}
+```
+
+## Loading State
+
+If your i18n configuration requires async loading (e.g., fetching translations from a server), you can provide a loading component:
+
+```tsx
+<UIKitProvider
+  i18nConfig="fr"
+  loadingComponent={<div>Loading translations...</div>}
+>
+  {children}
+</UIKitProvider>
+```
+
+## Without the Provider
+
+You can use @melv1c/ui-core components without the provider. However, components that rely on i18n (like `LoginForm`, `NextButton`, `PreviousButton`) will fall back to English strings, and you won't have the global Toaster available.
+
+```tsx
+// This works fine — no provider needed for basic components
+import { Button, Card, Input } from '@melv1c/ui-core';
+
+export function SimpleForm() {
+  return (
+    <Card>
+      <Input placeholder="Enter text" />
+      <Button>Submit</Button>
+    </Card>
+  );
+}
+```

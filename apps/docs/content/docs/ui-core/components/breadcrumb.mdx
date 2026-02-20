@@ -1,0 +1,86 @@
+---
+title: Breadcrumb
+description: Displays the path to the current resource using a hierarchy of links.
+---
+
+<ComponentPreview name="breadcrumb-demo" />
+
+## Usage
+
+```tsx
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+```
+
+## Examples
+
+### Basic
+
+A basic breadcrumb with home and components links.
+
+<ComponentPreview name="breadcrumb-basic" />
+
+### Custom Separator
+
+Pass a custom component as `children` to `<BreadcrumbSeparator />` to create a custom separator.
+
+<ComponentPreview name="breadcrumb-separator" />
+
+### Dropdown
+
+Compose `<BreadcrumbItem />` with a `<DropdownMenu />` to create a dropdown in the breadcrumb.
+
+<ComponentPreview name="breadcrumb-dropdown" />
+
+### Collapsed
+
+Use `<BreadcrumbEllipsis />` to show a collapsed state when the breadcrumb is too long.
+
+<ComponentPreview name="breadcrumb-ellipsis" />
+
+### Link Component
+
+Use the `asChild` prop on `<BreadcrumbLink />` to render a custom link component from your routing library.
+
+<ComponentPreview name="breadcrumb-link" />
+
+## RTL
+
+<ComponentPreview name="breadcrumb-rtl" />
+
+## API Reference
+
+### BreadcrumbSeparator
+
+Pass custom children to override the default separator icon.
+
+| Prop        | Type              | Default |
+| ----------- | ----------------- | ------- |
+| `children`  | `React.ReactNode` | -       |
+| `className` | `string`          | -       |
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/breadcrumb) documentation for more information.

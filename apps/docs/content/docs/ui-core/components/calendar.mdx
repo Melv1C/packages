@@ -1,0 +1,82 @@
+---
+title: Calendar
+description: A date field component that allows users to enter and edit date.
+---
+
+<ComponentPreview name="calendar-demo" />
+
+## Usage
+
+```tsx
+import { Calendar } from '@melv1c/ui-core';
+```
+
+```tsx
+<Calendar mode="single" selected={date} onSelect={setDate} />
+```
+
+## Examples
+
+### Basic
+
+A basic calendar with single date selection.
+
+<ComponentPreview name="calendar-basic" />
+
+### Caption
+
+Use `captionLayout="dropdown"` to show month and year dropdowns in the caption.
+
+<ComponentPreview name="calendar-caption" />
+
+### Booked Dates
+
+Disable specific dates using the `disabled` prop.
+
+<ComponentPreview name="calendar-booked-dates" />
+
+### Custom Days
+
+Use `CalendarDayButton` to customize the appearance of individual day cells.
+
+<ComponentPreview name="calendar-custom-days" />
+
+### Multiple
+
+Use `mode="multiple"` to allow selecting multiple dates.
+
+<ComponentPreview name="calendar-multiple" />
+
+### Presets
+
+Combine the calendar with a list of preset date options.
+
+<ComponentPreview name="calendar-presets" />
+
+### Range
+
+Use `mode="range"` to allow selecting a date range.
+
+<ComponentPreview name="calendar-range" />
+
+### Time
+
+Combine the calendar with a time input for datetime selection.
+
+<ComponentPreview name="calendar-time" />
+
+### Week Numbers
+
+Use `showWeekNumber` to display week numbers alongside the calendar.
+
+<ComponentPreview name="calendar-week-numbers" />
+
+### Hijri
+
+Use `DayPicker` from `react-day-picker/persian` to render a Hijri calendar.
+
+<ComponentPreview name="calendar-hijri" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/calendar) documentation for more information.

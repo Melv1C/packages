@@ -1,0 +1,53 @@
+---
+title: Tabs
+description: A set of layered sections of content — known as tab panels — that are displayed one at a time.
+---
+
+<ComponentPreview name="tabs-demo" />
+
+## Usage
+
+```tsx
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@melv1c/ui-core';
+```
+
+```tsx
+<Tabs defaultValue="account">
+  <TabsList>
+    <TabsTrigger value="account">Account</TabsTrigger>
+    <TabsTrigger value="password">Password</TabsTrigger>
+  </TabsList>
+  <TabsContent value="account">Account settings.</TabsContent>
+  <TabsContent value="password">Change your password.</TabsContent>
+</Tabs>
+```
+
+## Examples
+
+### Icons
+
+Add icons to tab triggers for visual context.
+
+<ComponentPreview name="tabs-icons" />
+
+### Disabled
+
+Use the `disabled` prop on a `TabsTrigger` to disable individual tabs.
+
+<ComponentPreview name="tabs-disabled" />
+
+### Vertical
+
+Use `orientation="vertical"` to stack tabs vertically.
+
+<ComponentPreview name="tabs-vertical" />
+
+### Line
+
+Use the `variant="line"` to render a line-style tab indicator.
+
+<ComponentPreview name="tabs-line" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/tabs) documentation for more information.

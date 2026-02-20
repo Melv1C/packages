@@ -1,0 +1,38 @@
+---
+title: Hover Card
+description: For sighted users to preview content available behind a link.
+---
+
+<ComponentPreview name="hover-card-demo" />
+
+## Usage
+
+```tsx
+import {
+  Button,
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<HoverCard>
+  <HoverCardTrigger asChild>
+    <Button variant="link">Hover Here</Button>
+  </HoverCardTrigger>
+  <HoverCardContent>Content shown on hover.</HoverCardContent>
+</HoverCard>
+```
+
+## Examples
+
+### Sides
+
+Control which side the card appears on using the `side` prop.
+
+<ComponentPreview name="hover-card-sides" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/hover-card) documentation for more information.

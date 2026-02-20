@@ -1,0 +1,121 @@
+---
+title: Internationalization
+description: Add multi-language support to your app with @melv1c/ui-core's built-in i18n system.
+icon: Globe
+---
+
+@melv1c/ui-core includes built-in internationalization (i18n) support powered by [i18next](https://www.i18next.com/). Components that display text — like `LoginForm`, `NextButton`, and `PreviousButton` — are automatically translated.
+
+## Supported Languages
+
+| Language | Code |
+| -------- | ---- |
+| English  | `en` |
+| French   | `fr` |
+| Dutch    | `nl` |
+| Spanish  | `es` |
+| German   | `de` |
+| Italian  | `it` |
+
+## Basic Setup
+
+The simplest way to enable i18n is to pass a locale string to `UIKitProvider`:
+
+```tsx title="app.tsx"
+import { UIKitProvider } from '@melv1c/ui-core';
+
+export function App({ children }: { children: React.ReactNode }) {
+  return <UIKitProvider i18nConfig="fr">{children}</UIKitProvider>;
+}
+```
+
+This will load the French translation bundle and apply it to all @melv1c components.
+
+## Custom Translations
+
+You can override specific translation keys or add your own:
+
+```tsx title="app.tsx"
+import { UIKitProvider } from '@melv1c/ui-core';
+
+export function App({ children }: { children: React.ReactNode }) {
+  return (
+    <UIKitProvider
+      i18nConfig={{
+        locale: 'en',
+        overrides: {
+          loginForm: {
+            title: 'Welcome Back',
+            description: 'Sign in to your workspace',
+          },
+        },
+      }}
+    >
+      {children}
+    </UIKitProvider>
+  );
+}
+```
+
+## Using Your Own i18n Instance
+
+If you already have an i18next instance configured in your app, you can pass it to the provider:
+
+```tsx title="app.tsx"
+import { UIKitProvider } from '@melv1c/ui-core';
+import i18n from './i18n'; // your existing i18next instance
+
+export function App({ children }: { children: React.ReactNode }) {
+  return (
+    <UIKitProvider i18nConfig={{ instance: i18n }}>{children}</UIKitProvider>
+  );
+}
+```
+
+## Translation Keys
+
+Here are the translation keys used by @melv1c/ui-core components:
+
+| Key                        | Default (English)      | Used by          |
+| -------------------------- | ---------------------- | ---------------- |
+| `next`                     | Next                   | `NextButton`     |
+| `previous`                 | Previous               | `PreviousButton` |
+| `loginForm.title`          | Login                  | `LoginForm`      |
+| `loginForm.description`    | Enter your credentials | `LoginForm`      |
+| `loginForm.email`          | Email                  | `LoginForm`      |
+| `loginForm.password`       | Password               | `LoginForm`      |
+| `loginForm.submit`         | Sign in                | `LoginForm`      |
+| `loginForm.forgotPassword` | Forgot password?       | `LoginForm`      |
+| `loginForm.signUp`         | Sign up                | `LoginForm`      |
+| `loginForm.orContinueWith` | Or continue with       | `LoginForm`      |
+
+## Dynamic Language Switching
+
+You can dynamically switch languages at runtime by updating the locale passed to the provider:
+
+```tsx title="language-switcher.tsx"
+import { useState } from 'react';
+import { UIKitProvider } from '@melv1c/ui-core';
+import type { SupportedLanguage } from '@melv1c/ui-core';
+
+export function App({ children }: { children: React.ReactNode }) {
+  const [locale, setLocale] = useState<SupportedLanguage>('en');
+
+  return (
+    <UIKitProvider i18nConfig={locale}>
+      <select
+        value={locale}
+        onChange={(e) => setLocale(e.target.value as SupportedLanguage)}
+      >
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="nl">Nederlands</option>
+        <option value="es">Español</option>
+        <option value="de">Deutsch</option>
+        <option value="it">Italiano</option>
+      </select>
+      {children}
+    </UIKitProvider>
+  );
+}
+```

@@ -1,0 +1,68 @@
+---
+title: Toggle Group
+description: A set of two-state buttons that can be toggled on or off.
+---
+
+<ComponentPreview name="toggle-group-demo" />
+
+## Usage
+
+```tsx
+import { ToggleGroup, ToggleGroupItem } from '@melv1c/ui-core';
+```
+
+```tsx
+<ToggleGroup type="single">
+  <ToggleGroupItem value="a" aria-label="Left aligned">
+    Left
+  </ToggleGroupItem>
+  <ToggleGroupItem value="b" aria-label="Center aligned">
+    Center
+  </ToggleGroupItem>
+  <ToggleGroupItem value="c" aria-label="Right aligned">
+    Right
+  </ToggleGroupItem>
+</ToggleGroup>
+```
+
+## Examples
+
+### Outline
+
+Use `variant="outline"` for outlined group items.
+
+<ComponentPreview name="toggle-group-outline" />
+
+### Sizes
+
+Use the `size` prop to control the size of all group items.
+
+<ComponentPreview name="toggle-group-sizes" />
+
+### Spacing
+
+Add spacing between toggle group items.
+
+<ComponentPreview name="toggle-group-spacing" />
+
+### Vertical
+
+Use `orientation="vertical"` to stack toggle items vertically.
+
+<ComponentPreview name="toggle-group-vertical" />
+
+### Disabled
+
+Use the `disabled` prop on `ToggleGroup` or individual `ToggleGroupItem` components.
+
+<ComponentPreview name="toggle-group-disabled" />
+
+### Font Weight Selector
+
+A practical example using a toggle group as a font weight selector.
+
+<ComponentPreview name="toggle-group-font-weight-selector" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/toggle-group) documentation for more information.

@@ -1,0 +1,70 @@
+---
+title: Menubar
+description: A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.
+---
+
+<ComponentPreview name="menubar-demo" />
+
+## Usage
+
+```tsx
+import {
+  Menubar,
+  MenubarCheckboxItem,
+  MenubarContent,
+  MenubarGroup,
+  MenubarItem,
+  MenubarMenu,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarTrigger,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Menubar>
+  <MenubarMenu>
+    <MenubarTrigger>File</MenubarTrigger>
+    <MenubarContent>
+      <MenubarItem>New Tab</MenubarItem>
+      <MenubarSeparator />
+      <MenubarItem>Quit</MenubarItem>
+    </MenubarContent>
+  </MenubarMenu>
+</Menubar>
+```
+
+## Examples
+
+### Icons
+
+Add icons to menu items for better visual clarity.
+
+<ComponentPreview name="menubar-icons" />
+
+### Checkboxes
+
+Use `MenubarCheckboxItem` to create toggleable menu items.
+
+<ComponentPreview name="menubar-checkbox" />
+
+### Radio
+
+Use `MenubarRadioGroup` and `MenubarRadioItem` for radio-style selection.
+
+<ComponentPreview name="menubar-radio" />
+
+### Submenu
+
+Nest menus inside the content to create submenus.
+
+<ComponentPreview name="menubar-submenu" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/menubar) documentation for more information.

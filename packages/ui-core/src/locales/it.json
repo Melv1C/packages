@@ -1,0 +1,28 @@
+{
+  "next": "Successivo",
+  "previous": "Precedente",
+  "loginForm": {
+    "title": "Accedi al tuo account",
+    "description": "Inserisci le tue credenziali per accedere al tuo account",
+    "email": "Email",
+    "emailPlaceholder": "nome@esempio.com",
+    "password": "Password",
+    "forgotPassword": "Password dimenticata?",
+    "login": "Accedi",
+    "loggingIn": "Accesso in corso...",
+    "orContinueWith": "o continua con",
+    "noAccount": "Non hai un account?",
+    "signUp": "Registrati",
+    "providers": {
+      "google": "Continua con Google",
+      "github": "Continua con GitHub",
+      "apple": "Continua con Apple",
+      "microsoft": "Continua con Microsoft",
+      "facebook": "Continua con Facebook"
+    },
+    "errors": {
+      "invalidEmail": "Inserisci un indirizzo email valido.",
+      "passwordRequired": "La password è obbligatoria."
+    }
+  }
+}

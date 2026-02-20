@@ -1,0 +1,67 @@
+---
+title: Date Time Picker
+description: A combined date and time picker with calendar popover and time input.
+---
+
+<ComponentPreview name="datetime-picker-demo" />
+
+## Usage
+
+```tsx
+import { DateTimePicker } from '@melv1c/ui-core';
+```
+
+```tsx
+const [value, setValue] = useState<Date | undefined>();
+
+<DateTimePicker value={value} onChange={setValue} />;
+```
+
+## Examples
+
+### With Label
+
+Use the `label` prop to add a visible label above the picker.
+
+<ComponentPreview name="datetime-picker-label" />
+
+### Custom Format
+
+Use the `formatDateTime` prop to control how the selected date is displayed in the trigger button.
+
+<ComponentPreview name="datetime-picker-format" />
+
+### Without Clear Button
+
+Set `showClear={false}` to hide the clear button.
+
+<ComponentPreview name="datetime-picker-no-clear" />
+
+### Constrained Dates
+
+Use the `disabledDates` prop to restrict selectable dates. It accepts the same value as
+[react-day-picker's `disabled` prop](https://daypicker.dev/selections/disabling-dates).
+
+<ComponentPreview name="datetime-picker-constrained" />
+
+### Disabled
+
+Set `disabled={true}` to disable the entire picker.
+
+<ComponentPreview name="datetime-picker-disabled" />
+
+## API Reference
+
+### DateTimePicker
+
+| Prop             | Type                                | Default                  | Description                                                  |
+| ---------------- | ----------------------------------- | ------------------------ | ------------------------------------------------------------ |
+| `value`          | `Date \| undefined`                 | —                        | The selected date and time                                   |
+| `onChange`       | `(date: Date \| undefined) => void` | —                        | Callback when the date or time changes                       |
+| `label`          | `string`                            | —                        | Label displayed above the picker                             |
+| `placeholder`    | `string`                            | `"Select date and time"` | Placeholder text when no date is selected                    |
+| `showClear`      | `boolean`                           | `true`                   | Whether to show the clear button                             |
+| `disabled`       | `boolean`                           | `false`                  | Disables the entire picker                                   |
+| `disabledDates`  | `DayPicker["disabled"]`             | —                        | Disable specific dates. Accepts all react-day-picker formats |
+| `formatDateTime` | `(date: Date) => string`            | —                        | Custom function to format the displayed date/time string     |
+| `className`      | `string`                            | —                        | Additional class name for the container                      |

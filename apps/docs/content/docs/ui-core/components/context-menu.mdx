@@ -1,0 +1,91 @@
+---
+title: Context Menu
+description: Displays a menu to the user — such as a set of actions or functions — triggered by a right-click.
+---
+
+<ComponentPreview name="context-menu-demo" />
+
+## Usage
+
+```tsx
+import {
+  ContextMenu,
+  ContextMenuCheckboxItem,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuItem,
+  ContextMenuLabel,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+  ContextMenuTrigger,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<ContextMenu>
+  <ContextMenuTrigger>Right click me</ContextMenuTrigger>
+  <ContextMenuContent>
+    <ContextMenuItem>Profile</ContextMenuItem>
+    <ContextMenuItem>Settings</ContextMenuItem>
+  </ContextMenuContent>
+</ContextMenu>
+```
+
+## Examples
+
+### Basic
+
+A basic context menu with simple items.
+
+<ComponentPreview name="context-menu-basic" />
+
+### Groups
+
+Organize menu items into labeled groups using `ContextMenuGroup` and `ContextMenuLabel`.
+
+<ComponentPreview name="context-menu-groups" />
+
+### Icons
+
+Add icons to context menu items for better visual clarity.
+
+<ComponentPreview name="context-menu-icons" />
+
+### Shortcuts
+
+Display keyboard shortcuts next to menu items using `ContextMenuShortcut`.
+
+<ComponentPreview name="context-menu-shortcuts" />
+
+### Checkboxes
+
+Use `ContextMenuCheckboxItem` to add toggleable items.
+
+<ComponentPreview name="context-menu-checkboxes" />
+
+### Radio
+
+Use `ContextMenuRadioGroup` and `ContextMenuRadioItem` for exclusive selection.
+
+<ComponentPreview name="context-menu-radio" />
+
+### Submenu
+
+Nest a `ContextMenuSub` inside the content to create submenus.
+
+<ComponentPreview name="context-menu-submenu" />
+
+### Destructive
+
+Mark a destructive action with the `destructive` variant.
+
+<ComponentPreview name="context-menu-destructive" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/context-menu) documentation for more information.

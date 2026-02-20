@@ -1,0 +1,56 @@
+---
+title: Table
+description: A responsive table component.
+---
+
+<ComponentPreview name="table-demo" />
+
+## Usage
+
+```tsx
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Name</TableHead>
+      <TableHead>Status</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>Alice</TableCell>
+      <TableCell>Active</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+```
+
+## Examples
+
+### Footer
+
+Add a footer row to summarize table data.
+
+<ComponentPreview name="table-footer" />
+
+### Actions
+
+Add an actions column to each row for inline operations.
+
+<ComponentPreview name="table-actions" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/table) documentation for more information.

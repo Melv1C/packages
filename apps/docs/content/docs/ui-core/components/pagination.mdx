@@ -1,0 +1,54 @@
+---
+title: Pagination
+description: Pagination with page navigation, next and previous links.
+---
+
+<ComponentPreview name="pagination-demo" />
+
+## Usage
+
+```tsx
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Pagination>
+  <PaginationContent>
+    <PaginationItem>
+      <PaginationPrevious href="#" />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink href="#">1</PaginationLink>
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationNext href="#" />
+    </PaginationItem>
+  </PaginationContent>
+</Pagination>
+```
+
+## Examples
+
+### Simple
+
+A minimal previous / next navigation without page numbers.
+
+<ComponentPreview name="pagination-simple" />
+
+### Icons Only
+
+Show only icon buttons for previous and next navigation.
+
+<ComponentPreview name="pagination-icons-only" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/pagination) documentation for more information.

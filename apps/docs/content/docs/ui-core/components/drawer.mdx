@@ -1,0 +1,65 @@
+---
+title: Drawer
+description: A drawer that slides in from the edge of the screen.
+---
+
+<ComponentPreview name="drawer-demo" />
+
+## Usage
+
+```tsx
+import {
+  Button,
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Drawer>
+  <DrawerTrigger asChild>
+    <Button variant="outline">Open Drawer</Button>
+  </DrawerTrigger>
+  <DrawerContent>
+    <DrawerHeader>
+      <DrawerTitle>Title</DrawerTitle>
+      <DrawerDescription>Description</DrawerDescription>
+    </DrawerHeader>
+    <DrawerFooter>
+      <DrawerClose asChild>
+        <Button variant="outline">Cancel</Button>
+      </DrawerClose>
+    </DrawerFooter>
+  </DrawerContent>
+</Drawer>
+```
+
+## Examples
+
+### Dialog
+
+Use the `shouldScaleBackground` prop to scale the background when the drawer is open.
+
+<ComponentPreview name="drawer-dialog" />
+
+### Sides
+
+Control which edge the drawer slides from using the `direction` prop: `top`, `right`, `bottom` (default), or `left`.
+
+<ComponentPreview name="drawer-sides" />
+
+### Scrollable Content
+
+Add scrollable content inside the drawer body.
+
+<ComponentPreview name="drawer-scrollable-content" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/drawer) documentation for more information.

@@ -1,0 +1,52 @@
+---
+title: Tooltip
+description: A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
+---
+
+<ComponentPreview name="tooltip-demo" />
+
+## Usage
+
+```tsx
+import {
+  Button,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@melv1c/ui-core';
+```
+
+```tsx
+<Tooltip>
+  <TooltipTrigger asChild>
+    <Button variant="outline">Hover</Button>
+  </TooltipTrigger>
+  <TooltipContent>
+    <p>Add to library</p>
+  </TooltipContent>
+</Tooltip>
+```
+
+## Examples
+
+### Sides
+
+Control which side the tooltip appears on using the `side` prop: `top` (default), `right`, `bottom`, or `left`.
+
+<ComponentPreview name="tooltip-sides" />
+
+### Disabled Element
+
+Wrap a disabled element in a `span` to still show the tooltip.
+
+<ComponentPreview name="tooltip-disabled" />
+
+### Keyboard
+
+Show a keyboard shortcut hint inside the tooltip.
+
+<ComponentPreview name="tooltip-keyboard" />
+
+## API Reference
+
+See the [Shadcn UI](https://ui.shadcn.com/docs/components/tooltip) documentation for more information.
