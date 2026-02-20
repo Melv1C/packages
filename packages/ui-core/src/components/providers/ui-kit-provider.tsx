@@ -4,7 +4,7 @@ import type { i18n as I18nInstance } from 'i18next';
 import i18n from 'i18next';
 import { useEffect, useState, type ReactNode } from 'react';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
-import { Toaster } from '../base';
+import { Toaster, TooltipProvider } from '../base';
 
 type I18nConfig =
   | {
@@ -108,8 +108,10 @@ export function UIKitProvider({
 
   return (
     <I18nextProvider i18n={instance}>
-      {children}
-      {hasToaster && <Toaster />}
+      <TooltipProvider>
+        {children}
+        {hasToaster && <Toaster />}
+      </TooltipProvider>
     </I18nextProvider>
   );
 }
