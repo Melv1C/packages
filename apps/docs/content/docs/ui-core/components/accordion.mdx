@@ -8,21 +8,14 @@ description: A vertically stacked set of interactive headings that each reveal a
 ## Usage
 
 ```tsx
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@melv1c/ui-core';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@melv1c/ui-core';
 ```
 
 ```tsx
 <Accordion type="single" collapsible defaultValue="item-1">
   <AccordionItem value="item-1">
     <AccordionTrigger>Is it accessible?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It adheres to the WAI-ARIA design pattern.
-    </AccordionContent>
+    <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
   </AccordionItem>
 </Accordion>
 ```

@@ -1,11 +1,4 @@
-import {
-  Button,
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  Input,
-} from '@melv1c/ui-core';
+import { Button, Field, FieldDescription, FieldGroup, FieldLabel, Input } from '@melv1c/ui-core';
 
 export default function InputFieldgroup() {
   return (
@@ -16,14 +9,8 @@ export default function InputFieldgroup() {
       </Field>
       <Field>
         <FieldLabel htmlFor="fieldgroup-email">Email</FieldLabel>
-        <Input
-          id="fieldgroup-email"
-          type="email"
-          placeholder="name@example.com"
-        />
-        <FieldDescription>
-          We&apos;ll send updates to this address.
-        </FieldDescription>
+        <Input id="fieldgroup-email" type="email" placeholder="name@example.com" />
+        <FieldDescription>We&apos;ll send updates to this address.</FieldDescription>
       </Field>
       <Field orientation="horizontal">
         <Button type="reset" variant="outline">

@@ -1,10 +1,4 @@
-import {
-  Field,
-  FieldDescription,
-  FieldLabel,
-  ToggleGroup,
-  ToggleGroupItem,
-} from '@melv1c/ui-core';
+import { Field, FieldDescription, FieldLabel, ToggleGroup, ToggleGroupItem } from '@melv1c/ui-core';
 import * as React from 'react';
 
 export default function ToggleGroupFontWeightSelector() {
@@ -15,7 +9,7 @@ export default function ToggleGroupFontWeightSelector() {
       <ToggleGroup
         type="single"
         value={fontWeight}
-        onValueChange={(value) => setFontWeight(value)}
+        onValueChange={value => setFontWeight(value)}
         variant="outline"
         spacing={2}
         size="lg"
@@ -54,11 +48,8 @@ export default function ToggleGroupFontWeightSelector() {
         </ToggleGroupItem>
       </ToggleGroup>
       <FieldDescription>
-        Use{' '}
-        <code className="bg-muted rounded-md px-1 py-0.5 font-mono">
-          font-{fontWeight}
-        </code>{' '}
-        to set the font weight.
+        Use <code className="bg-muted rounded-md px-1 py-0.5 font-mono">font-{fontWeight}</code> to
+        set the font weight.
       </FieldDescription>
     </Field>
   );

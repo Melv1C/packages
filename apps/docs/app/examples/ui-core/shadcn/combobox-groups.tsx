@@ -58,7 +58,7 @@ export default function ComboboxWithGroupsAndSeparator() {
             <ComboboxGroup key={group.value} items={group.items}>
               <ComboboxLabel>{group.value}</ComboboxLabel>
               <ComboboxCollection>
-                {(item) => (
+                {item => (
                   <ComboboxItem key={item} value={item}>
                     {item}
                   </ComboboxItem>

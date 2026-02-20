@@ -18,8 +18,7 @@ export default function DialogNoCloseButton() {
         <DialogHeader>
           <DialogTitle>No Close Button</DialogTitle>
           <DialogDescription>
-            This dialog doesn&apos;t have a close button in the top-right
-            corner.
+            This dialog doesn&apos;t have a close button in the top-right corner.
           </DialogDescription>
         </DialogHeader>
       </DialogContent>

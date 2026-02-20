@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 import {
   Card,
   CardContent,
@@ -8,25 +8,25 @@ import {
   CarouselNext,
   CarouselPrevious,
   type CarouselApi,
-} from "@melv1c/ui-core"
+} from '@melv1c/ui-core';
 
 export default function CarouselDApiDemo() {
-  const [api, setApi] = React.useState<CarouselApi>()
-  const [current, setCurrent] = React.useState(0)
-  const [count, setCount] = React.useState(0)
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
     if (!api) {
-      return
+      return;
     }
 
-    setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap() + 1)
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
 
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1)
-    })
-  }, [api])
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
   return (
     <div className="mx-auto max-w-[10rem] sm:max-w-xs">
@@ -49,5 +49,5 @@ export default function CarouselDApiDemo() {
         Slide {current} of {count}
       </div>
     </div>
-  )
+  );
 }

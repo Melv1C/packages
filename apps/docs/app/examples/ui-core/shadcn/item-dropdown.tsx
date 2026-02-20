@@ -44,7 +44,7 @@ export default function ItemDropdown() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48" align="end">
         <DropdownMenuGroup>
-          {people.map((person) => (
+          {people.map(person => (
             <DropdownMenuItem key={person.username}>
               <Item size="sm" className="w-full p-2">
                 <ItemMedia>
@@ -55,9 +55,7 @@ export default function ItemDropdown() {
                 </ItemMedia>
                 <ItemContent className="gap-0">
                   <ItemTitle>{person.username}</ItemTitle>
-                  <ItemDescription className="leading-none">
-                    {person.email}
-                  </ItemDescription>
+                  <ItemDescription className="leading-none">{person.email}</ItemDescription>
                 </ItemContent>
               </Item>
             </DropdownMenuItem>

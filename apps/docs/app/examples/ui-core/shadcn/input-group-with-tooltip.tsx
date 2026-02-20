@@ -50,9 +50,7 @@ export default function InputGroupWithTooltip({
             </Tooltip>
           </InputGroupAddon>
         </InputGroup>
-        <FieldDescription>
-          This is a description of the input group.
-        </FieldDescription>
+        <FieldDescription>This is a description of the input group.</FieldDescription>
       </Field>
       <Field>
         <FieldLabel htmlFor="input-dropdown-21">Dropdown</FieldLabel>
@@ -71,22 +69,14 @@ export default function InputGroupWithTooltip({
                 sideOffset={10}
                 alignOffset={-8}
               >
-                <DropdownMenuItem onClick={() => setCountry('+1')}>
-                  +1
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setCountry('+44')}>
-                  +44
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setCountry('+46')}>
-                  +46
-                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setCountry('+1')}>+1</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setCountry('+44')}>+44</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setCountry('+46')}>+46</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </InputGroupAddon>
         </InputGroup>
-        <FieldDescription>
-          This is a description of the input group.
-        </FieldDescription>
+        <FieldDescription>This is a description of the input group.</FieldDescription>
       </Field>
       <Field>
         <FieldLabel htmlFor="input-secure-19">Popover</FieldLabel>
@@ -108,22 +98,15 @@ export default function InputGroupWithTooltip({
               </PopoverHeader>
             </PopoverContent>
           </Popover>
-          <InputGroupAddon className="text-muted-foreground pl-1">
-            https://
-          </InputGroupAddon>
+          <InputGroupAddon className="text-muted-foreground pl-1">https://</InputGroupAddon>
           <InputGroupInput id="input-secure-19" />
           <InputGroupAddon align="inline-end">
-            <InputGroupButton
-              size="icon-xs"
-              onClick={() => toast('Added to favorites')}
-            >
+            <InputGroupButton size="icon-xs" onClick={() => toast('Added to favorites')}>
               <StarIcon />
             </InputGroupButton>
           </InputGroupAddon>
         </InputGroup>
-        <FieldDescription>
-          This is a description of the input group.
-        </FieldDescription>
+        <FieldDescription>This is a description of the input group.</FieldDescription>
       </Field>
       <Field>
         <FieldLabel htmlFor="url">Button Group</FieldLabel>
@@ -137,9 +120,7 @@ export default function InputGroupWithTooltip({
           </InputGroup>
           <ButtonGroupText>.com</ButtonGroupText>
         </ButtonGroup>
-        <FieldDescription>
-          This is a description of the input group.
-        </FieldDescription>
+        <FieldDescription>This is a description of the input group.</FieldDescription>
       </Field>
     </FieldGroup>
   );

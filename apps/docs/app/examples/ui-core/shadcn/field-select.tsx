@@ -31,9 +31,7 @@ export default function FieldSelect() {
           </SelectGroup>
         </SelectContent>
       </Select>
-      <FieldDescription>
-        Select your department or area of work.
-      </FieldDescription>
+      <FieldDescription>Select your department or area of work.</FieldDescription>
     </Field>
   );
 }

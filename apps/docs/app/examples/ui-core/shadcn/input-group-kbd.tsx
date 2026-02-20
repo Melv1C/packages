@@ -1,9 +1,4 @@
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-  Kbd,
-} from '@melv1c/ui-core';
+import { InputGroup, InputGroupAddon, InputGroupInput, Kbd } from '@melv1c/ui-core';
 import { SearchIcon } from 'lucide-react';
 
 export default function InputGroupKbd() {

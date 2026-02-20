@@ -68,12 +68,7 @@ export default function ComboboxPopup() {
     <>
       <Combobox items={countries} defaultValue={countries[0]}>
         <ComboboxTrigger
-          render={
-            <Button
-              variant="outline"
-              className="w-64 justify-between font-normal"
-            />
-          }
+          render={<Button variant="outline" className="w-64 justify-between font-normal" />}
         >
           <ComboboxValue />
         </ComboboxTrigger>
@@ -81,7 +76,7 @@ export default function ComboboxPopup() {
           <ComboboxInput showTrigger={false} placeholder="Search" />
           <ComboboxEmpty>No items found.</ComboboxEmpty>
           <ComboboxList>
-            {(item) => (
+            {item => (
               <ComboboxItem key={item.code} value={item}>
                 {item.label}
               </ComboboxItem>

@@ -28,11 +28,7 @@ export const ComponentPreview = ({ name }: ComponentPreviewProps) => {
       <TabsContent value="preview">
         <div className="flex w-full items-center justify-center rounded-lg border p-6">
           <Suspense
-            fallback={
-              <div className="text-sm text-fd-muted-foreground">
-                Loading preview...
-              </div>
-            }
+            fallback={<div className="text-sm text-fd-muted-foreground">Loading preview...</div>}
           >
             <Component />
           </Suspense>

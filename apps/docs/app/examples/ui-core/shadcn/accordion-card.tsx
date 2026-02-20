@@ -37,13 +37,12 @@ export default function AccordionCard() {
       <CardHeader>
         <CardTitle>Subscription & Billing</CardTitle>
         <CardDescription>
-          Common questions about your account, plans, payments and
-          cancellations.
+          Common questions about your account, plans, payments and cancellations.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <Accordion type="single" collapsible defaultValue="plans">
-          {items.map((item) => (
+          {items.map(item => (
             <AccordionItem key={item.value} value={item.value}>
               <AccordionTrigger>{item.trigger}</AccordionTrigger>
               <AccordionContent>{item.content}</AccordionContent>

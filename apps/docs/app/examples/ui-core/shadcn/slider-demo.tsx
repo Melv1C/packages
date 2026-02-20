@@ -1,12 +1,5 @@
 import { Slider } from '@melv1c/ui-core';
 
 export default function SliderDemo() {
-  return (
-    <Slider
-      defaultValue={[75]}
-      max={100}
-      step={1}
-      className="mx-auto w-full max-w-xs"
-    />
-  );
+  return <Slider defaultValue={[75]} max={100} step={1} className="mx-auto w-full max-w-xs" />;
 }

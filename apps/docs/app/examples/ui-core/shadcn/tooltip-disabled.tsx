@@ -1,9 +1,4 @@
-import {
-  Button,
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '@melv1c/ui-core';
+import { Button, Tooltip, TooltipContent, TooltipTrigger } from '@melv1c/ui-core';
 
 export default function TooltipDisabled() {
   return (

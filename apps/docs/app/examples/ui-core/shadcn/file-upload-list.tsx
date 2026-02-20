@@ -45,7 +45,7 @@ export default function FileUploadList() {
 
   return (
     <ItemGroup>
-      {files.map((file) => (
+      {files.map(file => (
         <Item key={file.id} size="sm" className="px-0">
           <ItemMedia variant="icon">
             <FileIcon className="size-5" />
@@ -57,9 +57,7 @@ export default function FileUploadList() {
             <Progress value={file.progress} className="w-32" />
           </ItemContent>
           <ItemActions className="w-16 justify-end">
-            <span className="text-muted-foreground text-sm">
-              {file.timeRemaining}
-            </span>
+            <span className="text-muted-foreground text-sm">{file.timeRemaining}</span>
           </ItemActions>
         </Item>
       ))}

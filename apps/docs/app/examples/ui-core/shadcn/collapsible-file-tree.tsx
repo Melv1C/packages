@@ -52,11 +52,7 @@ export default function CollapsibleFileTree() {
     },
     {
       name: 'public',
-      items: [
-        { name: 'favicon.ico' },
-        { name: 'logo.svg' },
-        { name: 'images' },
-      ],
+      items: [{ name: 'favicon.ico' }, { name: 'logo.svg' }, { name: 'images' }],
     },
     { name: 'app.tsx' },
     { name: 'layout.tsx' },
@@ -84,7 +80,7 @@ export default function CollapsibleFileTree() {
           </CollapsibleTrigger>
           <CollapsibleContent className="style-lyra:ml-4 mt-1 ml-5">
             <div className="flex flex-col gap-1">
-              {fileItem.items.map((child) => renderItem(child))}
+              {fileItem.items.map(child => renderItem(child))}
             </div>
           </CollapsibleContent>
         </Collapsible>
@@ -114,9 +110,7 @@ export default function CollapsibleFileTree() {
         </Tabs>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-col gap-1">
-          {fileTree.map((item) => renderItem(item))}
-        </div>
+        <div className="flex flex-col gap-1">{fileTree.map(item => renderItem(item))}</div>
       </CardContent>
     </Card>
   );

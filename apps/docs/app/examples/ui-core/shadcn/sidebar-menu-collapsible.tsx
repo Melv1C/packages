@@ -152,11 +152,7 @@ export default function AppSidebar() {
             <SidebarGroupContent>
               <SidebarMenu>
                 {items.map((item, index) => (
-                  <Collapsible
-                    key={index}
-                    className="group/collapsible"
-                    defaultOpen={index === 0}
-                  >
+                  <Collapsible key={index} className="group/collapsible" defaultOpen={index === 0}>
                     <SidebarMenuItem>
                       <CollapsibleTrigger asChild>
                         <SidebarMenuButton>

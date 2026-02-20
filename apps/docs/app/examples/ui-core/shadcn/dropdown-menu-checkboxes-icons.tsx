@@ -29,7 +29,7 @@ export default function DropdownMenuCheckboxesIcons() {
           <DropdownMenuLabel>Notification Preferences</DropdownMenuLabel>
           <DropdownMenuCheckboxItem
             checked={notifications.email}
-            onCheckedChange={(checked) =>
+            onCheckedChange={checked =>
               setNotifications({ ...notifications, email: checked === true })
             }
           >
@@ -38,7 +38,7 @@ export default function DropdownMenuCheckboxesIcons() {
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
             checked={notifications.sms}
-            onCheckedChange={(checked) =>
+            onCheckedChange={checked =>
               setNotifications({ ...notifications, sms: checked === true })
             }
           >
@@ -47,7 +47,7 @@ export default function DropdownMenuCheckboxesIcons() {
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
             checked={notifications.push}
-            onCheckedChange={(checked) =>
+            onCheckedChange={checked =>
               setNotifications({ ...notifications, push: checked === true })
             }
           >

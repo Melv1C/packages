@@ -1,11 +1,4 @@
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldSet,
-  Input,
-} from '@melv1c/ui-core';
+import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSet, Input } from '@melv1c/ui-core';
 
 export default function FieldInput() {
   return (
@@ -14,15 +7,11 @@ export default function FieldInput() {
         <Field>
           <FieldLabel htmlFor="username">Username</FieldLabel>
           <Input id="username" type="text" placeholder="Max Leiter" />
-          <FieldDescription>
-            Choose a unique username for your account.
-          </FieldDescription>
+          <FieldDescription>Choose a unique username for your account.</FieldDescription>
         </Field>
         <Field>
           <FieldLabel htmlFor="password">Password</FieldLabel>
-          <FieldDescription>
-            Must be at least 8 characters long.
-          </FieldDescription>
+          <FieldDescription>Must be at least 8 characters long.</FieldDescription>
           <Input id="password" type="password" placeholder="••••••••" />
         </Field>
       </FieldGroup>

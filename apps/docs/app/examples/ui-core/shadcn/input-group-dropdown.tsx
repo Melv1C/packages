@@ -19,11 +19,7 @@ export default function InputGroupDropdown() {
         <InputGroupAddon align="inline-end">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <InputGroupButton
-                variant="ghost"
-                aria-label="More"
-                size="icon-xs"
-              >
+              <InputGroupButton variant="ghost" aria-label="More" size="icon-xs">
                 <MoreHorizontal />
               </InputGroupButton>
             </DropdownMenuTrigger>

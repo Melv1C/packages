@@ -1,9 +1,4 @@
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSeparator,
-  InputOTPSlot,
-} from '@melv1c/ui-core';
+import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from '@melv1c/ui-core';
 import * as React from 'react';
 
 export default function InputOTPInvalid() {

@@ -67,7 +67,7 @@ export default function TableFooterExample() {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {invoices.slice(0, 3).map((invoice) => (
+        {invoices.slice(0, 3).map(invoice => (
           <TableRow key={invoice.invoice}>
             <TableCell className="font-medium">{invoice.invoice}</TableCell>
             <TableCell>{invoice.paymentStatus}</TableCell>

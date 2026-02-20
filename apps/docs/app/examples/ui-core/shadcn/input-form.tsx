@@ -18,19 +18,12 @@ export default function InputForm() {
       <FieldGroup>
         <Field>
           <FieldLabel htmlFor="form-name">Name</FieldLabel>
-          <Input
-            id="form-name"
-            type="text"
-            placeholder="Evil Rabbit"
-            required
-          />
+          <Input id="form-name" type="text" placeholder="Evil Rabbit" required />
         </Field>
         <Field>
           <FieldLabel htmlFor="form-email">Email</FieldLabel>
           <Input id="form-email" type="email" placeholder="john@example.com" />
-          <FieldDescription>
-            We&apos;ll never share your email with anyone.
-          </FieldDescription>
+          <FieldDescription>We&apos;ll never share your email with anyone.</FieldDescription>
         </Field>
         <div className="grid grid-cols-2 gap-4">
           <Field>

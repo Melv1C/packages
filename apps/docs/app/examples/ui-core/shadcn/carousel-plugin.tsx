@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 import {
   Card,
   CardContent,
@@ -7,13 +7,11 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@melv1c/ui-core"
-import Autoplay from "embla-carousel-autoplay"
+} from '@melv1c/ui-core';
+import Autoplay from 'embla-carousel-autoplay';
 
 export default function CarouselPlugin() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
+  const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   return (
     <Carousel
@@ -38,5 +36,5 @@ export default function CarouselPlugin() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }

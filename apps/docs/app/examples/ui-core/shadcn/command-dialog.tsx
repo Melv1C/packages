@@ -8,14 +8,7 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from '@melv1c/ui-core';
-import {
-  Calculator,
-  Calendar,
-  CreditCard,
-  Settings,
-  Smile,
-  User,
-} from 'lucide-react';
+import { Calculator, Calendar, CreditCard, Settings, Smile, User } from 'lucide-react';
 import * as React from 'react';
 
 export default function CommandDialogDemo() {
@@ -25,7 +18,7 @@ export default function CommandDialogDemo() {
     const down = (e: KeyboardEvent) => {
       if (e.key === 'j' && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
-        setOpen((open) => !open);
+        setOpen(open => !open);
       }
     };
 

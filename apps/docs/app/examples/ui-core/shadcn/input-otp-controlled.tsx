@@ -6,11 +6,7 @@ export default function InputOTPControlled() {
 
   return (
     <div className="space-y-2">
-      <InputOTP
-        maxLength={6}
-        value={value}
-        onChange={(value) => setValue(value)}
-      >
+      <InputOTP maxLength={6} value={value} onChange={value => setValue(value)}>
         <InputOTPGroup>
           <InputOTPSlot index={0} />
           <InputOTPSlot index={1} />
@@ -21,11 +17,7 @@ export default function InputOTPControlled() {
         </InputOTPGroup>
       </InputOTP>
       <div className="text-center text-sm">
-        {value === '' ? (
-          <>Enter your one-time password.</>
-        ) : (
-          <>You entered: {value}</>
-        )}
+        {value === '' ? <>Enter your one-time password.</> : <>You entered: {value}</>}
       </div>
     </div>
   );

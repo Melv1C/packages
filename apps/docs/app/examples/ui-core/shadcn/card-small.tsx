@@ -6,21 +6,19 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@melv1c/ui-core"
+} from '@melv1c/ui-core';
 
 export default function CardSmall() {
   return (
     <Card className="mx-auto w-full max-w-sm">
       <CardHeader>
         <CardTitle>Small Card</CardTitle>
-        <CardDescription>
-          This card uses the small size variant.
-        </CardDescription>
+        <CardDescription>This card uses the small size variant.</CardDescription>
       </CardHeader>
       <CardContent>
         <p>
-          The card component supports a size prop that can be set to
-          &quot;sm&quot; for a more compact appearance.
+          The card component supports a size prop that can be set to &quot;sm&quot; for a more
+          compact appearance.
         </p>
       </CardContent>
       <CardFooter>
@@ -29,5 +27,5 @@ export default function CardSmall() {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

@@ -31,10 +31,7 @@ export default function AppSidebar() {
                     <ChevronUpIcon className="ml-auto" />
                   </SidebarMenuButton>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent
-                  side="top"
-                  className="w-(--radix-popper-anchor-width)"
-                >
+                <DropdownMenuContent side="top" className="w-(--radix-popper-anchor-width)">
                   <DropdownMenuItem>
                     <span>Account</span>
                   </DropdownMenuItem>

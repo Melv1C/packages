@@ -1,9 +1,4 @@
-import {
-  Button,
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from '@melv1c/ui-core';
+import { Button, Collapsible, CollapsibleContent, CollapsibleTrigger } from '@melv1c/ui-core';
 import { ChevronsUpDown } from 'lucide-react';
 import * as React from 'react';
 
@@ -11,11 +6,7 @@ export default function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <Collapsible
-      open={isOpen}
-      onOpenChange={setIsOpen}
-      className="flex w-[350px] flex-col gap-2"
-    >
+    <Collapsible open={isOpen} onOpenChange={setIsOpen} className="flex w-[350px] flex-col gap-2">
       <div className="flex items-center justify-between gap-4 px-4">
         <h4 className="text-sm font-semibold">Order #4189</h4>
         <CollapsibleTrigger asChild>

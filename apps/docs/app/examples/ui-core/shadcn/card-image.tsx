@@ -7,7 +7,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@melv1c/ui-core"
+} from '@melv1c/ui-core';
 
 export default function CardImage() {
   return (
@@ -24,13 +24,12 @@ export default function CardImage() {
         </CardAction>
         <CardTitle>Design systems meetup</CardTitle>
         <CardDescription>
-          A practical talk on component APIs, accessibility, and shipping
-          faster.
+          A practical talk on component APIs, accessibility, and shipping faster.
         </CardDescription>
       </CardHeader>
       <CardFooter>
         <Button className="w-full">View Event</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

@@ -20,10 +20,7 @@ export default function CollapsibleBasic() {
             </Button>
           </CollapsibleTrigger>
           <CollapsibleContent className="flex flex-col items-start gap-2 p-2.5 pt-0 text-sm">
-            <div>
-              This panel can be expanded or collapsed to reveal additional
-              content.
-            </div>
+            <div>This panel can be expanded or collapsed to reveal additional content.</div>
             <Button size="xs">Learn More</Button>
           </CollapsibleContent>
         </Collapsible>

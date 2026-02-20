@@ -24,7 +24,7 @@ export default function ScrollAreaHorizontalDemo() {
   return (
     <ScrollArea className="w-96 rounded-md border whitespace-nowrap">
       <div className="flex w-max space-x-4 p-4">
-        {works.map((artwork) => (
+        {works.map(artwork => (
           <figure key={artwork.artist} className="shrink-0">
             <div className="overflow-hidden rounded-md">
               <img
@@ -36,10 +36,7 @@ export default function ScrollAreaHorizontalDemo() {
               />
             </div>
             <figcaption className="text-muted-foreground pt-2 text-xs">
-              Photo by{' '}
-              <span className="text-foreground font-semibold">
-                {artwork.artist}
-              </span>
+              Photo by <span className="text-foreground font-semibold">{artwork.artist}</span>
             </figcaption>
           </figure>
         ))}

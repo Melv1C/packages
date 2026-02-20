@@ -30,20 +30,14 @@ export default function InputGroupWithKbd() {
           </InputGroupAddon>
         </InputGroup>
         <InputGroup>
-          <InputGroupInput
-            id="input-search-apps-24"
-            placeholder="Search for Apps..."
-          />
+          <InputGroupInput id="input-search-apps-24" placeholder="Search for Apps..." />
           <InputGroupAddon align="inline-end">Ask AI</InputGroupAddon>
           <InputGroupAddon align="inline-end">
             <Kbd>Tab</Kbd>
           </InputGroupAddon>
         </InputGroup>
         <InputGroup>
-          <InputGroupInput
-            id="input-search-type-25"
-            placeholder="Type to search..."
-          />
+          <InputGroupInput id="input-search-type-25" placeholder="Type to search..." />
           <InputGroupAddon align="inline-start">
             <SparklesIcon />
           </InputGroupAddon>
@@ -65,15 +59,10 @@ export default function InputGroupWithKbd() {
             </div>
           </InputGroupAddon>
         </InputGroup>
-        <FieldDescription className="text-green-700">
-          This username is available.
-        </FieldDescription>
+        <FieldDescription className="text-green-700">This username is available.</FieldDescription>
       </Field>
       <InputGroup>
-        <InputGroupInput
-          id="input-search-docs-27"
-          placeholder="Search documentation..."
-        />
+        <InputGroupInput id="input-search-docs-27" placeholder="Search documentation..." />
         <InputGroupAddon>
           <SearchIcon />
         </InputGroupAddon>
@@ -120,9 +109,7 @@ export default function InputGroupWithKbd() {
             <Spinner />
           </InputGroupAddon>
         </InputGroup>
-        <FieldDescription>
-          This is a description of the input group.
-        </FieldDescription>
+        <FieldDescription>This is a description of the input group.</FieldDescription>
       </Field>
     </FieldGroup>
   );

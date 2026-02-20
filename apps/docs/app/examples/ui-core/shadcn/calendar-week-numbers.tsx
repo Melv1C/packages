@@ -1,10 +1,10 @@
-import * as React from "react"
+import * as React from 'react';
 import { Calendar, Card, CardContent } from '@melv1c/ui-core';
 
 export default function CalendarWeekNumbers() {
   const [date, setDate] = React.useState<Date | undefined>(
-    new Date(new Date().getFullYear(), 1, 3)
-  )
+    new Date(new Date().getFullYear(), 1, 3),
+  );
 
   return (
     <Card className="mx-auto w-fit p-0">
@@ -18,5 +18,5 @@ export default function CalendarWeekNumbers() {
         />
       </CardContent>
     </Card>
-  )
+  );
 }

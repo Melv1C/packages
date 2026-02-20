@@ -1,16 +1,5 @@
-import {
-  InputGroup,
-  InputGroupInput,
-  InputGroupAddon,
-} from '@melv1c/ui-core';
-import {
-  CheckIcon,
-  CreditCardIcon,
-  InfoIcon,
-  MailIcon,
-  SearchIcon,
-  StarIcon,
-} from 'lucide-react';
+import { InputGroup, InputGroupInput, InputGroupAddon } from '@melv1c/ui-core';
+import { CheckIcon, CreditCardIcon, InfoIcon, MailIcon, SearchIcon, StarIcon } from 'lucide-react';
 
 export default function InputGroupIcon() {
   return (

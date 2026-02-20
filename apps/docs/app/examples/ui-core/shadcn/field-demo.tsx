@@ -25,38 +25,24 @@ export default function FieldDemo() {
         <FieldGroup>
           <FieldSet>
             <FieldLegend>Payment Method</FieldLegend>
-            <FieldDescription>
-              All transactions are secure and encrypted
-            </FieldDescription>
+            <FieldDescription>All transactions are secure and encrypted</FieldDescription>
             <FieldGroup>
               <Field>
-                <FieldLabel htmlFor="checkout-7j9-card-name-43j">
-                  Name on Card
-                </FieldLabel>
-                <Input
-                  id="checkout-7j9-card-name-43j"
-                  placeholder="Evil Rabbit"
-                  required
-                />
+                <FieldLabel htmlFor="checkout-7j9-card-name-43j">Name on Card</FieldLabel>
+                <Input id="checkout-7j9-card-name-43j" placeholder="Evil Rabbit" required />
               </Field>
               <Field>
-                <FieldLabel htmlFor="checkout-7j9-card-number-uw1">
-                  Card Number
-                </FieldLabel>
+                <FieldLabel htmlFor="checkout-7j9-card-number-uw1">Card Number</FieldLabel>
                 <Input
                   id="checkout-7j9-card-number-uw1"
                   placeholder="1234 5678 9012 3456"
                   required
                 />
-                <FieldDescription>
-                  Enter your 16-digit card number
-                </FieldDescription>
+                <FieldDescription>Enter your 16-digit card number</FieldDescription>
               </Field>
               <div className="grid grid-cols-3 gap-4">
                 <Field>
-                  <FieldLabel htmlFor="checkout-exp-month-ts6">
-                    Month
-                  </FieldLabel>
+                  <FieldLabel htmlFor="checkout-exp-month-ts6">Month</FieldLabel>
                   <Select defaultValue="">
                     <SelectTrigger id="checkout-exp-month-ts6">
                       <SelectValue placeholder="MM" />
@@ -80,9 +66,7 @@ export default function FieldDemo() {
                   </Select>
                 </Field>
                 <Field>
-                  <FieldLabel htmlFor="checkout-7j9-exp-year-f59">
-                    Year
-                  </FieldLabel>
+                  <FieldLabel htmlFor="checkout-7j9-exp-year-f59">Year</FieldLabel>
                   <Select defaultValue="">
                     <SelectTrigger id="checkout-7j9-exp-year-f59">
                       <SelectValue placeholder="YYYY" />
@@ -114,14 +98,8 @@ export default function FieldDemo() {
             </FieldDescription>
             <FieldGroup>
               <Field orientation="horizontal">
-                <Checkbox
-                  id="checkout-7j9-same-as-shipping-wgm"
-                  defaultChecked
-                />
-                <FieldLabel
-                  htmlFor="checkout-7j9-same-as-shipping-wgm"
-                  className="font-normal"
-                >
+                <Checkbox id="checkout-7j9-same-as-shipping-wgm" defaultChecked />
+                <FieldLabel htmlFor="checkout-7j9-same-as-shipping-wgm" className="font-normal">
                   Same as shipping address
                 </FieldLabel>
               </Field>
@@ -130,9 +108,7 @@ export default function FieldDemo() {
           <FieldSet>
             <FieldGroup>
               <Field>
-                <FieldLabel htmlFor="checkout-7j9-optional-comments">
-                  Comments
-                </FieldLabel>
+                <FieldLabel htmlFor="checkout-7j9-optional-comments">Comments</FieldLabel>
                 <Textarea
                   id="checkout-7j9-optional-comments"
                   placeholder="Add any additional comments"

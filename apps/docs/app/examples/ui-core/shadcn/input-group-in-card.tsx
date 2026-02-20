@@ -29,11 +29,7 @@ export default function InputGroupInCard() {
           <Field>
             <FieldLabel htmlFor="email-input">Email Address</FieldLabel>
             <InputGroup>
-              <InputGroupInput
-                id="email-input"
-                type="email"
-                placeholder="you@example.com"
-              />
+              <InputGroupInput id="email-input" type="email" placeholder="you@example.com" />
               <InputGroupAddon align="inline-end">
                 <MailIcon />
               </InputGroupAddon>
@@ -52,9 +48,7 @@ export default function InputGroupInCard() {
             </InputGroup>
           </Field>
           <Field>
-            <FieldLabel htmlFor="feedback-textarea">
-              Feedback & Comments
-            </FieldLabel>
+            <FieldLabel htmlFor="feedback-textarea">Feedback & Comments</FieldLabel>
             <InputGroup>
               <InputGroupTextarea
                 id="feedback-textarea"

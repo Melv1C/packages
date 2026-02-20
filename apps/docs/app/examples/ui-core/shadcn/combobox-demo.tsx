@@ -5,15 +5,9 @@ import {
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "@melv1c/ui-core"
+} from '@melv1c/ui-core';
 
-const frameworks = [
-  "Next.js",
-  "SvelteKit",
-  "Nuxt.js",
-  "Remix",
-  "Astro",
-] as const
+const frameworks = ['Next.js', 'SvelteKit', 'Nuxt.js', 'Remix', 'Astro'] as const;
 
 export default function ComboboxBasic() {
   return (
@@ -22,7 +16,7 @@ export default function ComboboxBasic() {
       <ComboboxContent>
         <ComboboxEmpty>No items found.</ComboboxEmpty>
         <ComboboxList>
-          {(item) => (
+          {item => (
             <ComboboxItem key={item} value={item}>
               {item}
             </ComboboxItem>
@@ -30,5 +24,5 @@ export default function ComboboxBasic() {
         </ComboboxList>
       </ComboboxContent>
     </Combobox>
-  )
+  );
 }

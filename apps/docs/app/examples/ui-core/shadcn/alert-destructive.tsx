@@ -1,5 +1,5 @@
-import { Alert, AlertDescription, AlertTitle } from '@melv1c/ui-core'
-import { AlertCircleIcon } from "lucide-react"
+import { Alert, AlertDescription, AlertTitle } from '@melv1c/ui-core';
+import { AlertCircleIcon } from 'lucide-react';
 
 export default function AlertDestructive() {
   return (
@@ -7,9 +7,8 @@ export default function AlertDestructive() {
       <AlertCircleIcon />
       <AlertTitle>Payment failed</AlertTitle>
       <AlertDescription>
-        Your payment could not be processed. Please check your payment method
-        and try again.
+        Your payment could not be processed. Please check your payment method and try again.
       </AlertDescription>
     </Alert>
-  )
+  );
 }

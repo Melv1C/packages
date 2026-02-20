@@ -18,10 +18,7 @@ export default function InputGroupBlockStart() {
       <Field>
         <FieldLabel htmlFor="block-start-input">Input</FieldLabel>
         <InputGroup className="h-auto">
-          <InputGroupInput
-            id="block-start-input"
-            placeholder="Enter your name"
-          />
+          <InputGroupInput id="block-start-input" placeholder="Enter your name" />
           <InputGroupAddon align="block-start">
             <InputGroupText>Full Name</InputGroupText>
           </InputGroupAddon>
@@ -45,9 +42,7 @@ export default function InputGroupBlockStart() {
             </InputGroupButton>
           </InputGroupAddon>
         </InputGroup>
-        <FieldDescription>
-          Header positioned above the textarea.
-        </FieldDescription>
+        <FieldDescription>Header positioned above the textarea.</FieldDescription>
       </Field>
     </FieldGroup>
   );

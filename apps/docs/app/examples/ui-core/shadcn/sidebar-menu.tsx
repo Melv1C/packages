@@ -8,14 +8,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from '@melv1c/ui-core';
-import {
-  FrameIcon,
-  LifeBuoyIcon,
-  MapIcon,
-  PieChartIcon,
-  SendIcon,
-  Sidebar,
-} from 'lucide-react';
+import { FrameIcon, LifeBuoyIcon, MapIcon, PieChartIcon, SendIcon, Sidebar } from 'lucide-react';
 
 const projects = [
   {
@@ -54,7 +47,7 @@ export default function AppSidebar() {
             <SidebarGroupLabel>Projects</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
-                {projects.map((project) => (
+                {projects.map(project => (
                   <SidebarMenuItem key={project.name}>
                     <SidebarMenuButton asChild>
                       <a href={project.url}>

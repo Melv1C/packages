@@ -1,12 +1,4 @@
 {
   "title": "@melv1c/ui-core",
-  "pages": [
-    "index",
-    "installation",
-    "quick-start",
-    "theming",
-    "i18n",
-    "providers",
-    "components"
-  ]
+  "pages": ["index", "installation", "quick-start", "theming", "i18n", "providers", "components"]
 }

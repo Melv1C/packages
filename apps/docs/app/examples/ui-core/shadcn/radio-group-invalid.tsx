@@ -12,9 +12,7 @@ export default function RadioGroupInvalid() {
   return (
     <FieldSet className="w-full max-w-xs">
       <FieldLegend variant="label">Notification Preferences</FieldLegend>
-      <FieldDescription>
-        Choose how you want to receive notifications.
-      </FieldDescription>
+      <FieldDescription>Choose how you want to receive notifications.</FieldDescription>
       <RadioGroup defaultValue="email">
         <Field orientation="horizontal" data-invalid>
           <RadioGroupItem value="email" id="invalid-email" aria-invalid />

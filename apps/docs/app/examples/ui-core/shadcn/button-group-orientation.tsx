@@ -3,11 +3,7 @@ import { MinusIcon, PlusIcon } from 'lucide-react';
 
 export default function ButtonGroupOrientation() {
   return (
-    <ButtonGroup
-      orientation="vertical"
-      aria-label="Media controls"
-      className="h-fit"
-    >
+    <ButtonGroup orientation="vertical" aria-label="Media controls" className="h-fit">
       <Button variant="outline" size="icon">
         <PlusIcon />
       </Button>

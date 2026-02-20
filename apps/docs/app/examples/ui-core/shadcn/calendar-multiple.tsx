@@ -7,5 +7,5 @@ export default function CalendarMultiple() {
         <Calendar mode="multiple" />
       </CardContent>
     </Card>
-  )
+  );
 }

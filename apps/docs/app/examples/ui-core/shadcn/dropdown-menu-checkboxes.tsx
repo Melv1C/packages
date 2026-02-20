@@ -37,10 +37,7 @@ export default function DropdownMenuCheckboxes() {
           >
             Activity Bar
           </DropdownMenuCheckboxItem>
-          <DropdownMenuCheckboxItem
-            checked={showPanel}
-            onCheckedChange={setShowPanel}
-          >
+          <DropdownMenuCheckboxItem checked={showPanel} onCheckedChange={setShowPanel}>
             Panel
           </DropdownMenuCheckboxItem>
         </DropdownMenuGroup>

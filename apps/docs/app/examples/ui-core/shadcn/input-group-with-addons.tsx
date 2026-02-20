@@ -24,9 +24,7 @@ export default function InputGroupWithAddons() {
   return (
     <FieldGroup>
       <Field>
-        <FieldLabel htmlFor="input-icon-left-05">
-          Addon (inline-start)
-        </FieldLabel>
+        <FieldLabel htmlFor="input-icon-left-05">Addon (inline-start)</FieldLabel>
         <InputGroup>
           <InputGroupInput id="input-icon-left-05" />
           <InputGroupAddon>
@@ -35,9 +33,7 @@ export default function InputGroupWithAddons() {
         </InputGroup>
       </Field>
       <Field>
-        <FieldLabel htmlFor="input-icon-right-07">
-          Addon (inline-end)
-        </FieldLabel>
+        <FieldLabel htmlFor="input-icon-right-07">Addon (inline-end)</FieldLabel>
         <InputGroup>
           <InputGroupInput id="input-icon-right-07" />
           <InputGroupAddon align="inline-end">
@@ -46,9 +42,7 @@ export default function InputGroupWithAddons() {
         </InputGroup>
       </Field>
       <Field>
-        <FieldLabel htmlFor="input-icon-both-09">
-          Addon (inline-start and inline-end)
-        </FieldLabel>
+        <FieldLabel htmlFor="input-icon-both-09">Addon (inline-start and inline-end)</FieldLabel>
         <InputGroup>
           <InputGroupInput id="input-icon-both-09" />
           <InputGroupAddon>
@@ -85,10 +79,7 @@ export default function InputGroupWithAddons() {
           <InputGroupInput id="input-icon-both-10" />
           <InputGroupAddon align="inline-end">
             <StarIcon />
-            <InputGroupButton
-              size="icon-xs"
-              onClick={() => toast('Copied to clipboard')}
-            >
+            <InputGroupButton size="icon-xs" onClick={() => toast('Copied to clipboard')}>
               <CopyIcon />
             </InputGroupButton>
           </InputGroupAddon>
@@ -105,9 +96,7 @@ export default function InputGroupWithAddons() {
             <InfoIcon />
           </InputGroupAddon>
         </InputGroup>
-        <FieldDescription>
-          This is a description of the input group.
-        </FieldDescription>
+        <FieldDescription>This is a description of the input group.</FieldDescription>
       </Field>
       <Field>
         <FieldLabel htmlFor="input-label-10">Label</FieldLabel>

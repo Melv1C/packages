@@ -1,10 +1,4 @@
-import {
-  Button,
-  Calendar,
-  Card,
-  CardContent,
-  CardFooter,
-} from '@melv1c/ui-core';
+import { Button, Calendar, Card, CardContent, CardFooter } from '@melv1c/ui-core';
 import { addDays } from 'date-fns';
 import * as React from 'react';
 
@@ -36,7 +30,7 @@ export default function CalendarWithPresets() {
           { label: 'In 3 days', value: 3 },
           { label: 'In a week', value: 7 },
           { label: 'In 2 weeks', value: 14 },
-        ].map((preset) => (
+        ].map(preset => (
           <Button
             key={preset.value}
             variant="outline"
@@ -45,9 +39,7 @@ export default function CalendarWithPresets() {
             onClick={() => {
               const newDate = addDays(new Date(), preset.value);
               setDate(newDate);
-              setCurrentMonth(
-                new Date(newDate.getFullYear(), newDate.getMonth(), 1),
-              );
+              setCurrentMonth(new Date(newDate.getFullYear(), newDate.getMonth(), 1));
             }}
           >
             {preset.label}

@@ -61,7 +61,7 @@ export default function AppSidebar() {
             <SidebarGroupLabel>Projects</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
-                {projects.map((project) => (
+                {projects.map(project => (
                   <SidebarMenuItem key={project.name}>
                     <SidebarMenuButton asChild>
                       <a href={project.url}>
@@ -78,11 +78,7 @@ export default function AppSidebar() {
       </Sidebar>
       <SidebarInset>
         <header className="flex h-12 items-center justify-between px-4">
-          <Button
-            onClick={() => setOpen((open) => !open)}
-            size="sm"
-            variant="ghost"
-          >
+          <Button onClick={() => setOpen(open => !open)} size="sm" variant="ghost">
             {open ? <PanelLeftCloseIcon /> : <PanelLeftOpenIcon />}
             <span>{open ? 'Close' : 'Open'} Sidebar</span>
           </Button>

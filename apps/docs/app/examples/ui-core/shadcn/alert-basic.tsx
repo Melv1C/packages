@@ -7,8 +7,7 @@ export default function AlertBasic() {
       <CheckCircle2Icon />
       <AlertTitle>Account updated successfully</AlertTitle>
       <AlertDescription>
-        Your profile information has been saved. Changes will be reflected
-        immediately.
+        Your profile information has been saved. Changes will be reflected immediately.
       </AlertDescription>
     </Alert>
   );

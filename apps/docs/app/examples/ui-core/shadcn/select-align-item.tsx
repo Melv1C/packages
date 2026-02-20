@@ -22,9 +22,7 @@ export default function SelectAlignItem() {
       <Field orientation="horizontal">
         <FieldContent>
           <FieldLabel htmlFor="align-item">Align Item</FieldLabel>
-          <FieldDescription>
-            Toggle to align the item with the trigger.
-          </FieldDescription>
+          <FieldDescription>Toggle to align the item with the trigger.</FieldDescription>
         </FieldContent>
         <Switch
           id="align-item"
@@ -37,9 +35,7 @@ export default function SelectAlignItem() {
           <SelectTrigger>
             <SelectValue />
           </SelectTrigger>
-          <SelectContent
-            position={alignItemWithTrigger ? 'item-aligned' : 'popper'}
-          >
+          <SelectContent position={alignItemWithTrigger ? 'item-aligned' : 'popper'}>
             <SelectGroup>
               <SelectItem value="apple">Apple</SelectItem>
               <SelectItem value="banana">Banana</SelectItem>

@@ -1,9 +1,4 @@
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-} from '@melv1c/ui-core';
+import { Pagination, PaginationContent, PaginationItem, PaginationLink } from '@melv1c/ui-core';
 
 export default function PaginationSimple() {
   return (

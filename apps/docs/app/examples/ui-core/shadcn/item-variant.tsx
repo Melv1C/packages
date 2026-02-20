@@ -1,10 +1,4 @@
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-  ItemMedia,
-  ItemTitle,
-} from '@melv1c/ui-core';
+import { Item, ItemContent, ItemDescription, ItemMedia, ItemTitle } from '@melv1c/ui-core';
 import { InboxIcon } from 'lucide-react';
 
 export default function ItemVariant() {
@@ -16,9 +10,7 @@ export default function ItemVariant() {
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Default Variant</ItemTitle>
-          <ItemDescription>
-            Transparent background with no border.
-          </ItemDescription>
+          <ItemDescription>Transparent background with no border.</ItemDescription>
         </ItemContent>
       </Item>
       <Item variant="outline">
@@ -27,9 +19,7 @@ export default function ItemVariant() {
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Outline Variant</ItemTitle>
-          <ItemDescription>
-            Outlined style with a visible border.
-          </ItemDescription>
+          <ItemDescription>Outlined style with a visible border.</ItemDescription>
         </ItemContent>
       </Item>
       <Item variant="muted">
@@ -38,9 +28,7 @@ export default function ItemVariant() {
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Muted Variant</ItemTitle>
-          <ItemDescription>
-            Muted background for secondary content.
-          </ItemDescription>
+          <ItemDescription>Muted background for secondary content.</ItemDescription>
         </ItemContent>
       </Item>
     </div>

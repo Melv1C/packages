@@ -1,9 +1,4 @@
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSlot,
-  InputOTPSeparator,
-} from '@melv1c/ui-core';
+import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from '@melv1c/ui-core';
 
 export default function InputOTPWithSeparator() {
   return (

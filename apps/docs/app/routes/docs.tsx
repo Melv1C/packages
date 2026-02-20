@@ -5,17 +5,12 @@ import { source } from '@/lib/source';
 import { useFumadocsLoader } from 'fumadocs-core/source/client';
 import browserCollections from 'fumadocs-mdx:collections/browser';
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
-import {
-  DocsBody,
-  DocsDescription,
-  DocsPage,
-  DocsTitle,
-} from 'fumadocs-ui/layouts/docs/page';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import type { Route } from './+types/docs';
 
 export async function loader({ params }: Route.LoaderArgs) {
-  const slugs = params['*'].split('/').filter((v) => v.length > 0);
+  const slugs = params['*'].split('/').filter(v => v.length > 0);
   const page = source.getPage(slugs);
   if (!page) throw new Response('Not found', { status: 404 });
 

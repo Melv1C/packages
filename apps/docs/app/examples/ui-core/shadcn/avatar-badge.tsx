@@ -1,9 +1,4 @@
-import {
-  Avatar,
-  AvatarBadge,
-  AvatarFallback,
-  AvatarImage,
-} from '@melv1c/ui-core';
+import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from '@melv1c/ui-core';
 
 export default function AvatarWithBadge() {
   return (

@@ -29,9 +29,7 @@ export default function InputOTPForm() {
       <CardContent>
         <Field>
           <div className="flex items-center justify-between">
-            <FieldLabel htmlFor="otp-verification">
-              Verification code
-            </FieldLabel>
+            <FieldLabel htmlFor="otp-verification">Verification code</FieldLabel>
             <Button variant="outline" size="xs">
               <RefreshCwIcon />
               Resend Code

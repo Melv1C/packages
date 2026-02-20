@@ -1,16 +1,11 @@
-import {
-  Button,
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from '@melv1c/ui-core';
+import { Button, HoverCard, HoverCardContent, HoverCardTrigger } from '@melv1c/ui-core';
 
 const HOVER_CARD_SIDES = ['left', 'top', 'bottom', 'right'] as const;
 
 export default function HoverCardSides() {
   return (
     <div className="flex flex-wrap justify-center gap-2">
-      {HOVER_CARD_SIDES.map((side) => (
+      {HOVER_CARD_SIDES.map(side => (
         <HoverCard key={side} openDelay={100} closeDelay={100}>
           <HoverCardTrigger asChild>
             <Button variant="outline" className="capitalize">

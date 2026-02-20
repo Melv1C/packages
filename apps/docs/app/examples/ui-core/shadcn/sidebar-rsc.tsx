@@ -10,13 +10,7 @@ import {
   SidebarMenuSkeleton,
   SidebarProvider,
 } from '@melv1c/ui-core';
-import {
-  FrameIcon,
-  LifeBuoyIcon,
-  MapIcon,
-  PieChartIcon,
-  SendIcon,
-} from 'lucide-react';
+import { FrameIcon, LifeBuoyIcon, MapIcon, PieChartIcon, SendIcon } from 'lucide-react';
 import * as React from 'react';
 
 const projects = [
@@ -54,7 +48,7 @@ const projects = [
 
 // Dummy fetch function.
 async function fetchProjects() {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  await new Promise(resolve => setTimeout(resolve, 3000));
   return projects;
 }
 
@@ -94,7 +88,7 @@ async function NavProjects() {
 
   return (
     <SidebarMenu>
-      {projects.map((project) => (
+      {projects.map(project => (
         <SidebarMenuItem key={project.name}>
           <SidebarMenuButton asChild>
             <a href={project.url}>

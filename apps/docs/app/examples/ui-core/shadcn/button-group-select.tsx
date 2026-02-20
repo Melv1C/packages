@@ -36,12 +36,9 @@ export default function ButtonGroupSelect() {
           <SelectTrigger className="font-mono">{currency}</SelectTrigger>
           <SelectContent className="min-w-24">
             <SelectGroup>
-              {CURRENCIES.map((currency) => (
+              {CURRENCIES.map(currency => (
                 <SelectItem key={currency.value} value={currency.value}>
-                  {currency.value}{' '}
-                  <span className="text-muted-foreground">
-                    {currency.label}
-                  </span>
+                  {currency.value} <span className="text-muted-foreground">{currency.label}</span>
                 </SelectItem>
               ))}
             </SelectGroup>

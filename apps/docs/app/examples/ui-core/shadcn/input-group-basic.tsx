@@ -1,19 +1,10 @@
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-  Input,
-  InputGroup,
-  InputGroupInput,
-} from '@melv1c/ui-core';
+import { Field, FieldGroup, FieldLabel, Input, InputGroup, InputGroupInput } from '@melv1c/ui-core';
 
 export default function InputGroupBasic() {
   return (
     <FieldGroup>
       <Field>
-        <FieldLabel htmlFor="input-default-01">
-          Default (No Input Group)
-        </FieldLabel>
+        <FieldLabel htmlFor="input-default-01">Default (No Input Group)</FieldLabel>
         <Input placeholder="Placeholder" id="input-default-01" />
       </Field>
       <Field>
@@ -25,11 +16,7 @@ export default function InputGroupBasic() {
       <Field data-disabled="true">
         <FieldLabel htmlFor="input-disabled-03">Disabled</FieldLabel>
         <InputGroup>
-          <InputGroupInput
-            id="input-disabled-03"
-            placeholder="This field is disabled"
-            disabled
-          />
+          <InputGroupInput id="input-disabled-03" placeholder="This field is disabled" disabled />
         </InputGroup>
       </Field>
       <Field data-invalid="true">

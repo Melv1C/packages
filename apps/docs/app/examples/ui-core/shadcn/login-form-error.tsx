@@ -7,7 +7,7 @@ export default function LoginFormError() {
     <UIKitProvider>
       <LoginForm
         onSubmit={async () => {
-          await new Promise((resolve) => setTimeout(resolve, 800));
+          await new Promise(resolve => setTimeout(resolve, 800));
           throw new Error('Invalid email or password. Please try again.');
         }}
         onForgotPassword={() => console.log('Forgot password')}

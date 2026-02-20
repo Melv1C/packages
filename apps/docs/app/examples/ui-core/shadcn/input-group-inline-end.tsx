@@ -13,11 +13,7 @@ export default function InputGroupInlineEnd() {
     <Field className="max-w-sm">
       <FieldLabel htmlFor="inline-end-input">Input</FieldLabel>
       <InputGroup>
-        <InputGroupInput
-          id="inline-end-input"
-          type="password"
-          placeholder="Enter password"
-        />
+        <InputGroupInput id="inline-end-input" type="password" placeholder="Enter password" />
         <InputGroupAddon align="inline-end">
           <EyeOffIcon />
         </InputGroupAddon>

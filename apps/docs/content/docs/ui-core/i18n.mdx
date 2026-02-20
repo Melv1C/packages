@@ -66,9 +66,7 @@ import { UIKitProvider } from '@melv1c/ui-core';
 import i18n from './i18n'; // your existing i18next instance
 
 export function App({ children }: { children: React.ReactNode }) {
-  return (
-    <UIKitProvider i18nConfig={{ instance: i18n }}>{children}</UIKitProvider>
-  );
+  return <UIKitProvider i18nConfig={{ instance: i18n }}>{children}</UIKitProvider>;
 }
 ```
 
@@ -103,10 +101,7 @@ export function App({ children }: { children: React.ReactNode }) {
 
   return (
     <UIKitProvider i18nConfig={locale}>
-      <select
-        value={locale}
-        onChange={(e) => setLocale(e.target.value as SupportedLanguage)}
-      >
+      <select value={locale} onChange={e => setLocale(e.target.value as SupportedLanguage)}>
         <option value="en">English</option>
         <option value="fr">Français</option>
         <option value="nl">Nederlands</option>

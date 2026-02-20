@@ -8,14 +8,7 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from '@melv1c/ui-core';
-import {
-  Calculator,
-  Calendar,
-  CreditCard,
-  Settings,
-  Smile,
-  User,
-} from 'lucide-react';
+import { Calculator, Calendar, CreditCard, Settings, Smile, User } from 'lucide-react';
 
 export default function CommandDemo() {
   return (

@@ -1,9 +1,4 @@
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from '@melv1c/ui-core';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@melv1c/ui-core';
 
 const items = [
   {
@@ -34,7 +29,7 @@ export default function AccordionBorders() {
       className="w-full rounded-lg border"
       defaultValue="billing"
     >
-      {items.map((item) => (
+      {items.map(item => (
         <AccordionItem
           key={item.value}
           value={item.value}

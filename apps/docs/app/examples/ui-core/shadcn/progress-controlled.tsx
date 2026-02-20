@@ -7,13 +7,7 @@ export default function ProgressControlled() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-4">
       <Progress value={value[0]} />
-      <Slider
-        value={value}
-        onValueChange={setValue}
-        min={0}
-        max={100}
-        step={1}
-      />
+      <Slider value={value} onValueChange={setValue} min={0} max={100} step={1} />
     </div>
   );
 }

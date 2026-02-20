@@ -59,9 +59,7 @@ export function App({ children }: { children: React.ReactNode }) {
 ### Bring your own i18n instance
 
 ```tsx
-<UIKitProvider i18nConfig={{ instance: myI18nInstance }}>
-  {children}
-</UIKitProvider>
+<UIKitProvider i18nConfig={{ instance: myI18nInstance }}>{children}</UIKitProvider>
 ```
 
 ## Toaster Configuration
@@ -81,10 +79,7 @@ function MyComponent() {
 If your i18n configuration requires async loading (e.g., fetching translations from a server), you can provide a loading component:
 
 ```tsx
-<UIKitProvider
-  i18nConfig="fr"
-  loadingComponent={<div>Loading translations...</div>}
->
+<UIKitProvider i18nConfig="fr" loadingComponent={<div>Loading translations...</div>}>
   {children}
 </UIKitProvider>
 ```

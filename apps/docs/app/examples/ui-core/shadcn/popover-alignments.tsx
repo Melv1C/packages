@@ -1,9 +1,4 @@
-import {
-  Button,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@melv1c/ui-core';
+import { Button, Popover, PopoverContent, PopoverTrigger } from '@melv1c/ui-core';
 
 export default function PopoverAlignments() {
   return (

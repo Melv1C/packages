@@ -37,15 +37,13 @@ const tableData = [
 ];
 
 export default function CheckboxInTable() {
-  const [selectedRows, setSelectedRows] = React.useState<Set<string>>(
-    new Set(['1']),
-  );
+  const [selectedRows, setSelectedRows] = React.useState<Set<string>>(new Set(['1']));
 
   const selectAll = selectedRows.size === tableData.length;
 
   const handleSelectAll = (checked: boolean) => {
     if (checked) {
-      setSelectedRows(new Set(tableData.map((row) => row.id)));
+      setSelectedRows(new Set(tableData.map(row => row.id)));
     } else {
       setSelectedRows(new Set());
     }
@@ -79,19 +77,14 @@ export default function CheckboxInTable() {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {tableData.map((row) => (
-          <TableRow
-            key={row.id}
-            data-state={selectedRows.has(row.id) ? 'selected' : undefined}
-          >
+        {tableData.map(row => (
+          <TableRow key={row.id} data-state={selectedRows.has(row.id) ? 'selected' : undefined}>
             <TableCell>
               <Checkbox
                 id={`row-${row.id}-checkbox`}
                 name={`row-${row.id}-checkbox`}
                 checked={selectedRows.has(row.id)}
-                onCheckedChange={(checked) =>
-                  handleSelectRow(row.id, checked === true)
-                }
+                onCheckedChange={checked => handleSelectRow(row.id, checked === true)}
               />
             </TableCell>
             <TableCell className="font-medium">{row.name}</TableCell>

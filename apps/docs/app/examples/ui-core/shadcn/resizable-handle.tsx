@@ -1,8 +1,4 @@
-import {
-  ResizablePanelGroup,
-  ResizablePanel,
-  ResizableHandle,
-} from '@melv1c/ui-core';
+import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from '@melv1c/ui-core';
 
 export default function ResizableHandleDemo() {
   return (

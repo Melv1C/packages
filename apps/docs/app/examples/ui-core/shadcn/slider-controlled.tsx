@@ -8,9 +8,7 @@ export default function SliderControlled() {
     <div className="mx-auto grid w-full max-w-xs gap-3">
       <div className="flex items-center justify-between gap-2">
         <Label htmlFor="slider-demo-temperature">Temperature</Label>
-        <span className="text-muted-foreground text-sm">
-          {value.join(', ')}
-        </span>
+        <span className="text-muted-foreground text-sm">{value.join(', ')}</span>
       </div>
       <Slider
         id="slider-demo-temperature"

@@ -1,5 +1,5 @@
-import { Alert, AlertDescription, AlertTitle } from '@melv1c/ui-core'
-import { AlertTriangleIcon } from "lucide-react"
+import { Alert, AlertDescription, AlertTitle } from '@melv1c/ui-core';
+import { AlertTriangleIcon } from 'lucide-react';
 
 export default function AlertColors() {
   return (
@@ -7,9 +7,9 @@ export default function AlertColors() {
       <AlertTriangleIcon />
       <AlertTitle>Your subscription will expire in 3 days.</AlertTitle>
       <AlertDescription>
-        Renew now to avoid service interruption or upgrade to a paid plan to
-        continue using the service.
+        Renew now to avoid service interruption or upgrade to a paid plan to continue using the
+        service.
       </AlertDescription>
     </Alert>
-  )
+  );
 }

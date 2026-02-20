@@ -9,13 +9,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from '@melv1c/ui-core';
-import {
-  FrameIcon,
-  MapIcon,
-  PieChartIcon,
-  PlusIcon,
-  Sidebar,
-} from 'lucide-react';
+import { FrameIcon, MapIcon, PieChartIcon, PlusIcon, Sidebar } from 'lucide-react';
 import { toast, Toaster } from 'sonner';
 
 export default function AppSidebar() {

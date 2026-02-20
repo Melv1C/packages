@@ -17,11 +17,7 @@ export default function InputGroupTooltip() {
         <InputGroupAddon align="inline-end">
           <Tooltip>
             <TooltipTrigger asChild>
-              <InputGroupButton
-                variant="ghost"
-                aria-label="Info"
-                size="icon-xs"
-              >
+              <InputGroupButton variant="ghost" aria-label="Info" size="icon-xs">
                 <InfoIcon />
               </InputGroupButton>
             </TooltipTrigger>
@@ -36,11 +32,7 @@ export default function InputGroupTooltip() {
         <InputGroupAddon align="inline-end">
           <Tooltip>
             <TooltipTrigger asChild>
-              <InputGroupButton
-                variant="ghost"
-                aria-label="Help"
-                size="icon-xs"
-              >
+              <InputGroupButton variant="ghost" aria-label="Help" size="icon-xs">
                 <HelpCircle />
               </InputGroupButton>
             </TooltipTrigger>
@@ -55,11 +47,7 @@ export default function InputGroupTooltip() {
         <Tooltip>
           <TooltipTrigger asChild>
             <InputGroupAddon>
-              <InputGroupButton
-                variant="ghost"
-                aria-label="Help"
-                size="icon-xs"
-              >
+              <InputGroupButton variant="ghost" aria-label="Help" size="icon-xs">
                 <HelpCircle />
               </InputGroupButton>
             </InputGroupAddon>

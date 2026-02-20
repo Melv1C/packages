@@ -13,8 +13,7 @@ export async function getLLMText(page: InferPageType<typeof source>) {
   const processed = await page.data.getText('processed');
   const withExpandedPreviews = processed.replace(
     /<ComponentPreview\s+name=(['"])([^'"]+)\1\s*\/>/g,
-    (_match, _quote, name: string) =>
-      `\n\n\`\`\`tsx\n${getDemoComponentCode(name)}\n\`\`\`\n\n`,
+    (_match, _quote, name: string) => `\n\n\`\`\`tsx\n${getDemoComponentCode(name)}\n\`\`\`\n\n`,
   );
 
   return `# ${page.data.title} (${page.url})

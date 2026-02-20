@@ -26,11 +26,7 @@ export default function CollapsibleSettings() {
         <CardDescription>Set the corner radius of the element.</CardDescription>
       </CardHeader>
       <CardContent>
-        <Collapsible
-          open={isOpen}
-          onOpenChange={setIsOpen}
-          className="flex items-start gap-2"
-        >
+        <Collapsible open={isOpen} onOpenChange={setIsOpen} className="flex items-start gap-2">
           <FieldGroup className="grid w-full grid-cols-2 gap-2">
             <Field>
               <FieldLabel htmlFor="radius-x" className="sr-only">

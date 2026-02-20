@@ -2,7 +2,7 @@ import type { Route } from './+types/mdx';
 import { getLLMText, source } from '@/lib/source';
 
 export async function loader({ params }: Route.LoaderArgs) {
-  const slugs = params['*'].split('/').filter((v) => v.length > 0);
+  const slugs = params['*'].split('/').filter(v => v.length > 0);
   // remove the appended "index.mdx" that's added to avoid React Router issues
   slugs.pop();
   const page = source.getPage(slugs);

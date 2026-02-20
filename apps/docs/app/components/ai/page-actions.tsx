@@ -27,7 +27,7 @@ export function LLMCopyButton({
     try {
       await navigator.clipboard.write([
         new ClipboardItem({
-          'text/plain': fetch(markdownUrl).then(async (res) => {
+          'text/plain': fetch(markdownUrl).then(async res => {
             const content = await res.text();
             cache.set(markdownUrl, content);
 

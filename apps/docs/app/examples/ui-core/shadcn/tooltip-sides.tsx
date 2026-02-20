@@ -1,14 +1,9 @@
-import {
-  Button,
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '@melv1c/ui-core';
+import { Button, Tooltip, TooltipContent, TooltipTrigger } from '@melv1c/ui-core';
 
 export default function TooltipSides() {
   return (
     <div className="flex flex-wrap gap-2">
-      {(['left', 'top', 'bottom', 'right'] as const).map((side) => (
+      {(['left', 'top', 'bottom', 'right'] as const).map(side => (
         <Tooltip key={side}>
           <TooltipTrigger asChild>
             <Button variant="outline" className="w-fit capitalize">

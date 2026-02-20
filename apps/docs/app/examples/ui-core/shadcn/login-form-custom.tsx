@@ -12,7 +12,7 @@ export default function LoginFormCustom() {
         onSubmit={async (email, password) => {
           console.log('Login attempt:', email, password);
         }}
-        onProviderLogin={(provider) => console.log('Provider login:', provider)}
+        onProviderLogin={provider => console.log('Provider login:', provider)}
         onForgotPassword={() => console.log('Forgot password')}
         onSignUp={() => console.log('Sign up')}
       />

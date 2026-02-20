@@ -1,10 +1,4 @@
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-  ItemMedia,
-  ItemTitle,
-} from '@melv1c/ui-core';
+import { Item, ItemContent, ItemDescription, ItemMedia, ItemTitle } from '@melv1c/ui-core';
 import { InboxIcon } from 'lucide-react';
 
 export default function ItemSizeDemo() {
@@ -16,9 +10,7 @@ export default function ItemSizeDemo() {
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Default Size</ItemTitle>
-          <ItemDescription>
-            The standard size for most use cases.
-          </ItemDescription>
+          <ItemDescription>The standard size for most use cases.</ItemDescription>
         </ItemContent>
       </Item>
       <Item variant="outline" size="sm">

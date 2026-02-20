@@ -12,9 +12,7 @@ const exampleModules = import.meta.glob<string>('../examples/**/*.tsx', {
   import: 'default',
 });
 
-const exampleComponents = import.meta.glob<{ default: ComponentType }>(
-  '../examples/**/*.tsx',
-);
+const exampleComponents = import.meta.glob<{ default: ComponentType }>('../examples/**/*.tsx');
 
 function buildRegistry(): Record<string, ExampleEntry> {
   const registry: Record<string, ExampleEntry> = {};
@@ -43,7 +41,5 @@ export function getDemoComponent(name: string) {
 }
 
 export function getDemoComponentCode(name: string) {
-  return (
-    examplesRegistry[name]?.code ?? `// Source code for "${name}" not found.`
-  );
+  return examplesRegistry[name]?.code ?? `// Source code for "${name}" not found.`;
 }
