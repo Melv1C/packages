@@ -4,5 +4,5 @@
   "singleQuote": true,
   "trailingComma": "all",
   "arrowParens": "avoid",
-  "ignorePatterns": ["**/routeTree.gen.ts"]
+  "ignorePatterns": ["**/routeTree.gen.ts", "**/base/*.tsx"]
 }
