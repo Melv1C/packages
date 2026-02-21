@@ -18,8 +18,3 @@ bun run dev
 bun run build
 bun run lint
 ```
-
-## Notes
-
-- `bun run dev` uses Turbo and starts available `dev` scripts across workspaces.
-- `@melv1c/rich-text-editor` and `@melv1c/code-editor` are currently thin workspace wrappers around optional exports from `@melv1c/ui-core`.
