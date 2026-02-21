@@ -1,5 +1,11 @@
 # docs
 
+## 1.1.2
+
+### Patch Changes
+
+- Correct docs about i18nConfig
+
 ## 1.1.1
 
 ### Patch Changes
