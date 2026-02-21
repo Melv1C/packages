@@ -1,20 +1,17 @@
-'use client';
+import { LoginForm } from '@melv1c/ui-core';
 
-import { LoginForm, UIKitProvider } from '@melv1c/ui-core';
-
-export default function LoginFormProviders() {
+export default function LoginFormCustom() {
   return (
-    <UIKitProvider>
       <LoginForm
-        providers={['google', 'github', 'apple', 'microsoft', 'facebook']}
+        title="Welcome back"
+        description="Sign in to your workspace to continue"
+        providers={['google', 'github']}
         onSubmit={async (email, password) => {
-          await new Promise(resolve => setTimeout(resolve, 1000));
           console.log('Login attempt:', email, password);
         }}
         onProviderLogin={provider => console.log('Provider login:', provider)}
         onForgotPassword={() => console.log('Forgot password')}
         onSignUp={() => console.log('Sign up')}
       />
-    </UIKitProvider>
   );
 }

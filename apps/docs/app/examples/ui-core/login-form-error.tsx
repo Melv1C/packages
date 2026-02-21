@@ -1,10 +1,7 @@
-'use client';
-
-import { LoginForm, UIKitProvider } from '@melv1c/ui-core';
+import { LoginForm } from '@melv1c/ui-core';
 
 export default function LoginFormError() {
   return (
-    <UIKitProvider>
       <LoginForm
         onSubmit={async () => {
           await new Promise(resolve => setTimeout(resolve, 800));
@@ -13,6 +10,5 @@ export default function LoginFormError() {
         onForgotPassword={() => console.log('Forgot password')}
         onSignUp={() => console.log('Sign up')}
       />
-    </UIKitProvider>
   );
 }

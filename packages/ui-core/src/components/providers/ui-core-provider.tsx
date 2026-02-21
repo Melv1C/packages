@@ -26,16 +26,16 @@ type ProviderProps = {
 };
 
 /**
- * Provider for UI kit components.
+ * Provider for UI core components.
  *
  * @example
  * ```tsx
- * <UIKitProvider>
+ * <UICoreProvider>
  *   <App />
- * </UIKitProvider>
+ * </UICoreProvider>
  * ```
  */
-export function UIKitProvider({
+export function UICoreProvider({
   children,
   hasToaster = true,
   i18nConfig = { locale: 'en' },

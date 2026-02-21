@@ -7,14 +7,11 @@ description: A pre-built authentication form with email/password fields, social 
 
 ## Usage
 
-The `LoginForm` component requires [`UIKitProvider`](/docs/ui-core/providers) to be present in your component tree for i18n to work correctly.
-
 ```tsx
-import { LoginForm, UIKitProvider } from '@melv1c/ui-core';
+import { LoginForm } from '@melv1c/ui-core';
 ```
 
 ```tsx
-<UIKitProvider>
   <LoginForm
     onSubmit={async (email, password) => {
       await signIn(email, password);
@@ -22,7 +19,6 @@ import { LoginForm, UIKitProvider } from '@melv1c/ui-core';
     onForgotPassword={() => router.push('/forgot-password')}
     onSignUp={() => router.push('/sign-up')}
   />
-</UIKitProvider>
 ```
 
 ### Error Handling

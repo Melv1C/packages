@@ -50,16 +50,16 @@ See the [Theming guide](/docs/ui-core/theming) for more details on customizing t
 
 ## Set Up the Provider
 
-Wrap your application with `UIKitProvider` to enable i18n and toast notifications:
+Wrap your application with `UICoreProvider` to enable i18n and toast notifications:
 
 ```tsx title="app.tsx"
-import { UIKitProvider } from '@melv1c/ui-core';
+import { UICoreProvider } from '@melv1c/ui-core';
 
 export function App({ children }: { children: React.ReactNode }) {
   return (
-    <UIKitProvider i18nConfig="en" hasToaster>
+    <UICoreProvider i18nConfig="en" hasToaster>
       {children}
-    </UIKitProvider>
+    </UICoreProvider>
   );
 }
 ```

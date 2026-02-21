@@ -1,23 +1,23 @@
 ---
 title: Providers
-description: Configure the UIKitProvider to enable i18n, toasts, and more.
+description: Configure the UICoreProvider to enable i18n, toasts, and more.
 icon: Layers
 ---
 
 @melv1c/ui-core provides a root provider component that handles global configuration for your app.
 
-## UIKitProvider
+## UICoreProvider
 
-`UIKitProvider` wraps your app with the necessary context providers for i18n (via `I18nextProvider`) and toast notifications (via `Sonner`).
+`UICoreProvider` wraps your app with the necessary context providers for i18n (via `I18nextProvider`) and toast notifications (via `Sonner`).
 
 ```tsx title="app.tsx"
-import { UIKitProvider } from '@melv1c/ui-core';
+import { UICoreProvider } from '@melv1c/ui-core';
 
 export function App({ children }: { children: React.ReactNode }) {
   return (
-    <UIKitProvider i18nConfig="en" hasToaster>
+    <UICoreProvider i18nConfig="en" hasToaster>
       {children}
-    </UIKitProvider>
+    </UICoreProvider>
   );
 }
 ```
@@ -36,13 +36,13 @@ export function App({ children }: { children: React.ReactNode }) {
 ### Simple locale string
 
 ```tsx
-<UIKitProvider i18nConfig="fr">{children}</UIKitProvider>
+<UICoreProvider i18nConfig="fr">{children}</UICoreProvider>
 ```
 
 ### Config object with overrides
 
 ```tsx
-<UIKitProvider
+<UICoreProvider
   i18nConfig={{
     locale: 'en',
     overrides: {
@@ -53,13 +53,13 @@ export function App({ children }: { children: React.ReactNode }) {
   }}
 >
   {children}
-</UIKitProvider>
+</UICoreProvider>
 ```
 
 ### Bring your own i18n instance
 
 ```tsx
-<UIKitProvider i18nConfig={{ instance: myI18nInstance }}>{children}</UIKitProvider>
+<UICoreProvider i18nConfig={{ instance: myI18nInstance }}>{children}</UICoreProvider>
 ```
 
 ## Toaster Configuration
@@ -79,9 +79,9 @@ function MyComponent() {
 If your i18n configuration requires async loading (e.g., fetching translations from a server), you can provide a loading component:
 
 ```tsx
-<UIKitProvider i18nConfig="fr" loadingComponent={<div>Loading translations...</div>}>
+<UICoreProvider i18nConfig="fr" loadingComponent={<div>Loading translations...</div>}>
   {children}
-</UIKitProvider>
+</UICoreProvider>
 ```
 
 ## Without the Provider

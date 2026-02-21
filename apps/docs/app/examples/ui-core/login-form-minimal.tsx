@@ -1,10 +1,7 @@
-'use client';
-
-import { LoginForm, UIKitProvider } from '@melv1c/ui-core';
+import { LoginForm } from '@melv1c/ui-core';
 
 export default function LoginFormMinimal() {
   return (
-    <UIKitProvider>
       <LoginForm
         showForgotPassword={false}
         showSignUp={false}
@@ -12,6 +9,5 @@ export default function LoginFormMinimal() {
           console.log('Login attempt:', email, password);
         }}
       />
-    </UIKitProvider>
   );
 }
