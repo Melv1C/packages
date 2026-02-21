@@ -8,7 +8,7 @@ icon: Layers
 
 ## UICoreProvider
 
-`UICoreProvider` wraps your app with the necessary context providers for i18n (via `I18nextProvider`) and toast notifications (via `Sonner`).
+`UICoreProvider` wraps your app with the necessary context providers for i18n (via `I18nextProvider`) and toast notifications (via `Sonner`). **You must wrap your application with this provider** — all @melv1c/ui-core components expect to be rendered inside it.
 
 ```tsx title="app.tsx"
 import { UICoreProvider } from '@melv1c/ui-core';
@@ -84,20 +84,6 @@ If your i18n configuration requires async loading (e.g., fetching translations f
 </UICoreProvider>
 ```
 
-## Without the Provider
+## Provider is Required
 
-You can use @melv1c/ui-core components without the provider. However, components that rely on i18n (like `LoginForm`, `NextButton`, `PreviousButton`) will fall back to English strings, and you won't have the global Toaster available.
-
-```tsx
-// This works fine — no provider needed for basic components
-import { Button, Card, Input } from '@melv1c/ui-core';
-
-export function SimpleForm() {
-  return (
-    <Card>
-      <Input placeholder="Enter text" />
-      <Button>Submit</Button>
-    </Card>
-  );
-}
-```
+All @melv1c/ui-core components should be rendered inside `UICoreProvider`. Using components without the provider is not supported and may lead to unexpected behavior.
