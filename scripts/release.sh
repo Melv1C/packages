@@ -5,7 +5,7 @@ echo "🚀 Starting release process..."
 echo
 
 echo "📦 Running changeset version..."
-npx changeset version
+bunx changeset version
 
 DATETIME=$(date +"%d-%m-%Y %H:%M:%S")
 echo "📝 Committing release changes ($DATETIME)..."
@@ -16,7 +16,7 @@ git push --quiet
 echo
 
 echo "🏷️  Creating release tags..."
-npx changeset tag
+bunx changeset tag
 echo
 
 echo "📤 Pushing new tags one by one..."
