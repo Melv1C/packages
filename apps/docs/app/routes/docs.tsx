@@ -27,10 +27,8 @@ const clientLoader = browserCollections.docs.createClientLoader({
     // you can define props for the component
     {
       slugs,
-      path,
     }: {
       slugs: string[];
-      path: string;
     },
   ) {
     const markdownUrl = `/llms.mdx/docs/${[...slugs, 'index.mdx'].join('/')}`;

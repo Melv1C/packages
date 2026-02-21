@@ -34,7 +34,7 @@ const people = [
 export default function ItemGroupExample() {
   return (
     <ItemGroup className="max-w-sm">
-      {people.map((person, index) => (
+      {people.map(person => (
         <Item key={person.username} variant="outline">
           <ItemMedia>
             <Avatar>
