@@ -25,7 +25,7 @@ The simplest way to enable i18n is to pass a locale string to `UICoreProvider` (
 import { UICoreProvider } from '@melv1c/ui-core';
 
 export function App({ children }: { children: React.ReactNode }) {
-  return <UICoreProvider i18nConfig="fr">{children}</UICoreProvider>;
+  return <UICoreProvider i18nConfig={{ locale: 'fr' }}>{children}</UICoreProvider>;
 }
 ```
 
@@ -100,7 +100,7 @@ export function App({ children }: { children: React.ReactNode }) {
   const [locale, setLocale] = useState<SupportedLanguage>('en');
 
   return (
-    <UICoreProvider i18nConfig={locale}>
+    <UICoreProvider i18nConfig={{ locale }}>
       <select value={locale} onChange={e => setLocale(e.target.value as SupportedLanguage)}>
         <option value="en">English</option>
         <option value="fr">Français</option>

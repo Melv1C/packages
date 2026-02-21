@@ -63,7 +63,7 @@ import { UICoreProvider } from '@melv1c/ui-core';
 
 export function App({ children }: { children: React.ReactNode }) {
   return (
-    <UICoreProvider i18nConfig="en" hasToaster>
+    <UICoreProvider i18nConfig={{ locale: 'en' }} hasToaster>
       {children}
     </UICoreProvider>
   );

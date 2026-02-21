@@ -15,7 +15,7 @@ import { UICoreProvider } from '@melv1c/ui-core';
 
 export function App({ children }: { children: React.ReactNode }) {
   return (
-    <UICoreProvider i18nConfig="en" hasToaster>
+    <UICoreProvider i18nConfig={{ locale: 'en' }} hasToaster>
       {children}
     </UICoreProvider>
   );
@@ -36,7 +36,7 @@ export function App({ children }: { children: React.ReactNode }) {
 ### Simple locale string
 
 ```tsx
-<UICoreProvider i18nConfig="fr">{children}</UICoreProvider>
+<UICoreProvider i18nConfig={{ locale: 'fr' }}>{children}</UICoreProvider>
 ```
 
 ### Config object with overrides
@@ -79,7 +79,7 @@ function MyComponent() {
 If your i18n configuration requires async loading (e.g., fetching translations from a server), you can provide a loading component:
 
 ```tsx
-<UICoreProvider i18nConfig="fr" loadingComponent={<div>Loading translations...</div>}>
+<UICoreProvider i18nConfig={{ locale: 'en' }} loadingComponent={<div>Loading translations...</div>}>
   {children}
 </UICoreProvider>
 ```
