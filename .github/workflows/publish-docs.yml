@@ -34,3 +34,14 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/docs:${{ steps.version.outputs.version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+      - name: Trigger Dokploy Docs Deployment
+        run: |
+          curl -X 'POST' \
+          '${{ secrets.DOKPLOY_DOMAIN }}/api/application.deploy' \
+          -H 'accept: application/json' \
+          -H 'x-api-key: ${{ secrets.DOKPLOY_API_KEY }}' \
+          -H 'Content-Type: application/json' \
+          -d '{
+               "applicationId": "${{ secrets.DOKPLOY_DOCS_APP_ID }}"
+            }'
