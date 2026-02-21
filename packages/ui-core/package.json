@@ -1,10 +1,10 @@
 {
   "name": "@melv1c/ui-core",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Core package of reusable UI components for the @melv1c packages monorepo.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/melv1c/ui-kit.git"
+    "url": "git+https://github.com/Melv1C/packages.git#main"
   },
   "files": [
     "dist"
@@ -25,6 +25,9 @@
       "import": "./dist/locales/index.mjs",
       "default": "./dist/locales/index.mjs"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "dev": "tsdown --watch",
