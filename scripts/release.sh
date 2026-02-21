@@ -7,6 +7,9 @@ echo
 echo "📦 Running changeset version..."
 bunx changeset version
 
+# Wait for a moment to ensure all changes are properly staged
+sleep 1
+
 DATETIME=$(date +"%d-%m-%Y %H:%M:%S")
 echo "📝 Committing release changes ($DATETIME)..."
 git commit -am "release: $DATETIME"
