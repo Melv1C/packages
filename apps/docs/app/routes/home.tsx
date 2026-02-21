@@ -5,22 +5,19 @@ import { Link } from 'react-router';
 const packages = [
   {
     name: '@melv1c/ui-core',
-    description:
-      '50+ accessible UI components built on Radix UI and Tailwind CSS.',
+    description: '50+ accessible UI components built on Radix UI and Tailwind CSS.',
     href: '/docs/ui-core',
     available: true,
   },
   {
     name: '@melv1c/rich-text-editor',
-    description:
-      'A Tiptap-based editor with pre-configured extensions.',
+    description: 'A Tiptap-based editor with pre-configured extensions.',
     href: '/docs/rich-text-editor',
     available: false,
   },
   {
     name: '@melv1c/code-editor',
-    description:
-      'A Monaco-based code editor with syntax highlighting and autocompletion.',
+    description: 'A Monaco-based code editor with syntax highlighting and autocompletion.',
     href: '/docs/code-editor',
     available: false,
   },
@@ -31,8 +28,7 @@ export function meta() {
     { title: '@melv1c — Documentation' },
     {
       name: 'description',
-      content:
-        'Documentation for @melv1c packages — reusable UI components and tools for React.',
+      content: 'Documentation for @melv1c packages — reusable UI components and tools for React.',
     },
   ];
 }
@@ -44,12 +40,10 @@ export default function Home() {
         <p className="mb-2 text-sm font-medium text-fd-muted-foreground">
           Open-source packages by Melvyn
         </p>
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-          @melv1c
-        </h1>
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">@melv1c</h1>
         <p className="mt-4 max-w-lg text-lg text-fd-muted-foreground">
-          A collection of reusable, accessible, and well-documented packages for
-          building modern React applications.
+          A collection of reusable, accessible, and well-documented packages for building modern
+          React applications.
         </p>
         <div className="mt-8 flex gap-3">
           <Link
@@ -69,16 +63,14 @@ export default function Home() {
         </div>
 
         <section className="mt-16 grid w-full max-w-3xl gap-4 text-left sm:grid-cols-3">
-          {packages.map((pkg) => (
+          {packages.map(pkg => (
             <Link
               key={pkg.name}
               to={pkg.href}
               className="group relative rounded-xl border border-fd-border p-5 transition-colors hover:bg-fd-accent/50"
             >
               <h2 className="text-sm font-semibold">{pkg.name}</h2>
-              <p className="mt-1.5 text-sm text-fd-muted-foreground">
-                {pkg.description}
-              </p>
+              <p className="mt-1.5 text-sm text-fd-muted-foreground">{pkg.description}</p>
               {!pkg.available && (
                 <span className="mt-3 inline-block rounded-full bg-fd-muted px-2 py-0.5 text-xs font-medium text-fd-muted-foreground">
                   Coming soon

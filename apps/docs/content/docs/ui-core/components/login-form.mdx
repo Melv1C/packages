@@ -12,13 +12,13 @@ import { LoginForm } from '@melv1c/ui-core';
 ```
 
 ```tsx
-  <LoginForm
-    onSubmit={async (email, password) => {
-      await signIn(email, password);
-    }}
-    onForgotPassword={() => router.push('/forgot-password')}
-    onSignUp={() => router.push('/sign-up')}
-  />
+<LoginForm
+  onSubmit={async (email, password) => {
+    await signIn(email, password);
+  }}
+  onForgotPassword={() => router.push('/forgot-password')}
+  onSignUp={() => router.push('/sign-up')}
+/>
 ```
 
 ### Error Handling
