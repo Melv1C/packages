@@ -1,0 +1,53 @@
+---
+title: Extensions
+description: Add Tiptap extensions and custom commands to @melv1c/rich-text-editor.
+icon: Plug
+---
+
+`@melv1c/rich-text-editor` forwards extension configuration to Tiptap.
+
+## Add extension packages
+
+Install extension packages you want to use:
+
+```package-install
+npm i @tiptap/extension-character-count
+```
+
+## Use `extensions` prop
+
+Both `RichTextEditor` and `RichTextEditorBuiltIn` accept `extensions`.
+
+```tsx
+import CharacterCount from '@tiptap/extension-character-count';
+import { RichTextEditorBuiltIn } from '@melv1c/rich-text-editor';
+
+<RichTextEditorBuiltIn
+  value={value}
+  onValueChange={setValue}
+  extensions={[CharacterCount.configure({ limit: 280 })]}
+/>;
+```
+
+## Add custom toolbar action
+
+Use `useRichTextEditor()` to access the editor instance and execute commands.
+
+<ComponentPreview name="rich-text-editor-custom-action" />
+
+```tsx
+function InsertSignatureButton() {
+  const { editor } = useRichTextEditor();
+
+  return (
+    <Button onClick={() => editor?.chain().focus().insertContent(' — Team').run()}>
+      Insert signature
+    </Button>
+  );
+}
+```
+
+## Official Tiptap references
+
+- [Tiptap extension list](hhttps://tiptap.dev/docs/editor/extensions/overview)
+- [Create a custom extension](https://tiptap.dev/docs/editor/extensions/custom-extensions/create-new)

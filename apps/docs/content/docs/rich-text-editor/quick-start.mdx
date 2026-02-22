@@ -1,0 +1,55 @@
+---
+title: Quick Start
+description: Install and set up @melv1c/rich-text-editor with @melv1c/ui-core.
+icon: Zap
+---
+
+## Requirements
+
+- **React** 19 or later
+- **Tailwind CSS** v4 or later
+- **tw-animate-css** v1.4 or later
+- **@melv1c/ui-core** (required peer dependency)
+
+## Install packages
+
+Install the editor package:
+
+```package-install
+npm i @melv1c/rich-text-editor
+```
+
+Install required peers (if not already installed):
+
+```package-install
+npm i @melv1c/ui-core tailwindcss@^4 tw-animate-css@^1.4
+```
+
+## Configure styles
+
+The rich text editor uses `@melv1c/ui-core` primitives, so include `@melv1c/ui-core` styles and a theme.
+
+```css title="app.css"
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@source "../node_modules/@melv1c";
+
+@import '@melv1c/ui-core/base.css';
+@import '@melv1c/ui-core/themes/default.css';
+```
+
+If you need detailed `@melv1c/ui-core` setup (provider, themes, i18n), see the [ui-core Quick Start](/docs/ui-core/quick-start).
+
+## First editor (built-in)
+
+```tsx title="editor.tsx"
+import { useState } from 'react';
+import { RichTextEditorBuiltIn } from '@melv1c/rich-text-editor';
+
+export function BasicEditor() {
+  const [value, setValue] = useState('<p>Hello world</p>');
+
+  return <RichTextEditorBuiltIn value={value} onValueChange={setValue} preset="complete" />;
+}
+```

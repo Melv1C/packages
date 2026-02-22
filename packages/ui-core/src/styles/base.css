@@ -51,4 +51,36 @@
   [role='button']:not(:disabled) {
     cursor: pointer;
   }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl font-bold;
+  }
+
+  ul {
+    @apply list-disc pl-6;
+  }
+
+  ol {
+    @apply list-decimal pl-6;
+  }
+
+  a {
+    @apply text-primary underline-offset-4 hover:underline;
+  }
+
+  /* TODO define if I want to keep '.ProseMirror' */
+  .ProseMirror code {
+    @apply font-mono px-1.5 py-0.5 rounded-md
+         bg-zinc-100 dark:bg-zinc-800
+         text-zinc-800 dark:text-zinc-200
+         border border-zinc-200 dark:border-zinc-700;
+  }
 }

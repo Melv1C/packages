@@ -10,6 +10,7 @@
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
+    "@melv1c/rich-text-editor": "workspace:*",
     "@melv1c/ui-core": "workspace:*",
     "@orama/orama": "^3.1.18",
     "@react-router/node": "^7.13.0",

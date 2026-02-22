@@ -1,0 +1,101 @@
+---
+title: Components
+description: Use root, toolbar, groups, content, and context exports from @melv1c/rich-text-editor.
+icon: Blocks
+---
+
+## Exported API
+
+```tsx
+import {
+  RichTextEditor,
+  RichTextEditorToolbar,
+  RichTextEditorContent,
+  useRichTextEditor,
+  // Groups
+  RichTextEditorFormattingGroup,
+  RichTextEditorHeadingGroup,
+  RichTextEditorListGroup,
+  RichTextEditorHistoryGroup,
+} from '@melv1c/rich-text-editor';
+```
+
+## Root + toolbar + content
+
+Use these primitives when you need full control.
+
+<ComponentPreview name="rich-text-editor-composable" />
+
+```tsx
+import {
+  RichTextEditor,
+  RichTextEditorToolbar,
+  RichTextEditorContent,
+  RichTextEditorFormattingGroup,
+  RichTextEditorHistoryGroup,
+} from '@melv1c/rich-text-editor';
+
+<RichTextEditor value={value} onValueChange={setValue}>
+  <RichTextEditorToolbar>
+    <RichTextEditorFormattingGroup />
+    <RichTextEditorHistoryGroup />
+  </RichTextEditorToolbar>
+
+  <RichTextEditorContent minHeight={180} maxHeight={320} />
+</RichTextEditor>;
+```
+
+## Groups
+
+- `RichTextEditorFormattingGroup` — bold / italic / strike / code controls.
+- `RichTextEditorHeadingGroup` — heading controls (`mode="select"` or `mode="toggle"`).
+- `RichTextEditorListGroup` — bullet and ordered list controls.
+- `RichTextEditorHistoryGroup` — undo/redo controls.
+
+You can hide specific actions by passing `items` to each group.
+
+```tsx
+<RichTextEditorFormattingGroup items={['bold', 'italic']} />
+<RichTextEditorListGroup items={['bullet-list']} />
+<RichTextEditorHistoryGroup items={['undo']} />
+```
+
+## Getting the editor instance
+
+Use `useRichTextEditor()` inside `RichTextEditor` children to build custom actions.
+
+<ComponentPreview name="rich-text-editor-custom-action" />
+
+```tsx title="custom-toolbar-action.tsx"
+import { Sparkles } from 'lucide-react';
+import { Button } from '@melv1c/ui-core';
+import { useRichTextEditor } from '@melv1c/rich-text-editor';
+
+function InsertSignatureButton() {
+  const { editor } = useRichTextEditor();
+
+  return (
+    <Button
+      variant="outline"
+      size="icon-sm"
+      disabled={!editor}
+      onClick={() => editor?.chain().focus().insertContent(' — Team').run()}
+      aria-label="Insert signature"
+    >
+      <Sparkles />
+    </Button>
+  );
+}
+```
+
+You can also access the instance from `onValueChange`:
+
+```tsx
+<RichTextEditor
+  onValueChange={(html, editor) => {
+    setValue(html);
+    const json = editor.getJSON();
+    console.log(json);
+  }}
+/>
+```

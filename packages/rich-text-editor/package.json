@@ -11,10 +11,10 @@
   ],
   "type": "module",
   "main": "./dist/index.mjs",
-  "types": "./src/index.ts",
+  "types": "./dist/index.d.mts",
   "exports": {
     ".": {
-      "types": "./src/index.ts",
+      "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs",
       "default": "./dist/index.mjs"
     }
@@ -26,7 +26,12 @@
     "build": "tsdown",
     "dev": "tsdown --watch --no-clean"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@tiptap/core": "^3.20.0",
+    "@tiptap/react": "^3.7.2",
+    "@tiptap/starter-kit": "^3.7.2",
+    "lucide-react": "^0.513.0"
+  },
   "devDependencies": {
     "@types/node": "^25.2.3",
     "@types/react": "^19.2.14",

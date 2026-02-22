@@ -1,0 +1,69 @@
+---
+title: Built-in Editor
+description: Use RichTextEditorBuiltIn presets -> minimal, simple, complete, and oneline.
+icon: LayoutTemplate
+---
+
+`RichTextEditorBuiltIn` provides a pre-composed editor layout with toolbar and content area.
+
+## Import
+
+```tsx
+import { RichTextEditorBuiltIn } from '@melv1c/rich-text-editor';
+```
+
+## Presets
+
+### `minimal`
+
+Formatting controls + undo/redo.
+
+<ComponentPreview name="rich-text-editor-minimal" />
+
+```tsx
+<RichTextEditorBuiltIn value={value} onValueChange={setValue} preset="minimal" />
+```
+
+### `simple`
+
+Heading select + formatting + undo/redo.
+
+<ComponentPreview name="rich-text-editor-simple" />
+
+```tsx
+<RichTextEditorBuiltIn value={value} onValueChange={setValue} preset="simple" />
+```
+
+### `complete` (default)
+
+Heading select + formatting + lists + undo/redo.
+
+<ComponentPreview name="rich-text-editor-demo" />
+
+```tsx
+<RichTextEditorBuiltIn value={value} onValueChange={setValue} preset="complete" />
+```
+
+### `oneline`
+
+Single-line mode (Enter and Shift+Enter are blocked).
+
+<ComponentPreview name="rich-text-editor-oneline" />
+
+```tsx
+<RichTextEditorBuiltIn value={value} onValueChange={setValue} preset="oneline" />
+```
+
+## Size options
+
+You can control content area size with `minHeight` and `maxHeight`.
+
+```tsx
+<RichTextEditorBuiltIn
+  value={value}
+  onValueChange={setValue}
+  preset="complete"
+  minHeight={180}
+  maxHeight={360}
+/>
+```
