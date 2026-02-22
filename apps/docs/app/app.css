@@ -4,7 +4,7 @@
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
 
-@source "../node_modules/@melv1c/ui-core";
+@source "../node_modules/@melv1c";
 
 /* Import base theme structure */
 @import '@melv1c/ui-core/base.css';
