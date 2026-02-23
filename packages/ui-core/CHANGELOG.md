@@ -1,5 +1,11 @@
 # @melv1c/ui-core
 
+## 1.1.2
+
+### Patch Changes
+
+- Add a rich text editor package
+
 ## 1.1.1
 
 ### Patch Changes
