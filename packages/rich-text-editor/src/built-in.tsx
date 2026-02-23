@@ -8,9 +8,6 @@ import {
   BoldButton,
   BulletListButton,
   CodeButton,
-  Heading1Button,
-  Heading2Button,
-  Heading3Button,
   ItalicButton,
   OrderedListButton,
   RedoButton,
@@ -92,21 +89,13 @@ export function RichTextEditorBuiltIn({
           </ButtonGroup>
         )}
 
-        {preset === 'simple' && <RichTextEditorHeadingSelect />}
-
-        {preset === 'complete' && (
-          <ButtonGroup>
-            <Heading1Button />
-            <Heading2Button />
-            <Heading3Button />
-          </ButtonGroup>
-        )}
+        {(preset === 'complete' || preset === 'simple') && <RichTextEditorHeadingSelect />}
 
         <ButtonGroup>
           <BoldButton />
           <ItalicButton />
           <StrikethroughButton />
-          <CodeButton />
+          {preset === 'complete' && <CodeButton />}
         </ButtonGroup>
 
         {preset === 'complete' && (
