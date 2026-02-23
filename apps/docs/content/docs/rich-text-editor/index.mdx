@@ -9,9 +9,11 @@ icon: FileText
 ## Features
 
 - **Composable API** — Build your editor with `RichTextEditor`, `RichTextEditorToolbar`, and `RichTextEditorContent`.
-- **Built-in presets** — Use `RichTextEditorBuiltIn` for a fast setup.
+- **Built-in presets** — Use `RichTextEditorBuiltIn` with `minimal`, `simple`, `complete`, or `oneline`.
 - **StarterKit by default** — Paragraphs, headings, lists, marks, history, and more are ready out of the box.
 - **Customizable extensions** — Add your own Tiptap extensions through the `extensions` prop.
 - **Typed primitives** — Full TypeScript support for editor props and toolbar components.
+
+It exports both low-level primitives (`RichTextEditor`, `RichTextEditorToolbar`, `RichTextEditorContent`) and ready-to-use controls (`BoldButton`, `Heading1Button`, `UndoButton`, etc.) so you can compose your own toolbar with `ButtonGroup`.
 
 <ComponentPreview name="rich-text-editor-demo" />

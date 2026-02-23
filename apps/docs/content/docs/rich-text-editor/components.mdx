@@ -1,6 +1,6 @@
 ---
 title: Components
-description: Use root, toolbar, groups, content, and context exports from @melv1c/rich-text-editor.
+description: Use root, toolbar, buttons, content, and context exports from @melv1c/rich-text-editor.
 icon: Blocks
 ---
 
@@ -8,15 +8,23 @@ icon: Blocks
 
 ```tsx
 import {
+  BoldButton,
+  BulletListButton,
+  CodeButton,
+  Heading1Button,
+  Heading2Button,
+  Heading3Button,
+  ItalicButton,
+  OrderedListButton,
+  RedoButton,
+  RichTextEditorBuiltIn,
   RichTextEditor,
   RichTextEditorToolbar,
   RichTextEditorContent,
+  RichTextEditorHeadingSelect,
+  StrikethroughButton,
+  UndoButton,
   useRichTextEditor,
-  // Groups
-  RichTextEditorFormattingGroup,
-  RichTextEditorHeadingGroup,
-  RichTextEditorListGroup,
-  RichTextEditorHistoryGroup,
 } from '@melv1c/rich-text-editor';
 ```
 
@@ -28,36 +36,74 @@ Use these primitives when you need full control.
 
 ```tsx
 import {
+  BoldButton,
+  ItalicButton,
+  RedoButton,
   RichTextEditor,
   RichTextEditorToolbar,
   RichTextEditorContent,
-  RichTextEditorFormattingGroup,
-  RichTextEditorHistoryGroup,
+  UndoButton,
 } from '@melv1c/rich-text-editor';
+import { ButtonGroup } from '@melv1c/ui-core';
 
 <RichTextEditor value={value} onValueChange={setValue}>
   <RichTextEditorToolbar>
-    <RichTextEditorFormattingGroup />
-    <RichTextEditorHistoryGroup />
+    <ButtonGroup>
+      <BoldButton />
+      <ItalicButton />
+    </ButtonGroup>
+    <ButtonGroup>
+      <UndoButton />
+      <RedoButton />
+    </ButtonGroup>
   </RichTextEditorToolbar>
 
   <RichTextEditorContent minHeight={180} maxHeight={320} />
 </RichTextEditor>;
 ```
 
-## Groups
+## Built-in preset
 
-- `RichTextEditorFormattingGroup` — bold / italic / strike / code controls.
-- `RichTextEditorHeadingGroup` — heading controls (`mode="select"` or `mode="toggle"`).
-- `RichTextEditorListGroup` — bullet and ordered list controls.
-- `RichTextEditorHistoryGroup` — undo/redo controls.
-
-You can hide specific actions by passing `items` to each group.
+Use `RichTextEditorBuiltIn` for a pre-composed toolbar + content setup:
 
 ```tsx
-<RichTextEditorFormattingGroup items={['bold', 'italic']} />
-<RichTextEditorListGroup items={['bullet-list']} />
-<RichTextEditorHistoryGroup items={['undo']} />
+<RichTextEditorBuiltIn value={value} onValueChange={setValue} preset="complete" />
+```
+
+## Editor controls
+
+- `BoldButton`, `ItalicButton`, `StrikethroughButton`, `CodeButton` — inline formatting.
+- `Heading1Button`, `Heading2Button`, `Heading3Button` — heading toggles.
+- `RichTextEditorHeadingSelect` — heading dropdown (with optional paragraph item).
+- `BulletListButton`, `OrderedListButton` — list controls.
+- `UndoButton`, `RedoButton` — history controls.
+
+Compose controls however you want, for example with `ButtonGroup`:
+
+```tsx
+<ButtonGroup>
+  <BoldButton />
+  <ItalicButton />
+  <CodeButton />
+</ButtonGroup>
+
+<ButtonGroup>
+  <Heading1Button />
+  <Heading2Button />
+  <Heading3Button />
+</ButtonGroup>
+
+<RichTextEditorHeadingSelect levels={[1, 2, 3]} />
+
+<ButtonGroup>
+  <BulletListButton />
+  <OrderedListButton />
+</ButtonGroup>
+
+<ButtonGroup>
+  <UndoButton />
+  <RedoButton />
+</ButtonGroup>
 ```
 
 ## Getting the editor instance

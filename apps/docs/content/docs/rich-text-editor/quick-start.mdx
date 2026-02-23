@@ -43,6 +43,13 @@ If you need detailed `@melv1c/ui-core` setup (provider, themes, i18n), see the [
 
 ## First editor (built-in)
 
+`RichTextEditorBuiltIn` supports four presets:
+
+- `minimal` — formatting controls
+- `simple` — heading select + formatting + history
+- `complete` (default) — heading buttons + formatting + lists + history
+- `oneline` — single-line mode (blocks Enter)
+
 ```tsx title="editor.tsx"
 import { useState } from 'react';
 import { RichTextEditorBuiltIn } from '@melv1c/rich-text-editor';

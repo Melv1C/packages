@@ -3,7 +3,7 @@ import { Field, Label } from '@melv1c/ui-core';
 import { useState } from 'react';
 
 export default function RichTextEditorMinimal() {
-  const [value, setValue] = useState('<p>Minimal preset with inline formatting and history.</p>');
+  const [value, setValue] = useState('<p>Minimal preset with inline formatting.</p>');
 
   return (
     <Field className="w-full max-w-2xl gap-2">

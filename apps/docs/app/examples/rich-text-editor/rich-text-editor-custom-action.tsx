@@ -1,11 +1,13 @@
 import {
+  BoldButton,
+  CodeButton,
+  ItalicButton,
   RichTextEditor,
   RichTextEditorContent,
-  RichTextEditorFormattingGroup,
   RichTextEditorToolbar,
   useRichTextEditor,
 } from '@melv1c/rich-text-editor';
-import { Button, Field, Label } from '@melv1c/ui-core';
+import { Button, ButtonGroup, Field, Label } from '@melv1c/ui-core';
 import { Sparkles } from 'lucide-react';
 import { useState } from 'react';
 
@@ -34,7 +36,12 @@ export default function RichTextEditorCustomAction() {
 
       <RichTextEditor value={value} onValueChange={setValue}>
         <RichTextEditorToolbar>
-          <RichTextEditorFormattingGroup />
+          <ButtonGroup>
+            <BoldButton />
+            <ItalicButton />
+            <CodeButton />
+          </ButtonGroup>
+
           <InsertSignatureButton />
         </RichTextEditorToolbar>
 

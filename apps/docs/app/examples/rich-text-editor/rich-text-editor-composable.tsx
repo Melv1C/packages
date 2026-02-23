@@ -1,13 +1,17 @@
 import {
+  BoldButton,
+  BulletListButton,
+  CodeButton,
+  ItalicButton,
+  OrderedListButton,
+  RedoButton,
   RichTextEditor,
   RichTextEditorContent,
-  RichTextEditorFormattingGroup,
-  RichTextEditorHeadingGroup,
-  RichTextEditorHistoryGroup,
-  RichTextEditorListGroup,
+  RichTextEditorHeadingSelect,
   RichTextEditorToolbar,
+  UndoButton,
 } from '@melv1c/rich-text-editor';
-import { Field, Label } from '@melv1c/ui-core';
+import { ButtonGroup, Field, Label } from '@melv1c/ui-core';
 import { useState } from 'react';
 
 export default function RichTextEditorComposable() {
@@ -19,10 +23,23 @@ export default function RichTextEditorComposable() {
 
       <RichTextEditor value={value} onValueChange={setValue}>
         <RichTextEditorToolbar>
-          <RichTextEditorHeadingGroup mode="select" />
-          <RichTextEditorFormattingGroup items={['bold', 'italic', 'code']} />
-          <RichTextEditorListGroup />
-          <RichTextEditorHistoryGroup />
+          <RichTextEditorHeadingSelect />
+
+          <ButtonGroup>
+            <BoldButton />
+            <ItalicButton />
+            <CodeButton />
+          </ButtonGroup>
+
+          <ButtonGroup>
+            <BulletListButton />
+            <OrderedListButton />
+          </ButtonGroup>
+
+          <ButtonGroup>
+            <UndoButton />
+            <RedoButton />
+          </ButtonGroup>
         </RichTextEditorToolbar>
 
         <RichTextEditorContent minHeight={160} />

@@ -1,15 +1,24 @@
 import { Extension } from '@tiptap/core';
 import { useMemo } from 'react';
 
+import { ButtonGroup } from '@melv1c/ui-core';
 import { RichTextEditorContent, type RichTextEditorContentProps } from './content';
 import { RichTextEditor, type RichTextEditorProps } from './editor';
 import {
-  RichTextEditorFormattingGroup,
-  RichTextEditorHeadingGroup,
-  RichTextEditorHistoryGroup,
-  RichTextEditorListGroup,
-} from './groups';
-import { RichTextEditorToolbar } from './toolbar';
+  BoldButton,
+  BulletListButton,
+  CodeButton,
+  Heading1Button,
+  Heading2Button,
+  Heading3Button,
+  ItalicButton,
+  OrderedListButton,
+  RedoButton,
+  RichTextEditorHeadingSelect,
+  RichTextEditorToolbar,
+  StrikethroughButton,
+  UndoButton,
+} from './toolbar';
 
 /**
  * Built-in editor presets:
@@ -76,10 +85,36 @@ export function RichTextEditorBuiltIn({
   return (
     <RichTextEditor className={className} extensions={mergedExtensions} {...props}>
       <RichTextEditorToolbar className={toolbarClassName}>
-        {(preset === 'complete' || preset === 'simple') && <RichTextEditorHistoryGroup />}
-        {preset !== 'oneline' && <RichTextEditorHeadingGroup mode="select" />}
-        <RichTextEditorFormattingGroup />
-        {preset === 'complete' && <RichTextEditorListGroup />}
+        {(preset === 'complete' || preset === 'simple') && (
+          <ButtonGroup>
+            <UndoButton />
+            <RedoButton />
+          </ButtonGroup>
+        )}
+
+        {preset === 'simple' && <RichTextEditorHeadingSelect />}
+
+        {preset === 'complete' && (
+          <ButtonGroup>
+            <Heading1Button />
+            <Heading2Button />
+            <Heading3Button />
+          </ButtonGroup>
+        )}
+
+        <ButtonGroup>
+          <BoldButton />
+          <ItalicButton />
+          <StrikethroughButton />
+          <CodeButton />
+        </ButtonGroup>
+
+        {preset === 'complete' && (
+          <ButtonGroup>
+            <BulletListButton />
+            <OrderedListButton />
+          </ButtonGroup>
+        )}
       </RichTextEditorToolbar>
 
       <RichTextEditorContent
