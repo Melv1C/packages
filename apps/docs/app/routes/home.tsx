@@ -13,7 +13,7 @@ const packages = [
     name: '@melv1c/rich-text-editor',
     description: 'A Tiptap-based editor with pre-configured extensions.',
     href: '/docs/rich-text-editor',
-    available: false,
+    available: true,
   },
   {
     name: '@melv1c/code-editor',
