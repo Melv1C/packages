@@ -1,5 +1,11 @@
 # docs
 
+## 1.2.1
+
+### Patch Changes
+
+- Set rich text editor availablity
+
 ## 1.2.0
 
 ### Minor Changes
