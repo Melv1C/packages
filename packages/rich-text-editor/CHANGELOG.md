@@ -1,5 +1,11 @@
 # @melv1c/rich-text-editor
 
+## 1.0.2
+
+### Patch Changes
+
+- Fix correct size default for toolbar button
+
 ## 1.0.1
 
 ### Patch Changes

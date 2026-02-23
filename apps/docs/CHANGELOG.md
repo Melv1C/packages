@@ -1,5 +1,12 @@
 # docs
 
+## 1.2.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @melv1c/rich-text-editor@1.0.2
+
 ## 1.2.2
 
 ### Patch Changes
