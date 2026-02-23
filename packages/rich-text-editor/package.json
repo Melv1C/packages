@@ -1,6 +1,6 @@
 {
   "name": "@melv1c/rich-text-editor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A rich text editor component for React, built with TipTap and styled with Tailwind CSS.",
   "repository": {
     "type": "git",

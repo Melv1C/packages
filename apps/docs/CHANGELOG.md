@@ -1,5 +1,13 @@
 # docs
 
+## 1.2.2
+
+### Patch Changes
+
+- Refactor rich text editor toolbar button export
+- Updated dependencies
+  - @melv1c/rich-text-editor@1.0.1
+
 ## 1.2.1
 
 ### Patch Changes
