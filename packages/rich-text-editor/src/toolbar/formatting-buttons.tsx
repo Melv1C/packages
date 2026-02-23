@@ -13,7 +13,6 @@ export function BoldButton({
   children,
   className,
   variant = 'outline',
-  size = 'sm',
   ...props
 }: FormattingButtonProps) {
   const { editor } = useRichTextEditor();
@@ -29,7 +28,6 @@ export function BoldButton({
       disabled={editor ? !editor.can().chain().focus().toggleBold().run() : true}
       onPressedChange={() => editor?.chain().focus().toggleBold().run()}
       variant={variant}
-      size={size}
       className={cn('shadow-none', className)}
       {...props}
     >
@@ -42,7 +40,6 @@ export function ItalicButton({
   children,
   className,
   variant = 'outline',
-  size = 'sm',
   ...props
 }: FormattingButtonProps) {
   const { editor } = useRichTextEditor();
@@ -58,7 +55,6 @@ export function ItalicButton({
       disabled={editor ? !editor.can().chain().focus().toggleItalic().run() : true}
       onPressedChange={() => editor?.chain().focus().toggleItalic().run()}
       variant={variant}
-      size={size}
       className={cn('shadow-none', className)}
       {...props}
     >
@@ -71,7 +67,6 @@ export function StrikethroughButton({
   children,
   className,
   variant = 'outline',
-  size = 'sm',
   ...props
 }: FormattingButtonProps) {
   const { editor } = useRichTextEditor();
@@ -87,7 +82,6 @@ export function StrikethroughButton({
       disabled={editor ? !editor.can().chain().focus().toggleStrike().run() : true}
       onPressedChange={() => editor?.chain().focus().toggleStrike().run()}
       variant={variant}
-      size={size}
       className={cn('shadow-none', className)}
       {...props}
     >
@@ -100,7 +94,6 @@ export function CodeButton({
   children,
   className,
   variant = 'outline',
-  size = 'sm',
   ...props
 }: FormattingButtonProps) {
   const { editor } = useRichTextEditor();
@@ -116,7 +109,6 @@ export function CodeButton({
       disabled={editor ? !editor.can().chain().focus().toggleCode().run() : true}
       onPressedChange={() => editor?.chain().focus().toggleCode().run()}
       variant={variant}
-      size={size}
       className={cn('shadow-none', className)}
       {...props}
     >

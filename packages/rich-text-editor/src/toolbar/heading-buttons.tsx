@@ -41,7 +41,6 @@ function HeadingButton({
   children,
   className,
   variant = 'outline',
-  size = 'sm',
   ...props
 }: HeadingButtonProps & { level: RichTextEditorHeadingLevel }) {
   const { editor } = useRichTextEditor();
@@ -58,7 +57,6 @@ function HeadingButton({
       disabled={editor ? !editor.can().chain().focus().toggleHeading({ level }).run() : true}
       onPressedChange={() => editor?.chain().focus().toggleHeading({ level }).run()}
       variant={variant}
-      size={size}
       className={cn('shadow-none', className)}
       {...props}
     >
@@ -138,12 +136,7 @@ export function RichTextEditorHeadingSelect({
         editor.chain().focus().setHeading({ level }).run();
       }}
     >
-      <SelectTrigger
-        aria-label="Heading levels"
-        size="sm"
-        disabled={!editor}
-        className="shadow-none"
-      >
+      <SelectTrigger aria-label="Heading levels" disabled={!editor} className="shadow-none">
         <SelectValue placeholder={selectPlaceholder} />
       </SelectTrigger>
 

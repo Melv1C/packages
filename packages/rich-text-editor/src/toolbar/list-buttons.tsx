@@ -15,7 +15,6 @@ export function BulletListButton({
   children,
   className,
   variant = 'outline',
-  size = 'sm',
   ...props
 }: ListButtonProps) {
   const { editor } = useRichTextEditor();
@@ -31,7 +30,6 @@ export function BulletListButton({
       disabled={editor ? !editor.can().chain().focus().toggleBulletList().run() : true}
       onPressedChange={() => editor?.chain().focus().toggleBulletList().run()}
       variant={variant}
-      size={size}
       className={cn('shadow-none', className)}
       {...props}
     >
@@ -44,7 +42,6 @@ export function OrderedListButton({
   children,
   className,
   variant = 'outline',
-  size = 'sm',
   ...props
 }: ListButtonProps) {
   const { editor } = useRichTextEditor();
@@ -60,7 +57,6 @@ export function OrderedListButton({
       disabled={editor ? !editor.can().chain().focus().toggleOrderedList().run() : true}
       onPressedChange={() => editor?.chain().focus().toggleOrderedList().run()}
       variant={variant}
-      size={size}
       className={cn('shadow-none', className)}
       {...props}
     >

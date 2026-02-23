@@ -11,7 +11,7 @@ export function UndoButton({
   children,
   className,
   variant = 'outline',
-  size = 'icon-sm',
+  size = 'icon',
   ...props
 }: HistoryButtonProps) {
   const { editor } = useRichTextEditor();
@@ -34,7 +34,7 @@ export function RedoButton({
   children,
   className,
   variant = 'outline',
-  size = 'icon-sm',
+  size = 'icon',
   ...props
 }: HistoryButtonProps) {
   const { editor } = useRichTextEditor();
