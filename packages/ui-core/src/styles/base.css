@@ -52,32 +52,31 @@
     cursor: pointer;
   }
 
-  h1 {
+  .rich-text h1 {
     @apply text-3xl font-bold;
   }
 
-  h2 {
+  .rich-text h2 {
     @apply text-2xl font-bold;
   }
 
-  h3 {
+  .rich-text h3 {
     @apply text-xl font-bold;
   }
 
-  ul {
+  .rich-text ul {
     @apply list-disc pl-6;
   }
 
-  ol {
+  .rich-text ol {
     @apply list-decimal pl-6;
   }
 
-  a {
+  .rich-text a {
     @apply text-primary underline-offset-4 hover:underline;
   }
 
-  /* TODO define if I want to keep '.ProseMirror' */
-  .ProseMirror code {
+  .rich-text code {
     @apply font-mono px-1.5 py-0.5 rounded-md
          bg-zinc-100 dark:bg-zinc-800
          text-zinc-800 dark:text-zinc-200

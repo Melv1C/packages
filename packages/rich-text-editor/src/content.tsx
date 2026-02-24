@@ -45,6 +45,7 @@ export function RichTextEditorContent({
       data-slot="rich-text-editor-content"
       editor={editor}
       className={cn(
+        'rich-text',
         'text-foreground [&_.ProseMirror]:px-2 [&_.ProseMirror]:py-1 [&_.ProseMirror]:outline-none [&_.ProseMirror_p.is-editor-empty:first-child::before]:text-muted-foreground [&_.ProseMirror_p.is-editor-empty:first-child::before]:pointer-events-none [&_.ProseMirror_p.is-editor-empty:first-child::before]:float-left [&_.ProseMirror_p.is-editor-empty:first-child::before]:h-0 [&_.ProseMirror_p.is-editor-empty:first-child::before]:content-[attr(data-placeholder)]',
         className,
       )}
