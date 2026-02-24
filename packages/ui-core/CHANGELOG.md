@@ -1,5 +1,11 @@
 # @melv1c/ui-core
 
+## 1.1.3
+
+### Patch Changes
+
+- Make sure that style for rich text only apply when the rich-text class is present
+
 ## 1.1.2
 
 ### Patch Changes

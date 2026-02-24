@@ -1,6 +1,6 @@
 {
   "name": "@melv1c/rich-text-editor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A rich text editor component for React, built with TipTap and styled with Tailwind CSS.",
   "repository": {
     "type": "git",
@@ -42,7 +42,7 @@
     "typescript": "~5.9.3"
   },
   "peerDependencies": {
-    "@melv1c/ui-core": ">=1.1.2",
+    "@melv1c/ui-core": ">=1.1.3",
     "react": ">=19",
     "react-dom": ">=19",
     "tailwindcss": "^4.1.17",

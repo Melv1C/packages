@@ -1,5 +1,13 @@
 # @melv1c/rich-text-editor
 
+## 1.0.3
+
+### Patch Changes
+
+- Make sure that style for rich text only apply when the rich-text class is present
+- Updated dependencies
+  - @melv1c/ui-core@1.1.3
+
 ## 1.0.2
 
 ### Patch Changes
