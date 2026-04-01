@@ -6,8 +6,8 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from '@melv1c/ui-core';
-import { HelpCircle, InfoIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { HelpCircle, InfoIcon } from "lucide-react";
 
 export default function InputGroupTooltip() {
   return (

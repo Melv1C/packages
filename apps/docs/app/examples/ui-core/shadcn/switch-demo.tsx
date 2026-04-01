@@ -1,4 +1,4 @@
-import { Label, Switch } from '@melv1c/ui-core';
+import { Label, Switch } from "@melv1c/ui-core";
 
 export default function SwitchDemo() {
   return (

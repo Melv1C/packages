@@ -1,7 +1,7 @@
-import { Calendar, CalendarDayButton, Card, CardContent } from '@melv1c/ui-core';
-import { addDays } from 'date-fns';
-import * as React from 'react';
-import { type DateRange } from 'react-day-picker';
+import { Calendar, CalendarDayButton, Card, CardContent } from "@melv1c/ui-core";
+import { addDays } from "date-fns";
+import * as React from "react";
+import { type DateRange } from "react-day-picker";
 
 export default function CalendarCustomDays() {
   const [range, setRange] = React.useState<DateRange | undefined>({
@@ -21,8 +21,8 @@ export default function CalendarCustomDays() {
           captionLayout="dropdown"
           className="[--cell-size:--spacing(10)] md:[--cell-size:--spacing(12)]"
           formatters={{
-            formatMonthDropdown: date => {
-              return date.toLocaleString('default', { month: 'long' });
+            formatMonthDropdown: (date) => {
+              return date.toLocaleString("default", { month: "long" });
             },
           }}
           components={{
@@ -32,7 +32,7 @@ export default function CalendarCustomDays() {
               return (
                 <CalendarDayButton day={day} modifiers={modifiers} {...props}>
                   {children}
-                  {!modifiers.outside && <span>{isWeekend ? '$120' : '$100'}</span>}
+                  {!modifiers.outside && <span>{isWeekend ? "$120" : "$100"}</span>}
                 </CalendarDayButton>
               );
             },

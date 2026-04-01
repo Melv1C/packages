@@ -1,7 +1,7 @@
 {
   "extends": "@melv1c/toolchain/tsconfigs/node.json",
-    "compilerOptions": {
-      "noEmit": true,
-    },
+  "compilerOptions": {
+    "noEmit": true
+  },
   "include": ["vite.config.ts"]
 }

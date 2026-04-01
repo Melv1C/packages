@@ -22,10 +22,10 @@ icon: Globe
 The simplest way to enable i18n is to pass a locale string to `UICoreProvider` (see [Providers](/docs/ui-core/providers)):
 
 ```tsx title="app.tsx"
-import { UICoreProvider } from '@melv1c/ui-core';
+import { UICoreProvider } from "@melv1c/ui-core";
 
 export function App({ children }: { children: React.ReactNode }) {
-  return <UICoreProvider i18nConfig={{ locale: 'fr' }}>{children}</UICoreProvider>;
+  return <UICoreProvider i18nConfig={{ locale: "fr" }}>{children}</UICoreProvider>;
 }
 ```
 
@@ -36,17 +36,17 @@ This will load the French translation bundle and apply it to all @melv1c compone
 You can override specific translation keys or add your own:
 
 ```tsx title="app.tsx"
-import { UICoreProvider } from '@melv1c/ui-core';
+import { UICoreProvider } from "@melv1c/ui-core";
 
 export function App({ children }: { children: React.ReactNode }) {
   return (
     <UICoreProvider
       i18nConfig={{
-        locale: 'en',
+        locale: "en",
         overrides: {
           loginForm: {
-            title: 'Welcome Back',
-            description: 'Sign in to your workspace',
+            title: "Welcome Back",
+            description: "Sign in to your workspace",
           },
         },
       }}
@@ -62,8 +62,8 @@ export function App({ children }: { children: React.ReactNode }) {
 If you already have an i18next instance configured in your app, you can pass it to the provider:
 
 ```tsx title="app.tsx"
-import { UICoreProvider } from '@melv1c/ui-core';
-import i18n from './i18n'; // your existing i18next instance
+import { UICoreProvider } from "@melv1c/ui-core";
+import i18n from "./i18n"; // your existing i18next instance
 
 export function App({ children }: { children: React.ReactNode }) {
   return <UICoreProvider i18nConfig={{ instance: i18n }}>{children}</UICoreProvider>;
@@ -92,16 +92,16 @@ Here are the translation keys used by @melv1c/ui-core components:
 You can dynamically switch languages at runtime by updating the locale passed to the provider:
 
 ```tsx title="language-switcher.tsx"
-import { useState } from 'react';
-import { UICoreProvider } from '@melv1c/ui-core';
-import type { SupportedLanguage } from '@melv1c/ui-core';
+import { useState } from "react";
+import { UICoreProvider } from "@melv1c/ui-core";
+import type { SupportedLanguage } from "@melv1c/ui-core";
 
 export function App({ children }: { children: React.ReactNode }) {
-  const [locale, setLocale] = useState<SupportedLanguage>('en');
+  const [locale, setLocale] = useState<SupportedLanguage>("en");
 
   return (
     <UICoreProvider i18nConfig={{ locale }}>
-      <select value={locale} onChange={e => setLocale(e.target.value as SupportedLanguage)}>
+      <select value={locale} onChange={(e) => setLocale(e.target.value as SupportedLanguage)}>
         <option value="en">English</option>
         <option value="fr">Français</option>
         <option value="nl">Nederlands</option>

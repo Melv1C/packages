@@ -9,8 +9,8 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from '@melv1c/ui-core';
-import { Plus } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { Plus } from "lucide-react";
 
 export default function ItemAvatar() {
   return (

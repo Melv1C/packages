@@ -25,7 +25,7 @@ import {
   StrikethroughButton,
   UndoButton,
   useRichTextEditor,
-} from '@melv1c/rich-text-editor';
+} from "@melv1c/rich-text-editor";
 ```
 
 ## Root + toolbar + content
@@ -43,8 +43,8 @@ import {
   RichTextEditorToolbar,
   RichTextEditorContent,
   UndoButton,
-} from '@melv1c/rich-text-editor';
-import { ButtonGroup } from '@melv1c/ui-core';
+} from "@melv1c/rich-text-editor";
+import { ButtonGroup } from "@melv1c/ui-core";
 
 <RichTextEditor value={value} onValueChange={setValue}>
   <RichTextEditorToolbar>
@@ -113,9 +113,9 @@ Use `useRichTextEditor()` inside `RichTextEditor` children to build custom actio
 <ComponentPreview name="rich-text-editor-custom-action" />
 
 ```tsx title="custom-toolbar-action.tsx"
-import { Sparkles } from 'lucide-react';
-import { Button } from '@melv1c/ui-core';
-import { useRichTextEditor } from '@melv1c/rich-text-editor';
+import { Sparkles } from "lucide-react";
+import { Button } from "@melv1c/ui-core";
+import { useRichTextEditor } from "@melv1c/rich-text-editor";
 
 function InsertSignatureButton() {
   const { editor } = useRichTextEditor();
@@ -125,7 +125,7 @@ function InsertSignatureButton() {
       variant="outline"
       size="icon-sm"
       disabled={!editor}
-      onClick={() => editor?.chain().focus().insertContent(' — Team').run()}
+      onClick={() => editor?.chain().focus().insertContent(" — Team").run()}
       aria-label="Insert signature"
     >
       <Sparkles />

@@ -1,5 +1,5 @@
-import { Item, ItemActions, ItemContent, ItemDescription, ItemTitle } from '@melv1c/ui-core';
-import { ChevronRightIcon, ExternalLinkIcon } from 'lucide-react';
+import { Item, ItemActions, ItemContent, ItemDescription, ItemTitle } from "@melv1c/ui-core";
+import { ChevronRightIcon, ExternalLinkIcon } from "lucide-react";
 
 export default function ItemLink() {
   return (

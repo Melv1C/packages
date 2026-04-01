@@ -1,18 +1,20 @@
-import { LLMCopyButton } from '@/components/ai/page-actions';
-import { ComponentPreview } from '@/components/component-preview';
-import { baseOptions } from '@/lib/layout.shared';
-import { source } from '@/lib/source';
-import { useFumadocsLoader } from 'fumadocs-core/source/client';
-import browserCollections from 'fumadocs-mdx:collections/browser';
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
-import defaultMdxComponents from 'fumadocs-ui/mdx';
-import type { Route } from './+types/docs';
+import { useFumadocsLoader } from "fumadocs-core/source/client";
+import browserCollections from "fumadocs-mdx:collections/browser";
+import { DocsLayout } from "fumadocs-ui/layouts/docs";
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from "fumadocs-ui/layouts/docs/page";
+import defaultMdxComponents from "fumadocs-ui/mdx";
+
+import { LLMCopyButton } from "@/components/ai/page-actions";
+import { ComponentPreview } from "@/components/component-preview";
+import { baseOptions } from "@/lib/layout.shared";
+import { source } from "@/lib/source";
+
+import type { Route } from "./+types/docs";
 
 export async function loader({ params }: Route.LoaderArgs) {
-  const slugs = params['*'].split('/').filter(v => v.length > 0);
+  const slugs = params["*"].split("/").filter((v) => v.length > 0);
   const page = source.getPage(slugs);
-  if (!page) throw new Response('Not found', { status: 404 });
+  if (!page) throw new Response("Not found", { status: 404 });
 
   return {
     slugs: page.slugs,
@@ -31,14 +33,14 @@ const clientLoader = browserCollections.docs.createClientLoader({
       slugs: string[];
     },
   ) {
-    const markdownUrl = `/llms.mdx/docs/${[...slugs, 'index.mdx'].join('/')}`;
+    const markdownUrl = `/llms.mdx/docs/${[...slugs, "index.mdx"].join("/")}`;
     return (
       <DocsPage toc={toc}>
         <title>{frontmatter.title}</title>
         <meta name="description" content={frontmatter.description} />
         <DocsTitle>{frontmatter.title}</DocsTitle>
         <DocsDescription>{frontmatter.description}</DocsDescription>
-        <div className="flex flex-row gap-2 items-center border-b -mt-4 pb-6">
+        <div className="-mt-4 flex flex-row items-center gap-2 border-b pb-6">
           <LLMCopyButton markdownUrl={markdownUrl} />
         </div>
         <DocsBody>
@@ -52,7 +54,7 @@ const clientLoader = browserCollections.docs.createClientLoader({
 export default function Page({ loaderData }: Route.ComponentProps) {
   const { pageTree, ...rest } = useFumadocsLoader(loaderData);
 
-  console.log('Page loader data:', loaderData);
+  console.log("Page loader data:", loaderData);
 
   return (
     <DocsLayout {...baseOptions()} tree={pageTree}>

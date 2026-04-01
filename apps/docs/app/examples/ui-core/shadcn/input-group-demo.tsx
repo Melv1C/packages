@@ -1,5 +1,5 @@
-import { InputGroup, InputGroupAddon, InputGroupInput } from '@melv1c/ui-core';
-import { Search } from 'lucide-react';
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@melv1c/ui-core";
+import { Search } from "lucide-react";
 
 export default function InputGroupDemo() {
   return (

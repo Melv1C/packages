@@ -5,8 +5,8 @@ import {
   ContextMenuItem,
   ContextMenuSeparator,
   ContextMenuTrigger,
-} from '@melv1c/ui-core';
-import { ClipboardPasteIcon, CopyIcon, ScissorsIcon, TrashIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { ClipboardPasteIcon, CopyIcon, ScissorsIcon, TrashIcon } from "lucide-react";
 
 export default function ContextMenuIcons() {
   return (

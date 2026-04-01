@@ -5,9 +5,9 @@
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
+    "postinstall": "fumadocs-mdx",
     "start": "serve ./build/client --config ../../serve.json",
-    "types:check": "react-router typegen && fumadocs-mdx && tsc --noEmit",
-    "postinstall": "fumadocs-mdx"
+    "types:check": "react-router typegen && fumadocs-mdx && tsc --noEmit"
   },
   "dependencies": {
     "@melv1c/rich-text-editor": "workspace:*",

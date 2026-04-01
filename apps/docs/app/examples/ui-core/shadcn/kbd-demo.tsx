@@ -1,4 +1,4 @@
-import { Kbd, KbdGroup } from '@melv1c/ui-core';
+import { Kbd, KbdGroup } from "@melv1c/ui-core";
 
 export default function KbdDemo() {
   return (

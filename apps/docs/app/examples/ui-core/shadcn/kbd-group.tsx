@@ -1,14 +1,14 @@
-import { Kbd, KbdGroup } from '@melv1c/ui-core';
+import { Kbd, KbdGroup } from "@melv1c/ui-core";
 
 export default function KbdGroupExample() {
   return (
     <div className="flex flex-col items-center gap-4">
       <p className="text-muted-foreground text-sm">
-        Use{' '}
+        Use{" "}
         <KbdGroup>
           <Kbd>Ctrl + B</Kbd>
           <Kbd>Ctrl + K</Kbd>
-        </KbdGroup>{' '}
+        </KbdGroup>{" "}
         to open the command palette
       </p>
     </div>

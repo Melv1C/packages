@@ -1,5 +1,5 @@
-import { Button, Kbd, Tooltip, TooltipContent, TooltipTrigger } from '@melv1c/ui-core';
-import { SaveIcon } from 'lucide-react';
+import { Button, Kbd, Tooltip, TooltipContent, TooltipTrigger } from "@melv1c/ui-core";
+import { SaveIcon } from "lucide-react";
 
 export default function TooltipKeyboard() {
   return (

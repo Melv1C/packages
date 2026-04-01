@@ -5,8 +5,8 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from '@melv1c/ui-core';
-import { ChevronDownIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { ChevronDownIcon } from "lucide-react";
 
 export default function CollapsibleBasic() {
   return (

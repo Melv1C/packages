@@ -6,8 +6,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from '@melv1c/ui-core';
-import { Bell, RefreshCcwIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { Bell, RefreshCcwIcon } from "lucide-react";
 
 export default function EmptyMuted() {
   return (

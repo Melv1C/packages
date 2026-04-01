@@ -1,4 +1,4 @@
-import { Separator } from '@melv1c/ui-core';
+import { Separator } from "@melv1c/ui-core";
 
 export default function SeparatorDemo() {
   return (

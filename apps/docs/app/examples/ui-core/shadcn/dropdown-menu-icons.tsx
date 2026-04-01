@@ -5,8 +5,8 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@melv1c/ui-core';
-import { CreditCardIcon, LogOutIcon, SettingsIcon, UserIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { CreditCardIcon, LogOutIcon, SettingsIcon, UserIcon } from "lucide-react";
 
 export default function DropdownMenuIcons() {
   return (

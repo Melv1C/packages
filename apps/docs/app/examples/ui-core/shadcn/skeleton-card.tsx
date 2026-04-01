@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, Skeleton } from '@melv1c/ui-core';
+import { Card, CardContent, CardHeader, Skeleton } from "@melv1c/ui-core";
 
 export default function SkeletonCard() {
   return (

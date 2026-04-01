@@ -8,7 +8,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 import {
   BellIcon,
   CalculatorIcon,
@@ -34,8 +34,8 @@ import {
   UserIcon,
   ZoomInIcon,
   ZoomOutIcon,
-} from 'lucide-react';
-import * as React from 'react';
+} from "lucide-react";
+import * as React from "react";
 
 export default function CommandManyItems() {
   const [open, setOpen] = React.useState(false);

@@ -10,8 +10,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@melv1c/ui-core';
-import { MoreHorizontalIcon, Table } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { MoreHorizontalIcon, Table } from "lucide-react";
 
 export default function TableActions() {
   return (

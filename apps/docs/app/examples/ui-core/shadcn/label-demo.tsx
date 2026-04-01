@@ -1,4 +1,4 @@
-import { Checkbox, Label } from '@melv1c/ui-core';
+import { Checkbox, Label } from "@melv1c/ui-core";
 
 export default function LabelDemo() {
   return (

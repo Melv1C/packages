@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@melv1c/ui-core';
+import { Avatar, AvatarFallback, AvatarImage } from "@melv1c/ui-core";
 
 export default function AvatarSizeExample() {
   return (

@@ -1,7 +1,8 @@
-import { getDemoComponent, getDemoComponentCode } from '@/lib/registry';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@melv1c/ui-core';
-import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
-import { Suspense } from 'react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@melv1c/ui-core";
+import { DynamicCodeBlock } from "fumadocs-ui/components/dynamic-codeblock";
+import { Suspense } from "react";
+
+import { getDemoComponent, getDemoComponentCode } from "@/lib/registry";
 
 type ComponentPreviewProps = {
   name: string;
@@ -13,14 +14,14 @@ export const ComponentPreview = ({ name }: ComponentPreviewProps) => {
 
   if (!Component) {
     return (
-      <div className="flex items-center justify-center rounded-lg border p-6 text-sm text-fd-muted-foreground">
+      <div className="text-fd-muted-foreground flex items-center justify-center rounded-lg border p-6 text-sm">
         Example &quot;{name}&quot; not found.
       </div>
     );
   }
 
   return (
-    <Tabs defaultValue="preview" className="w-full not-prose">
+    <Tabs defaultValue="preview" className="not-prose w-full">
       <TabsList className="justify-start">
         <TabsTrigger value="preview">Preview</TabsTrigger>
         <TabsTrigger value="code">Code</TabsTrigger>
@@ -28,7 +29,7 @@ export const ComponentPreview = ({ name }: ComponentPreviewProps) => {
       <TabsContent value="preview">
         <div className="flex w-full items-center justify-center rounded-lg border p-6">
           <Suspense
-            fallback={<div className="text-sm text-fd-muted-foreground">Loading preview...</div>}
+            fallback={<div className="text-fd-muted-foreground text-sm">Loading preview...</div>}
           >
             <Component />
           </Suspense>

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { Field, FieldDescription, FieldTitle, Slider } from '@melv1c/ui-core';
-import * as React from 'react';
+import { Field, FieldDescription, FieldTitle, Slider } from "@melv1c/ui-core";
+import * as React from "react";
 
 export default function FieldSlider() {
   const [value, setValue] = React.useState([200, 800]);
@@ -11,12 +11,12 @@ export default function FieldSlider() {
       <FieldTitle>Price Range</FieldTitle>
       <FieldDescription>
         Set your budget range ($
-        <span className="font-medium tabular-nums">{value[0]}</span> -{' '}
+        <span className="font-medium tabular-nums">{value[0]}</span> -{" "}
         <span className="font-medium tabular-nums">{value[1]}</span>).
       </FieldDescription>
       <Slider
         value={value}
-        onValueChange={value => setValue(value as [number, number])}
+        onValueChange={(value) => setValue(value as [number, number])}
         max={1000}
         min={0}
         step={10}

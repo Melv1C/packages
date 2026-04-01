@@ -12,7 +12,7 @@ import {
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function BreadcrumbDemo() {
   return (

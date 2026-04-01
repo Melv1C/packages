@@ -1,5 +1,5 @@
-import { Button, ButtonGroup, Input } from '@melv1c/ui-core';
-import { SearchIcon } from 'lucide-react';
+import { Button, ButtonGroup, Input } from "@melv1c/ui-core";
+import { SearchIcon } from "lucide-react";
 
 export default function ButtonGroupInput() {
   return (

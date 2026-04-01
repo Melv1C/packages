@@ -1,5 +1,5 @@
-import { ToggleGroup, ToggleGroupItem } from '@melv1c/ui-core';
-import { BoldIcon, ItalicIcon, UnderlineIcon } from 'lucide-react';
+import { ToggleGroup, ToggleGroupItem } from "@melv1c/ui-core";
+import { BoldIcon, ItalicIcon, UnderlineIcon } from "lucide-react";
 
 export default function ToggleGroupVertical() {
   return (
@@ -7,7 +7,7 @@ export default function ToggleGroupVertical() {
       type="multiple"
       orientation="vertical"
       spacing={1}
-      defaultValue={['bold', 'italic']}
+      defaultValue={["bold", "italic"]}
     >
       <ToggleGroupItem value="bold" aria-label="Toggle bold">
         <BoldIcon />

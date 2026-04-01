@@ -1,4 +1,4 @@
-import { Field, FieldGroup, FieldLabel, Switch } from '@melv1c/ui-core';
+import { Field, FieldGroup, FieldLabel, Switch } from "@melv1c/ui-core";
 
 export default function SwitchSizes() {
   return (

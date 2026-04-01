@@ -1,5 +1,5 @@
-import { Calendar, Card, CardContent } from '@melv1c/ui-core';
-import * as React from 'react';
+import { Calendar, Card, CardContent } from "@melv1c/ui-core";
+import * as React from "react";
 
 export default function CalendarBookedDates() {
   const [date, setDate] = React.useState<Date | undefined>(
@@ -23,7 +23,7 @@ export default function CalendarBookedDates() {
             booked: bookedDates,
           }}
           modifiersClassNames={{
-            booked: '[&>button]:line-through opacity-100',
+            booked: "[&>button]:line-through opacity-100",
           }}
         />
       </CardContent>

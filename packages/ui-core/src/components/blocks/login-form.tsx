@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { CircleAlert, Eye, EyeOff } from 'lucide-react';
-import { useState } from 'react';
-import { Controller, useForm } from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
-import * as z from 'zod';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { CircleAlert, Eye, EyeOff } from "lucide-react";
+import { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+import * as z from "zod";
 
-import { Alert, AlertDescription } from '@/components/base/alert';
-import { Button } from '@/components/base/button';
+import { Alert, AlertDescription } from "@/components/base/alert";
+import { Button } from "@/components/base/button";
 import {
   Card,
   CardContent,
@@ -16,12 +16,12 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/base/card';
-import { Field, FieldError, FieldGroup, FieldLabel } from '@/components/base/field';
-import { Input } from '@/components/base/input';
-import { Separator } from '@/components/base/separator';
-import { AppleIcon, FacebookIcon, GithubIcon, GoogleIcon, MicrosoftIcon } from '@/components/icons';
-import { cn } from '@/lib/utils';
+} from "@/components/base/card";
+import { Field, FieldError, FieldGroup, FieldLabel } from "@/components/base/field";
+import { Input } from "@/components/base/input";
+import { Separator } from "@/components/base/separator";
+import { AppleIcon, FacebookIcon, GithubIcon, GoogleIcon, MicrosoftIcon } from "@/components/icons";
+import { cn } from "@/lib/utils";
 
 type LoginFormValues = {
   email: string;
@@ -30,11 +30,11 @@ type LoginFormValues = {
 
 const createLoginFormSchema = (t: (key: string) => string) =>
   z.object({
-    email: z.email(t('loginForm.errors.invalidEmail')),
-    password: z.string().min(1, t('loginForm.errors.passwordRequired')),
+    email: z.email(t("loginForm.errors.invalidEmail")),
+    password: z.string().min(1, t("loginForm.errors.passwordRequired")),
   });
 
-type LoginProvider = 'google' | 'github' | 'apple' | 'microsoft' | 'facebook';
+type LoginProvider = "google" | "github" | "apple" | "microsoft" | "facebook";
 
 interface LoginFormProps {
   /** Callback when form is submitted with email and password. Can throw an error that will be caught and displayed. */
@@ -82,7 +82,7 @@ function LoginForm({
   schema,
   className,
 }: LoginFormProps) {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation("ui");
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -93,8 +93,8 @@ function LoginForm({
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(resolvedSchema as typeof translatedSchema),
     defaultValues: {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     },
   });
 
@@ -111,11 +111,11 @@ function LoginForm({
     }
   };
 
-  const displayTitle = title ?? t('loginForm.title');
-  const displayDescription = description ?? t('loginForm.description');
+  const displayTitle = title ?? t("loginForm.title");
+  const displayDescription = description ?? t("loginForm.description");
 
   return (
-    <Card className={cn('w-full max-w-md', className)}>
+    <Card className={cn("w-full max-w-md", className)}>
       <CardHeader className="text-center">
         <CardTitle className="text-xl">{displayTitle}</CardTitle>
         <CardDescription>{displayDescription}</CardDescription>
@@ -134,12 +134,12 @@ function LoginForm({
               control={form.control}
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel htmlFor="login-email">{t('loginForm.email')}</FieldLabel>
+                  <FieldLabel htmlFor="login-email">{t("loginForm.email")}</FieldLabel>
                   <Input
                     {...field}
                     id="login-email"
                     type="email"
-                    placeholder={t('loginForm.emailPlaceholder')}
+                    placeholder={t("loginForm.emailPlaceholder")}
                     disabled={isLoading}
                     autoComplete="email"
                     aria-invalid={fieldState.invalid}
@@ -154,7 +154,7 @@ function LoginForm({
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
                   <div className="flex items-center">
-                    <FieldLabel htmlFor="login-password">{t('loginForm.password')}</FieldLabel>
+                    <FieldLabel htmlFor="login-password">{t("loginForm.password")}</FieldLabel>
                     {showForgotPassword && (
                       <button
                         type="button"
@@ -162,7 +162,7 @@ function LoginForm({
                         className="text-muted-foreground hover:text-primary ml-auto text-sm underline-offset-4 hover:underline"
                         disabled={isLoading}
                       >
-                        {t('loginForm.forgotPassword')}
+                        {t("loginForm.forgotPassword")}
                       </button>
                     )}
                   </div>
@@ -170,7 +170,7 @@ function LoginForm({
                     <Input
                       {...field}
                       id="login-password"
-                      type={showPassword ? 'text' : 'password'}
+                      type={showPassword ? "text" : "password"}
                       disabled={isLoading}
                       autoComplete="current-password"
                       aria-invalid={fieldState.invalid}
@@ -181,7 +181,7 @@ function LoginForm({
                       onClick={() => setShowPassword(!showPassword)}
                       className="text-muted-foreground hover:text-foreground absolute top-1/2 right-3 -translate-y-1/2"
                       disabled={isLoading}
-                      aria-label={showPassword ? 'Hide password' : 'Show password'}
+                      aria-label={showPassword ? "Hide password" : "Show password"}
                     >
                       {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
                     </button>
@@ -191,7 +191,7 @@ function LoginForm({
               )}
             />
             <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? t('loginForm.loggingIn') : t('loginForm.login')}
+              {isLoading ? t("loginForm.loggingIn") : t("loginForm.login")}
             </Button>
             {providers.length > 0 && (
               <>
@@ -201,12 +201,12 @@ function LoginForm({
                   </div>
                   <div className="relative flex justify-center text-xs uppercase">
                     <span className="bg-card text-muted-foreground px-2">
-                      {t('loginForm.orContinueWith')}
+                      {t("loginForm.orContinueWith")}
                     </span>
                   </div>
                 </div>
                 <div className="flex flex-col gap-3">
-                  {providers.map(provider => (
+                  {providers.map((provider) => (
                     <Button
                       key={provider}
                       type="button"
@@ -228,14 +228,14 @@ function LoginForm({
       {showSignUp && (
         <CardFooter className="justify-center">
           <p className="text-muted-foreground text-sm">
-            {t('loginForm.noAccount')}{' '}
+            {t("loginForm.noAccount")}{" "}
             <button
               type="button"
               onClick={onSignUp}
               className="text-primary underline-offset-4 hover:underline"
               disabled={isLoading}
             >
-              {t('loginForm.signUp')}
+              {t("loginForm.signUp")}
             </button>
           </p>
         </CardFooter>

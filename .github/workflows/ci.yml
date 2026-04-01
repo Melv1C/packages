@@ -22,6 +22,6 @@ jobs:
         run: bun install
       - name: Build UI Core
         run: bun run build --filter=@melv1c/ui-core
-      
+
       - name: Check code formatting
         run: bun run check

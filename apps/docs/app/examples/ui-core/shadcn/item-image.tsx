@@ -5,26 +5,26 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 const music = [
   {
-    title: 'Midnight City Lights',
-    artist: 'Neon Dreams',
-    album: 'Electric Nights',
-    duration: '3:45',
+    title: "Midnight City Lights",
+    artist: "Neon Dreams",
+    album: "Electric Nights",
+    duration: "3:45",
   },
   {
-    title: 'Coffee Shop Conversations',
-    artist: 'The Morning Brew',
-    album: 'Urban Stories',
-    duration: '4:05',
+    title: "Coffee Shop Conversations",
+    artist: "The Morning Brew",
+    album: "Urban Stories",
+    duration: "4:05",
   },
   {
-    title: 'Digital Rain',
-    artist: 'Cyber Symphony',
-    album: 'Binary Beats',
-    duration: '3:30',
+    title: "Digital Rain",
+    artist: "Cyber Symphony",
+    album: "Binary Beats",
+    duration: "3:30",
   },
 ];
 
@@ -32,7 +32,7 @@ export default function ItemImage() {
   return (
     <div className="flex w-full max-w-md flex-col gap-6">
       <ItemGroup className="gap-4">
-        {music.map(song => (
+        {music.map((song) => (
           <Item key={song.title} variant="outline" asChild role="listitem">
             <a href="#">
               <ItemMedia variant="image">

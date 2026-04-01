@@ -9,7 +9,7 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function InputGroupBlockEnd() {
   return (

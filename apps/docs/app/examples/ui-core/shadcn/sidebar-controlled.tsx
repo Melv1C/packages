@@ -9,7 +9,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 import {
   FrameIcon,
   LifeBuoyIcon,
@@ -19,33 +19,33 @@ import {
   PieChartIcon,
   SendIcon,
   Sidebar,
-} from 'lucide-react';
-import * as React from 'react';
+} from "lucide-react";
+import * as React from "react";
 
 const projects = [
   {
-    name: 'Design Engineering',
-    url: '#',
+    name: "Design Engineering",
+    url: "#",
     icon: FrameIcon,
   },
   {
-    name: 'Sales & Marketing',
-    url: '#',
+    name: "Sales & Marketing",
+    url: "#",
     icon: PieChartIcon,
   },
   {
-    name: 'Travel',
-    url: '#',
+    name: "Travel",
+    url: "#",
     icon: MapIcon,
   },
   {
-    name: 'Support',
-    url: '#',
+    name: "Support",
+    url: "#",
     icon: LifeBuoyIcon,
   },
   {
-    name: 'Feedback',
-    url: '#',
+    name: "Feedback",
+    url: "#",
     icon: SendIcon,
   },
 ];
@@ -61,7 +61,7 @@ export default function AppSidebar() {
             <SidebarGroupLabel>Projects</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
-                {projects.map(project => (
+                {projects.map((project) => (
                   <SidebarMenuItem key={project.name}>
                     <SidebarMenuButton asChild>
                       <a href={project.url}>
@@ -78,9 +78,9 @@ export default function AppSidebar() {
       </Sidebar>
       <SidebarInset>
         <header className="flex h-12 items-center justify-between px-4">
-          <Button onClick={() => setOpen(open => !open)} size="sm" variant="ghost">
+          <Button onClick={() => setOpen((open) => !open)} size="sm" variant="ghost">
             {open ? <PanelLeftCloseIcon /> : <PanelLeftOpenIcon />}
-            <span>{open ? 'Close' : 'Open'} Sidebar</span>
+            <span>{open ? "Close" : "Open"} Sidebar</span>
           </Button>
         </header>
       </SidebarInset>

@@ -1,4 +1,4 @@
-import { Checkbox, Field, FieldGroup, FieldLabel } from '@melv1c/ui-core';
+import { Checkbox, Field, FieldGroup, FieldLabel } from "@melv1c/ui-core";
 
 export default function CheckboxInvalid() {
   return (

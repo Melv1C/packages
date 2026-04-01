@@ -7,7 +7,7 @@ import {
   MenubarSeparator,
   MenubarShortcut,
   MenubarTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function MenubarCheckbox() {
   return (

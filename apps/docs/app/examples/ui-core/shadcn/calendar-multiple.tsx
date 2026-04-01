@@ -1,4 +1,4 @@
-import { Calendar, Card, CardContent } from '@melv1c/ui-core';
+import { Calendar, Card, CardContent } from "@melv1c/ui-core";
 
 export default function CalendarMultiple() {
   return (

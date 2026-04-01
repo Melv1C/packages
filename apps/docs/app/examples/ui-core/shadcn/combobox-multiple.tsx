@@ -9,10 +9,10 @@ import {
   ComboboxList,
   ComboboxValue,
   useComboboxAnchor,
-} from '@melv1c/ui-core';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import * as React from "react";
 
-const frameworks = ['Next.js', 'SvelteKit', 'Nuxt.js', 'Remix', 'Astro'] as const;
+const frameworks = ["Next.js", "SvelteKit", "Nuxt.js", "Remix", "Astro"] as const;
 
 export default function ComboboxMultiple() {
   const anchor = useComboboxAnchor();
@@ -21,7 +21,7 @@ export default function ComboboxMultiple() {
     <Combobox multiple autoHighlight items={frameworks} defaultValue={[frameworks[0]]}>
       <ComboboxChips ref={anchor} className="w-full max-w-xs">
         <ComboboxValue>
-          {values => (
+          {(values) => (
             <React.Fragment>
               {values.map((value: string) => (
                 <ComboboxChip key={value}>{value}</ComboboxChip>
@@ -34,7 +34,7 @@ export default function ComboboxMultiple() {
       <ComboboxContent anchor={anchor}>
         <ComboboxEmpty>No items found.</ComboboxEmpty>
         <ComboboxList>
-          {item => (
+          {(item) => (
             <ComboboxItem key={item} value={item}>
               {item}
             </ComboboxItem>

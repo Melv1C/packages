@@ -1,4 +1,4 @@
-import { NativeSelect, NativeSelectOptGroup, NativeSelectOption } from '@melv1c/ui-core';
+import { NativeSelect, NativeSelectOptGroup, NativeSelectOption } from "@melv1c/ui-core";
 
 export default function NativeSelectGroups() {
   return (

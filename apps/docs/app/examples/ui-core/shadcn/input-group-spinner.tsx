@@ -4,8 +4,8 @@ import {
   InputGroupAddon,
   Spinner,
   InputGroupText,
-} from '@melv1c/ui-core';
-import { LoaderIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { LoaderIcon } from "lucide-react";
 
 export default function InputGroupSpinner() {
   return (

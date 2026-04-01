@@ -2,7 +2,7 @@
   "extends": "@melv1c/toolchain/tsconfigs/react.json",
   "compilerOptions": {
     "types": ["vite/client"],
-    "noEmit": true,
+    "noEmit": true
   },
   "include": ["src"]
 }

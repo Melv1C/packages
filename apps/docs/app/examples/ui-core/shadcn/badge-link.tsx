@@ -1,5 +1,5 @@
-import { Badge } from '@melv1c/ui-core';
-import { ArrowUpRightIcon } from 'lucide-react';
+import { Badge } from "@melv1c/ui-core";
+import { ArrowUpRightIcon } from "lucide-react";
 
 export default function BadgeAsLink() {
   return (

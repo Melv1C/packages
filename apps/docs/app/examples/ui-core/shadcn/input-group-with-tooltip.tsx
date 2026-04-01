@@ -22,9 +22,9 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from '@melv1c/ui-core';
-import { ChevronDownIcon, InfoIcon, StarIcon } from 'lucide-react';
-import { toast } from 'sonner';
+} from "@melv1c/ui-core";
+import { ChevronDownIcon, InfoIcon, StarIcon } from "lucide-react";
+import { toast } from "sonner";
 
 export default function InputGroupWithTooltip({
   country,
@@ -69,9 +69,9 @@ export default function InputGroupWithTooltip({
                 sideOffset={10}
                 alignOffset={-8}
               >
-                <DropdownMenuItem onClick={() => setCountry('+1')}>+1</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setCountry('+44')}>+44</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setCountry('+46')}>+46</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setCountry("+1")}>+1</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setCountry("+44")}>+44</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setCountry("+46")}>+46</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </InputGroupAddon>
@@ -101,7 +101,7 @@ export default function InputGroupWithTooltip({
           <InputGroupAddon className="text-muted-foreground pl-1">https://</InputGroupAddon>
           <InputGroupInput id="input-secure-19" />
           <InputGroupAddon align="inline-end">
-            <InputGroupButton size="icon-xs" onClick={() => toast('Added to favorites')}>
+            <InputGroupButton size="icon-xs" onClick={() => toast("Added to favorites")}>
               <StarIcon />
             </InputGroupButton>
           </InputGroupAddon>

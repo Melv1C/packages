@@ -1,9 +1,9 @@
-import { Extension } from '@tiptap/core';
-import { useMemo } from 'react';
+import { ButtonGroup } from "@melv1c/ui-core";
+import { Extension } from "@tiptap/core";
+import { useMemo } from "react";
 
-import { ButtonGroup } from '@melv1c/ui-core';
-import { RichTextEditorContent, type RichTextEditorContentProps } from './content';
-import { RichTextEditor, type RichTextEditorProps } from './editor';
+import { RichTextEditorContent, type RichTextEditorContentProps } from "./content";
+import { RichTextEditor, type RichTextEditorProps } from "./editor";
 import {
   BoldButton,
   BulletListButton,
@@ -15,7 +15,7 @@ import {
   RichTextEditorToolbar,
   StrikethroughButton,
   UndoButton,
-} from './toolbar';
+} from "./toolbar";
 
 /**
  * Built-in editor presets:
@@ -24,20 +24,20 @@ import {
  * - `"complete"`: Heading toggles + formatting + lists + undo/redo
  * - `"oneline"`: No toolbar, single-line (Enter is blocked)
  */
-export type RichTextEditorPreset = 'minimal' | 'simple' | 'complete' | 'oneline';
+export type RichTextEditorPreset = "minimal" | "simple" | "complete" | "oneline";
 
 /** Blocks Enter / Shift-Enter so the editor stays on a single line. */
 const OneLinerExtension = Extension.create({
-  name: 'oneLiner',
+  name: "oneLiner",
   addKeyboardShortcuts() {
     return {
       Enter: () => true,
-      'Shift-Enter': () => true,
+      "Shift-Enter": () => true,
     };
   },
 });
 
-export type RichTextEditorBuiltInProps = Omit<RichTextEditorProps, 'children'> & {
+export type RichTextEditorBuiltInProps = Omit<RichTextEditorProps, "children"> & {
   contentClassName?: string;
   toolbarClassName?: string;
   /**
@@ -50,27 +50,27 @@ export type RichTextEditorBuiltInProps = Omit<RichTextEditorProps, 'children'> &
    * Accepts a number (px) or any valid CSS size string.
    * Forwarded to `RichTextEditorContent`.
    */
-  minHeight?: RichTextEditorContentProps['minHeight'];
+  minHeight?: RichTextEditorContentProps["minHeight"];
   /**
    * Maximum height of the editor content area. When set the content area becomes
    * scrollable once the content exceeds this height.
    * Accepts a number (px) or any valid CSS size string.
    * Forwarded to `RichTextEditorContent`.
    */
-  maxHeight?: RichTextEditorContentProps['maxHeight'];
+  maxHeight?: RichTextEditorContentProps["maxHeight"];
 };
 
 export function RichTextEditorBuiltIn({
   className,
   contentClassName,
   toolbarClassName,
-  preset = 'complete',
+  preset = "complete",
   minHeight,
   maxHeight,
   extensions,
   ...props
 }: RichTextEditorBuiltInProps) {
-  const isOneline = preset === 'oneline';
+  const isOneline = preset === "oneline";
 
   const resolvedMinHeight = minHeight ?? (isOneline ? 0 : 180);
 
@@ -82,23 +82,23 @@ export function RichTextEditorBuiltIn({
   return (
     <RichTextEditor className={className} extensions={mergedExtensions} {...props}>
       <RichTextEditorToolbar className={toolbarClassName}>
-        {(preset === 'complete' || preset === 'simple') && (
+        {(preset === "complete" || preset === "simple") && (
           <ButtonGroup>
             <UndoButton />
             <RedoButton />
           </ButtonGroup>
         )}
 
-        {(preset === 'complete' || preset === 'simple') && <RichTextEditorHeadingSelect />}
+        {(preset === "complete" || preset === "simple") && <RichTextEditorHeadingSelect />}
 
         <ButtonGroup>
           <BoldButton />
           <ItalicButton />
           <StrikethroughButton />
-          {preset === 'complete' && <CodeButton />}
+          {preset === "complete" && <CodeButton />}
         </ButtonGroup>
 
-        {preset === 'complete' && (
+        {preset === "complete" && (
           <ButtonGroup>
             <BulletListButton />
             <OrderedListButton />

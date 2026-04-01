@@ -1,10 +1,12 @@
-import * as locales from '@/locales';
-import type { SupportedLanguage } from '@/types';
-import type { i18n as I18nInstance } from 'i18next';
-import i18n from 'i18next';
-import { useEffect, useState, type ReactNode } from 'react';
-import { I18nextProvider, initReactI18next } from 'react-i18next';
-import { Toaster, TooltipProvider } from '../base';
+import type { i18n as I18nInstance } from "i18next";
+import i18n from "i18next";
+import { useEffect, useState, type ReactNode } from "react";
+import { I18nextProvider, initReactI18next } from "react-i18next";
+
+import * as locales from "@/locales";
+import type { SupportedLanguage } from "@/types";
+
+import { Toaster, TooltipProvider } from "../base";
 
 type I18nConfig =
   | {
@@ -38,7 +40,7 @@ type ProviderProps = {
 export function UICoreProvider({
   children,
   hasToaster = true,
-  i18nConfig = { locale: 'en' },
+  i18nConfig = { locale: "en" },
   loadingComponent = null,
 }: ProviderProps) {
   const [localInstance] = useState(() => (!i18nConfig.instance ? i18n.createInstance() : null));
@@ -53,7 +55,7 @@ export function UICoreProvider({
         .init({
           lng: i18nConfig.locale,
           fallbackLng: i18nConfig.locale,
-          defaultNS: 'ui',
+          defaultNS: "ui",
           resources: {},
           interpolation: {
             escapeValue: false,
@@ -73,14 +75,14 @@ export function UICoreProvider({
         ? { ...baseTranslations, ...i18nConfig.overrides }
         : baseTranslations;
 
-      instance.addResourceBundle(i18nConfig.locale, 'ui', mergedTranslations, true, true);
+      instance.addResourceBundle(i18nConfig.locale, "ui", mergedTranslations, true, true);
       instance.changeLanguage(i18nConfig.locale);
     } else if (i18nConfig.instance) {
       // Mode with instance
       for (const [lng, resources] of Object.entries(locales)) {
         const languageOverrides = i18nConfig.overrides?.[lng];
 
-        if (instance.hasResourceBundle(lng, 'ui') && !languageOverrides) {
+        if (instance.hasResourceBundle(lng, "ui") && !languageOverrides) {
           continue;
         }
 
@@ -88,7 +90,7 @@ export function UICoreProvider({
           ? { ...resources, ...languageOverrides }
           : resources;
 
-        instance.addResourceBundle(lng, 'ui', mergedResources, true, true);
+        instance.addResourceBundle(lng, "ui", mergedResources, true, true);
       }
 
       // Add any additional languages from overrides (not in supported locales)
@@ -96,7 +98,7 @@ export function UICoreProvider({
         const supportedLanguages = Object.keys(locales);
         for (const [lng, resources] of Object.entries(i18nConfig.overrides)) {
           if (supportedLanguages.includes(lng)) continue;
-          instance.addResourceBundle(lng, 'ui', resources, true, true);
+          instance.addResourceBundle(lng, "ui", resources, true, true);
         }
       }
     }

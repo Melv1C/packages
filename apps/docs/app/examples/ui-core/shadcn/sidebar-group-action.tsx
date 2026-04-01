@@ -8,9 +8,9 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
-} from '@melv1c/ui-core';
-import { FrameIcon, MapIcon, PieChartIcon, PlusIcon, Sidebar } from 'lucide-react';
-import { toast, Toaster } from 'sonner';
+} from "@melv1c/ui-core";
+import { FrameIcon, MapIcon, PieChartIcon, PlusIcon, Sidebar } from "lucide-react";
+import { toast, Toaster } from "sonner";
 
 export default function AppSidebar() {
   return (
@@ -18,7 +18,7 @@ export default function AppSidebar() {
       <Toaster
         position="bottom-left"
         toastOptions={{
-          className: 'ml-[160px]',
+          className: "ml-[160px]",
         }}
       />
       <Sidebar>
@@ -27,7 +27,7 @@ export default function AppSidebar() {
             <SidebarGroupLabel>Projects</SidebarGroupLabel>
             <SidebarGroupAction
               title="Add Project"
-              onClick={() => toast('You clicked the group action!')}
+              onClick={() => toast("You clicked the group action!")}
             >
               <PlusIcon /> <span className="sr-only">Add Project</span>
             </SidebarGroupAction>

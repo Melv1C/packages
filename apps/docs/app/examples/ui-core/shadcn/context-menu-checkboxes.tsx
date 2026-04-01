@@ -4,7 +4,7 @@ import {
   ContextMenuContent,
   ContextMenuGroup,
   ContextMenuTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function ContextMenuCheckboxes() {
   return (

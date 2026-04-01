@@ -7,8 +7,8 @@ import {
   InputGroupInput,
   TooltipContent,
   TooltipTrigger,
-} from '@melv1c/ui-core';
-import { InfoIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { InfoIcon } from "lucide-react";
 
 export default function InputGroupLabel() {
   return (

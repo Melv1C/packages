@@ -24,30 +24,30 @@ The package ships with 6 ready-to-use themes:
 Import the base styles and your chosen theme in your CSS file. Don't forget the `@source` directive so Tailwind can scan the package's classes:
 
 ```css title="app.css"
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @source "../node_modules/@melv1c";
 
 /* Import base theme structure */
-@import '@melv1c/ui-core/base.css';
+@import "@melv1c/ui-core/base.css";
 
 /* Pick one theme */
-@import '@melv1c/ui-core/themes/default.css';
+@import "@melv1c/ui-core/themes/default.css";
 ```
 
 To switch themes, simply change the theme import:
 
 ```css title="app.css"
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @source "../node_modules/@melv1c";
 
-@import '@melv1c/ui-core/base.css';
+@import "@melv1c/ui-core/base.css";
 
 /* Using the Claude theme instead */
-@import '@melv1c/ui-core/themes/claude.css';
+@import "@melv1c/ui-core/themes/claude.css";
 ```
 
 ## Dark Mode
@@ -150,13 +150,13 @@ Here's the full structure of a theme file (this is the default theme):
 You don't need to define every variable. Override only the ones you want to change:
 
 ```css title="app.css"
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @source "../node_modules/@melv1c";
 
-@import '@melv1c/ui-core/base.css';
-@import '@melv1c/ui-core/themes/default.css';
+@import "@melv1c/ui-core/base.css";
+@import "@melv1c/ui-core/themes/default.css";
 
 /* Override just the primary color */
 :root {

@@ -1,5 +1,5 @@
-import { Alert, AlertDescription, AlertTitle } from '@melv1c/ui-core';
-import { AlertTriangleIcon } from 'lucide-react';
+import { Alert, AlertDescription, AlertTitle } from "@melv1c/ui-core";
+import { AlertTriangleIcon } from "lucide-react";
 
 export default function AlertColors() {
   return (

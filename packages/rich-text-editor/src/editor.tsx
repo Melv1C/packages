@@ -1,18 +1,17 @@
-import type { Editor } from '@tiptap/react';
-import { useEditor } from '@tiptap/react';
-import StarterKit from '@tiptap/starter-kit';
-import { useEffect, useMemo, type HTMLAttributes } from 'react';
+import { cn } from "@melv1c/ui-core";
+import type { Editor } from "@tiptap/react";
+import { useEditor } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
+import { useEffect, useMemo, type HTMLAttributes } from "react";
 
-import { cn } from '@melv1c/ui-core';
-
-import { RichTextEditorContext, type RichTextEditorContextValue } from './context';
+import { RichTextEditorContext, type RichTextEditorContextValue } from "./context";
 
 export type RichTextEditorProps = HTMLAttributes<HTMLDivElement> & {
   value?: string;
   defaultValue?: string;
   onValueChange?: (value: string, editor: Editor) => void;
   editable?: boolean;
-  extensions?: Parameters<typeof useEditor>[0]['extensions'];
+  extensions?: Parameters<typeof useEditor>[0]["extensions"];
   starterKit?: Parameters<typeof StarterKit.configure>[0];
 };
 
@@ -36,7 +35,7 @@ export function RichTextEditor({
     {
       extensions: mergedExtensions,
       editable,
-      content: value ?? defaultValue ?? '',
+      content: value ?? defaultValue ?? "",
       onUpdate({ editor: currentEditor }) {
         onValueChange?.(currentEditor.getHTML(), currentEditor);
       },
@@ -60,7 +59,7 @@ export function RichTextEditor({
     <RichTextEditorContext.Provider value={contextValue}>
       <div
         data-slot="rich-text-editor"
-        className={cn('bg-background border-border rounded-lg border', className)}
+        className={cn("bg-background border-border rounded-lg border", className)}
         {...props}
       >
         {children}

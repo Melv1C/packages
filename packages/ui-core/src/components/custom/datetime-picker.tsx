@@ -1,14 +1,15 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/base/button';
-import { Calendar } from '@/components/base/calendar';
-import { Input } from '@/components/base/input';
-import { Label } from '@/components/base/label';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/base/popover';
-import { cn } from '@/lib/utils';
-import { CalendarIcon, XIcon } from 'lucide-react';
-import { useEffect, useState, type ChangeEvent } from 'react';
-import type { DayPicker } from 'react-day-picker';
+import { CalendarIcon, XIcon } from "lucide-react";
+import { useEffect, useState, type ChangeEvent } from "react";
+import type { DayPicker } from "react-day-picker";
+
+import { Button } from "@/components/base/button";
+import { Calendar } from "@/components/base/calendar";
+import { Input } from "@/components/base/input";
+import { Label } from "@/components/base/label";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/base/popover";
+import { cn } from "@/lib/utils";
 
 export interface DateTimePickerProps {
   /**
@@ -40,7 +41,7 @@ export interface DateTimePickerProps {
    * Supports Date, Date[], DateRange, DateBefore, DateAfter, DateInterval, DayOfWeek, or a function.
    * @see https://daypicker.dev/selections/disabling-dates
    */
-  disabledDates?: React.ComponentProps<typeof DayPicker>['disabled'];
+  disabledDates?: React.ComponentProps<typeof DayPicker>["disabled"];
   /**
    * Custom className for the container
    */
@@ -55,7 +56,7 @@ function DateTimePicker({
   value,
   onChange,
   label,
-  placeholder = 'Select date and time',
+  placeholder = "Select date and time",
   showClear = true,
   disabled = false,
   disabledDates,
@@ -94,7 +95,7 @@ function DateTimePicker({
     const timeValue = event.target.value;
     if (!timeValue) return;
 
-    const [hours = '0', minutes = '0', seconds = '0'] = timeValue.split(':');
+    const [hours = "0", minutes = "0", seconds = "0"] = timeValue.split(":");
     const updatedDate = date ? new Date(date) : new Date();
     updatedDate.setHours(parseInt(hours, 10));
     updatedDate.setMinutes(parseInt(minutes, 10));
@@ -105,10 +106,10 @@ function DateTimePicker({
   };
 
   const formatTimeValue = (date: Date | undefined) => {
-    if (!date) return '';
+    if (!date) return "";
 
-    const hours = date.getHours().toString().padStart(2, '0');
-    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const hours = date.getHours().toString().padStart(2, "0");
+    const minutes = date.getMinutes().toString().padStart(2, "0");
 
     return `${hours}:${minutes}`;
   };
@@ -116,8 +117,8 @@ function DateTimePicker({
   const defaultFormatDateTime = (date: Date) => {
     const dateStr = date.toLocaleDateString();
     const timeStr = date.toLocaleTimeString(undefined, {
-      hour: '2-digit',
-      minute: '2-digit',
+      hour: "2-digit",
+      minute: "2-digit",
     });
     return `${dateStr} ${timeStr}`;
   };
@@ -127,7 +128,7 @@ function DateTimePicker({
   }, [value]);
 
   return (
-    <div className={cn('flex flex-col gap-3', className)}>
+    <div className={cn("flex flex-col gap-3", className)}>
       {label && (
         <Label htmlFor="datetime-picker" className="px-1">
           {label}
@@ -138,7 +139,7 @@ function DateTimePicker({
           <Button
             variant="outline"
             id="datetime-picker"
-            className={cn('w-full justify-start font-normal', !date && 'text-muted-foreground')}
+            className={cn("w-full justify-start font-normal", !date && "text-muted-foreground")}
             disabled={disabled}
           >
             <CalendarIcon className="mr-2 size-4" />
@@ -150,7 +151,7 @@ function DateTimePicker({
             {showClear && date && (
               <button
                 type="button"
-                onClick={e => {
+                onClick={(e) => {
                   e.stopPropagation();
                   handleClear();
                 }}

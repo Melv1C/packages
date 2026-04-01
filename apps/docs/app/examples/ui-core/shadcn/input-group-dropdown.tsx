@@ -8,8 +8,8 @@ import {
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from '@melv1c/ui-core';
-import { ChevronDownIcon, MoreHorizontal } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { ChevronDownIcon, MoreHorizontal } from "lucide-react";
 
 export default function InputGroupDropdown() {
   return (

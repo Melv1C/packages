@@ -8,7 +8,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function DrawerScrollableContent() {
   return (

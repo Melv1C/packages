@@ -7,7 +7,7 @@ import {
   FieldLabel,
   FieldTitle,
   Label,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function CheckboxDemo() {
   return (

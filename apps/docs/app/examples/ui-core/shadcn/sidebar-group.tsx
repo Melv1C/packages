@@ -7,8 +7,8 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
-} from '@melv1c/ui-core';
-import { LifeBuoyIcon, SendIcon, Sidebar } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { LifeBuoyIcon, SendIcon, Sidebar } from "lucide-react";
 
 export default function AppSidebar() {
   return (

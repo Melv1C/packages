@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Menubar,
@@ -9,12 +9,12 @@ import {
   MenubarRadioItem,
   MenubarSeparator,
   MenubarTrigger,
-} from '@melv1c/ui-core';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import * as React from "react";
 
 export default function MenubarRadio() {
-  const [user, setUser] = React.useState('benoit');
-  const [theme, setTheme] = React.useState('system');
+  const [user, setUser] = React.useState("benoit");
+  const [theme, setTheme] = React.useState("system");
 
   return (
     <Menubar className="w-72">

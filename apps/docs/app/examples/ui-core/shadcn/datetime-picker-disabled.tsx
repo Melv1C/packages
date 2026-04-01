@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { DateTimePicker } from '@melv1c/ui-core';
+import { DateTimePicker } from "@melv1c/ui-core";
 
 export default function DateTimePickerDisabled() {
   return (

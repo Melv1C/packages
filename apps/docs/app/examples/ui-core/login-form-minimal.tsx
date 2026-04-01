@@ -1,4 +1,4 @@
-import { LoginForm } from '@melv1c/ui-core';
+import { LoginForm } from "@melv1c/ui-core";
 
 export default function LoginFormMinimal() {
   return (
@@ -6,7 +6,7 @@ export default function LoginFormMinimal() {
       showForgotPassword={false}
       showSignUp={false}
       onSubmit={async (email, password) => {
-        console.log('Login attempt:', email, password);
+        console.log("Login attempt:", email, password);
       }}
     />
   );

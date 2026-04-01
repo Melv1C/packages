@@ -6,7 +6,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function CardSmall() {
   return (

@@ -1,5 +1,5 @@
-import { InputOTP, InputOTPGroup, InputOTPSlot } from '@melv1c/ui-core';
-import { REGEXP_ONLY_DIGITS } from 'input-otp';
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@melv1c/ui-core";
+import { REGEXP_ONLY_DIGITS } from "input-otp";
 
 export default function InputOTPFourDigits() {
   return (

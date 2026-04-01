@@ -17,8 +17,8 @@ import {
   DrawerTrigger,
   Input,
   Label,
-} from '@melv1c/ui-core';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import * as React from "react";
 
 export default function DrawerDialogDemo() {
   const [open, setOpen] = React.useState(false);
@@ -67,9 +67,9 @@ export default function DrawerDialogDemo() {
   );
 }
 
-function ProfileForm({ className }: React.ComponentProps<'form'>) {
+function ProfileForm({ className }: React.ComponentProps<"form">) {
   return (
-    <form className={cn('grid items-start gap-6', className)}>
+    <form className={cn("grid items-start gap-6", className)}>
       <div className="grid gap-3">
         <Label htmlFor="email">Email</Label>
         <Input type="email" id="email" defaultValue="shadcn@example.com" />

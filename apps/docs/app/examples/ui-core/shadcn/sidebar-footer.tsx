@@ -12,8 +12,8 @@ import {
   DropdownMenuItem,
   SidebarInset,
   SidebarTrigger,
-} from '@melv1c/ui-core';
-import { ChevronUpIcon, Sidebar } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { ChevronUpIcon, Sidebar } from "lucide-react";
 
 export default function AppSidebar() {
   return (

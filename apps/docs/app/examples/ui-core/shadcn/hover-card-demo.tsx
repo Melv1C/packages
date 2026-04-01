@@ -1,4 +1,4 @@
-import { Button, HoverCard, HoverCardContent, HoverCardTrigger } from '@melv1c/ui-core';
+import { Button, HoverCard, HoverCardContent, HoverCardTrigger } from "@melv1c/ui-core";
 
 export default function HoverCardDemo() {
   return (

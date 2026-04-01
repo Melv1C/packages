@@ -8,7 +8,7 @@ import {
   FieldLegend,
   FieldSet,
   Input,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function FieldResponsive() {
   return (

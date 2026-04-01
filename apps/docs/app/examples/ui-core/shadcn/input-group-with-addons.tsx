@@ -8,7 +8,7 @@ import {
   InputGroupButton,
   InputGroupInput,
   InputGroupText,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 import {
   CopyIcon,
   EyeOffIcon,
@@ -17,8 +17,8 @@ import {
   RadioIcon,
   SearchIcon,
   StarIcon,
-} from 'lucide-react';
-import { toast } from 'sonner';
+} from "lucide-react";
+import { toast } from "sonner";
 
 export default function InputGroupWithAddons() {
   return (
@@ -79,7 +79,7 @@ export default function InputGroupWithAddons() {
           <InputGroupInput id="input-icon-both-10" />
           <InputGroupAddon align="inline-end">
             <StarIcon />
-            <InputGroupButton size="icon-xs" onClick={() => toast('Copied to clipboard')}>
+            <InputGroupButton size="icon-xs" onClick={() => toast("Copied to clipboard")}>
               <CopyIcon />
             </InputGroupButton>
           </InputGroupAddon>

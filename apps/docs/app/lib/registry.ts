@@ -1,4 +1,4 @@
-import { lazy, type ComponentType } from 'react';
+import { lazy, type ComponentType } from "react";
 
 type ExampleEntry = {
   name: string;
@@ -6,19 +6,19 @@ type ExampleEntry = {
   code: string;
 };
 
-const exampleModules = import.meta.glob<string>('../examples/**/*.tsx', {
+const exampleModules = import.meta.glob<string>("../examples/**/*.tsx", {
   eager: true,
-  query: '?raw',
-  import: 'default',
+  query: "?raw",
+  import: "default",
 });
 
-const exampleComponents = import.meta.glob<{ default: ComponentType }>('../examples/**/*.tsx');
+const exampleComponents = import.meta.glob<{ default: ComponentType }>("../examples/**/*.tsx");
 
 function buildRegistry(): Record<string, ExampleEntry> {
   const registry: Record<string, ExampleEntry> = {};
 
   for (const [path, code] of Object.entries(exampleModules)) {
-    const fileName = path.split('/').pop()?.replace('.tsx', '');
+    const fileName = path.split("/").pop()?.replace(".tsx", "");
     if (!fileName) continue;
 
     const componentLoader = exampleComponents[path];

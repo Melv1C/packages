@@ -6,8 +6,8 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from '@melv1c/ui-core';
-import { BadgeCheckIcon, ChevronRightIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { BadgeCheckIcon, ChevronRightIcon } from "lucide-react";
 
 export default function ItemDemo() {
   return (

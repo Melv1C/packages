@@ -6,10 +6,10 @@ import {
   RichTextEditorContent,
   RichTextEditorToolbar,
   useRichTextEditor,
-} from '@melv1c/rich-text-editor';
-import { Button, ButtonGroup, Field, Label } from '@melv1c/ui-core';
-import { Sparkles } from 'lucide-react';
-import { useState } from 'react';
+} from "@melv1c/rich-text-editor";
+import { Button, ButtonGroup, Field, Label } from "@melv1c/ui-core";
+import { Sparkles } from "lucide-react";
+import { useState } from "react";
 
 function InsertSignatureButton() {
   const { editor } = useRichTextEditor();
@@ -19,7 +19,7 @@ function InsertSignatureButton() {
       variant="outline"
       size="icon-sm"
       disabled={!editor}
-      onClick={() => editor?.chain().focus().insertContent(' — Team Melv1c').run()}
+      onClick={() => editor?.chain().focus().insertContent(" — Team Melv1c").run()}
       aria-label="Insert signature"
     >
       <Sparkles />
@@ -28,7 +28,7 @@ function InsertSignatureButton() {
 }
 
 export default function RichTextEditorCustomAction() {
-  const [value, setValue] = useState('<p>Use the sparkle button to append a signature.</p>');
+  const [value, setValue] = useState("<p>Use the sparkle button to append a signature.</p>");
 
   return (
     <Field className="w-full max-w-2xl gap-2">

@@ -5,7 +5,7 @@ import {
   FieldLabel,
   FieldSet,
   Textarea,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function FieldTextarea() {
   return (

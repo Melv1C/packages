@@ -9,7 +9,7 @@ import {
   FieldTitle,
   RadioGroup,
   RadioGroupItem,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function FieldChoiceCard() {
   return (

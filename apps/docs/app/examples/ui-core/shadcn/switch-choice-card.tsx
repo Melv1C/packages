@@ -6,7 +6,7 @@ import {
   FieldLabel,
   FieldTitle,
   Switch,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function SwitchChoiceCard() {
   return (

@@ -1,4 +1,4 @@
-import { ToggleGroup, ToggleGroupItem } from '@melv1c/ui-core';
+import { ToggleGroup, ToggleGroupItem } from "@melv1c/ui-core";
 
 export default function ToggleGroupSpacing() {
   return (

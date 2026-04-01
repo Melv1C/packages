@@ -11,11 +11,11 @@ icon: Layers
 `UICoreProvider` wraps your app with the necessary context providers for i18n (via `I18nextProvider`) and toast notifications (via `Sonner`). **You must wrap your application with this provider** — all @melv1c/ui-core components expect to be rendered inside it.
 
 ```tsx title="app.tsx"
-import { UICoreProvider } from '@melv1c/ui-core';
+import { UICoreProvider } from "@melv1c/ui-core";
 
 export function App({ children }: { children: React.ReactNode }) {
   return (
-    <UICoreProvider i18nConfig={{ locale: 'en' }} hasToaster>
+    <UICoreProvider i18nConfig={{ locale: "en" }} hasToaster>
       {children}
     </UICoreProvider>
   );
@@ -36,7 +36,7 @@ export function App({ children }: { children: React.ReactNode }) {
 ### Simple locale string
 
 ```tsx
-<UICoreProvider i18nConfig={{ locale: 'fr' }}>{children}</UICoreProvider>
+<UICoreProvider i18nConfig={{ locale: "fr" }}>{children}</UICoreProvider>
 ```
 
 ### Config object with overrides
@@ -44,10 +44,10 @@ export function App({ children }: { children: React.ReactNode }) {
 ```tsx
 <UICoreProvider
   i18nConfig={{
-    locale: 'en',
+    locale: "en",
     overrides: {
       loginForm: {
-        title: 'Welcome',
+        title: "Welcome",
       },
     },
   }}
@@ -67,10 +67,10 @@ export function App({ children }: { children: React.ReactNode }) {
 When `hasToaster` is `true`, the provider renders a `<Toaster />` component from [Sonner](https://sonner.emilkowal.dev/). You can then trigger toasts anywhere in your app:
 
 ```tsx
-import { toast } from 'sonner';
+import { toast } from "sonner";
 
 function MyComponent() {
-  return <Button onClick={() => toast.success('Settings saved!')}>Save</Button>;
+  return <Button onClick={() => toast.success("Settings saved!")}>Save</Button>;
 }
 ```
 
@@ -79,7 +79,7 @@ function MyComponent() {
 If your i18n configuration requires async loading (e.g., fetching translations from a server), you can provide a loading component:
 
 ```tsx
-<UICoreProvider i18nConfig={{ locale: 'en' }} loadingComponent={<div>Loading translations...</div>}>
+<UICoreProvider i18nConfig={{ locale: "en" }} loadingComponent={<div>Loading translations...</div>}>
   {children}
 </UICoreProvider>
 ```

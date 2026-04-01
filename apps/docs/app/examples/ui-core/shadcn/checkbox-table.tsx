@@ -6,44 +6,44 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@melv1c/ui-core';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import * as React from "react";
 
 const tableData = [
   {
-    id: '1',
-    name: 'Sarah Chen',
-    email: 'sarah.chen@example.com',
-    role: 'Admin',
+    id: "1",
+    name: "Sarah Chen",
+    email: "sarah.chen@example.com",
+    role: "Admin",
   },
   {
-    id: '2',
-    name: 'Marcus Rodriguez',
-    email: 'marcus.rodriguez@example.com',
-    role: 'User',
+    id: "2",
+    name: "Marcus Rodriguez",
+    email: "marcus.rodriguez@example.com",
+    role: "User",
   },
   {
-    id: '3',
-    name: 'Priya Patel',
-    email: 'priya.patel@example.com',
-    role: 'User',
+    id: "3",
+    name: "Priya Patel",
+    email: "priya.patel@example.com",
+    role: "User",
   },
   {
-    id: '4',
-    name: 'David Kim',
-    email: 'david.kim@example.com',
-    role: 'Editor',
+    id: "4",
+    name: "David Kim",
+    email: "david.kim@example.com",
+    role: "Editor",
   },
 ];
 
 export default function CheckboxInTable() {
-  const [selectedRows, setSelectedRows] = React.useState<Set<string>>(new Set(['1']));
+  const [selectedRows, setSelectedRows] = React.useState<Set<string>>(new Set(["1"]));
 
   const selectAll = selectedRows.size === tableData.length;
 
   const handleSelectAll = (checked: boolean) => {
     if (checked) {
-      setSelectedRows(new Set(tableData.map(row => row.id)));
+      setSelectedRows(new Set(tableData.map((row) => row.id)));
     } else {
       setSelectedRows(new Set());
     }
@@ -77,14 +77,14 @@ export default function CheckboxInTable() {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {tableData.map(row => (
-          <TableRow key={row.id} data-state={selectedRows.has(row.id) ? 'selected' : undefined}>
+        {tableData.map((row) => (
+          <TableRow key={row.id} data-state={selectedRows.has(row.id) ? "selected" : undefined}>
             <TableCell>
               <Checkbox
                 id={`row-${row.id}-checkbox`}
                 name={`row-${row.id}-checkbox`}
                 checked={selectedRows.has(row.id)}
-                onCheckedChange={checked => handleSelectRow(row.id, checked === true)}
+                onCheckedChange={(checked) => handleSelectRow(row.id, checked === true)}
               />
             </TableCell>
             <TableCell className="font-medium">{row.name}</TableCell>
