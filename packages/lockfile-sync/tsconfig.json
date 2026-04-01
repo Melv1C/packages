@@ -1,0 +1,4 @@
+{
+  "extends": "@melv1c/toolchain/tsconfigs/node.json",
+  "include": ["./src", "./vite.config.ts"]
+}

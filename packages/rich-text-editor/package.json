@@ -27,19 +27,20 @@
     "dev": "tsdown --watch --no-clean"
   },
   "dependencies": {
-    "@tiptap/core": "^3.20.1",
-    "@tiptap/react": "^3.20.1",
-    "@tiptap/starter-kit": "^3.20.1",
-    "lucide-react": "^0.577.0"
+    "@tiptap/core": "^3.22.0",
+    "@tiptap/react": "^3.22.0",
+    "@tiptap/starter-kit": "^3.22.0",
+    "lucide-react": "^1.7.0"
   },
   "devDependencies": {
-    "@types/node": "^25.5.0",
-    "@types/react": "^19.2.14",
+    "@melv1c/toolchain": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
     "@types/react-dom": "^19.2.3",
-    "react": "^19.2.4",
+    "react": "catalog:",
     "react-dom": "^19.2.4",
-    "tsdown": "^0.21.2",
-    "typescript": "~5.9.3"
+    "tsdown": "catalog:",
+    "typescript": "catalog:"
   },
   "peerDependencies": {
     "@melv1c/ui-core": ">=1.1.3",

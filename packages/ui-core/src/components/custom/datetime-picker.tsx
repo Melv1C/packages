@@ -94,7 +94,7 @@ function DateTimePicker({
     const timeValue = event.target.value;
     if (!timeValue) return;
 
-    const [hours, minutes, seconds = '0'] = timeValue.split(':');
+    const [hours = '0', minutes = '0', seconds = '0'] = timeValue.split(':');
     const updatedDate = date ? new Date(date) : new Date();
     updatedDate.setHours(parseInt(hours, 10));
     updatedDate.setMinutes(parseInt(minutes, 10));
