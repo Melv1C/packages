@@ -10,8 +10,8 @@ type RejectDependency = (name: string, semver: unknown) => boolean;
 
 const INVISIBLE_SORT_KEY_BY_GROUP: Record<string, string> = {
   // Zero-width chars used only for sorting output order.
-  minor: "\u200B",
-  patch: "\u200C",
+  patch: "\u200B",
+  minor: "\u200C",
   major: "\u200D",
   majorVersionZero: "\u2060",
 };
