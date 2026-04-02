@@ -6,13 +6,13 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function CarouselSize() {
   return (
     <Carousel
       opts={{
-        align: 'start',
+        align: "start",
       }}
       className="w-full max-w-[12rem] sm:max-w-xs md:max-w-sm"
     >

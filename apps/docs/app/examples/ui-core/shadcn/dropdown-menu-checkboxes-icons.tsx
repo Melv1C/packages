@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Button,
@@ -8,9 +8,9 @@ import {
   DropdownMenuGroup,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@melv1c/ui-core';
-import { BellIcon, MailIcon, MessageSquareIcon } from 'lucide-react';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import { BellIcon, MailIcon, MessageSquareIcon } from "lucide-react";
+import * as React from "react";
 
 export default function DropdownMenuCheckboxesIcons() {
   const [notifications, setNotifications] = React.useState({
@@ -29,7 +29,7 @@ export default function DropdownMenuCheckboxesIcons() {
           <DropdownMenuLabel>Notification Preferences</DropdownMenuLabel>
           <DropdownMenuCheckboxItem
             checked={notifications.email}
-            onCheckedChange={checked =>
+            onCheckedChange={(checked) =>
               setNotifications({ ...notifications, email: checked === true })
             }
           >
@@ -38,7 +38,7 @@ export default function DropdownMenuCheckboxesIcons() {
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
             checked={notifications.sms}
-            onCheckedChange={checked =>
+            onCheckedChange={(checked) =>
               setNotifications({ ...notifications, sms: checked === true })
             }
           >
@@ -47,7 +47,7 @@ export default function DropdownMenuCheckboxesIcons() {
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
             checked={notifications.push}
-            onCheckedChange={checked =>
+            onCheckedChange={(checked) =>
               setNotifications({ ...notifications, push: checked === true })
             }
           >

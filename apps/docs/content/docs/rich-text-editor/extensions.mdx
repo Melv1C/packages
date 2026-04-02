@@ -19,8 +19,8 @@ npm i @tiptap/extension-character-count
 Both `RichTextEditor` and `RichTextEditorBuiltIn` accept `extensions`.
 
 ```tsx
-import CharacterCount from '@tiptap/extension-character-count';
-import { RichTextEditorBuiltIn } from '@melv1c/rich-text-editor';
+import CharacterCount from "@tiptap/extension-character-count";
+import { RichTextEditorBuiltIn } from "@melv1c/rich-text-editor";
 
 <RichTextEditorBuiltIn
   value={value}
@@ -40,7 +40,7 @@ function InsertSignatureButton() {
   const { editor } = useRichTextEditor();
 
   return (
-    <Button onClick={() => editor?.chain().focus().insertContent(' — Team').run()}>
+    <Button onClick={() => editor?.chain().focus().insertContent(" — Team").run()}>
       Insert signature
     </Button>
   );

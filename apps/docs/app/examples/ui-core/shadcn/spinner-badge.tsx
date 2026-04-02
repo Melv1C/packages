@@ -1,4 +1,4 @@
-import { Badge, Spinner } from '@melv1c/ui-core';
+import { Badge, Spinner } from "@melv1c/ui-core";
 
 export default function SpinnerBadge() {
   return (

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Item,
@@ -8,36 +8,36 @@ import {
   ItemMedia,
   ItemTitle,
   Progress,
-} from '@melv1c/ui-core';
-import { FileIcon } from 'lucide-react';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import { FileIcon } from "lucide-react";
+import * as React from "react";
 
 export default function FileUploadList() {
   const files = React.useMemo(
     () => [
       {
-        id: '1',
-        name: 'document.pdf',
+        id: "1",
+        name: "document.pdf",
         progress: 45,
-        timeRemaining: '2m 30s',
+        timeRemaining: "2m 30s",
       },
       {
-        id: '2',
-        name: 'presentation.pptx',
+        id: "2",
+        name: "presentation.pptx",
         progress: 78,
-        timeRemaining: '45s',
+        timeRemaining: "45s",
       },
       {
-        id: '3',
-        name: 'spreadsheet.xlsx',
+        id: "3",
+        name: "spreadsheet.xlsx",
         progress: 12,
-        timeRemaining: '5m 12s',
+        timeRemaining: "5m 12s",
       },
       {
-        id: '4',
-        name: 'image.jpg',
+        id: "4",
+        name: "image.jpg",
         progress: 100,
-        timeRemaining: 'Complete',
+        timeRemaining: "Complete",
       },
     ],
     [],
@@ -45,7 +45,7 @@ export default function FileUploadList() {
 
   return (
     <ItemGroup>
-      {files.map(file => (
+      {files.map((file) => (
         <Item key={file.id} size="sm" className="px-0">
           <ItemMedia variant="icon">
             <FileIcon className="size-5" />

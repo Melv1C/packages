@@ -1,5 +1,5 @@
-import { Button } from '@melv1c/ui-core';
-import { ArrowUpRightIcon } from 'lucide-react';
+import { Button } from "@melv1c/ui-core";
+import { ArrowUpRightIcon } from "lucide-react";
 
 export default function ButtonSize() {
   return (

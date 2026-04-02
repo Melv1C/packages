@@ -1,7 +1,7 @@
-import { Calendar, Card, CardContent } from '@melv1c/ui-core';
-import { addDays } from 'date-fns';
-import * as React from 'react';
-import { type DateRange } from 'react-day-picker';
+import { Calendar, Card, CardContent } from "@melv1c/ui-core";
+import { addDays } from "date-fns";
+import * as React from "react";
+import { type DateRange } from "react-day-picker";
 
 export default function CalendarRange() {
   const [dateRange, setDateRange] = React.useState<DateRange | undefined>({
@@ -18,7 +18,7 @@ export default function CalendarRange() {
           selected={dateRange}
           onSelect={setDateRange}
           numberOfMonths={2}
-          disabled={date => date > new Date() || date < new Date('1900-01-01')}
+          disabled={(date) => date > new Date() || date < new Date("1900-01-01")}
         />
       </CardContent>
     </Card>

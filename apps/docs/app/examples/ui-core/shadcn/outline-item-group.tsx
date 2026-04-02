@@ -5,8 +5,8 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from '@melv1c/ui-core';
-import { InboxIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { InboxIcon } from "lucide-react";
 
 export default function OutlineItemGroup() {
   return (

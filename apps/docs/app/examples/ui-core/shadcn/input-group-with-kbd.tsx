@@ -9,8 +9,8 @@ import {
   Kbd,
   KbdGroup,
   Spinner,
-} from '@melv1c/ui-core';
-import { CheckIcon, InfoIcon, SearchIcon, SparklesIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { CheckIcon, InfoIcon, SearchIcon, SparklesIcon } from "lucide-react";
 
 export default function InputGroupWithKbd() {
   return (

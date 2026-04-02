@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Field, FieldLabel, Input } from '@melv1c/ui-core';
+import { Button, ButtonGroup, Field, FieldLabel, Input } from "@melv1c/ui-core";
 
 export default function InputButtonGroup() {
   return (

@@ -4,8 +4,8 @@ import {
   AvatarGroup,
   AvatarGroupCount,
   AvatarImage,
-} from '@melv1c/ui-core';
-import { PlusIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { PlusIcon } from "lucide-react";
 
 export default function AvatarGroupCountIconExample() {
   return (

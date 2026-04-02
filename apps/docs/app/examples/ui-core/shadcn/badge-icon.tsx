@@ -1,5 +1,5 @@
-import { Badge } from '@melv1c/ui-core';
-import { BadgeCheck, BookmarkIcon } from 'lucide-react';
+import { Badge } from "@melv1c/ui-core";
+import { BadgeCheck, BookmarkIcon } from "lucide-react";
 
 export default function BadgeWithIconLeft() {
   return (

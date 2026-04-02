@@ -1,4 +1,4 @@
-import { Field, FieldDescription, FieldLabel, Input } from '@melv1c/ui-core';
+import { Field, FieldDescription, FieldLabel, Input } from "@melv1c/ui-core";
 
 export default function InputDemo() {
   return (

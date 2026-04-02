@@ -1,5 +1,5 @@
-import { Tabs, TabsList, TabsTrigger } from '@melv1c/ui-core';
-import { AppWindowIcon, CodeIcon } from 'lucide-react';
+import { Tabs, TabsList, TabsTrigger } from "@melv1c/ui-core";
+import { AppWindowIcon, CodeIcon } from "lucide-react";
 
 export default function TabsIcons() {
   return (

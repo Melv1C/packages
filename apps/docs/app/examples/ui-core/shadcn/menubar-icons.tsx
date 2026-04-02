@@ -7,7 +7,7 @@ import {
   MenubarSeparator,
   MenubarShortcut,
   MenubarTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 import {
   FileIcon,
   FolderIcon,
@@ -15,7 +15,7 @@ import {
   SaveIcon,
   SettingsIcon,
   TrashIcon,
-} from 'lucide-react';
+} from "lucide-react";
 
 export default function MenubarIcons() {
   return (

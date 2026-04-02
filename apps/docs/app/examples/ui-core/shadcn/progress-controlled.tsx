@@ -1,5 +1,5 @@
-import { Progress, Slider } from '@melv1c/ui-core';
-import * as React from 'react';
+import { Progress, Slider } from "@melv1c/ui-core";
+import * as React from "react";
 
 export default function ProgressControlled() {
   const [value, setValue] = React.useState([50]);

@@ -1,1 +1,1 @@
-export * from './ui-core-provider';
+export * from "./ui-core-provider";

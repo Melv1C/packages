@@ -7,12 +7,12 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
-} from '@melv1c/ui-core';
-import { Building2Icon, CreditCardIcon, WalletIcon } from 'lucide-react';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import { Building2Icon, CreditCardIcon, WalletIcon } from "lucide-react";
+import * as React from "react";
 
 export default function DropdownMenuRadioIcons() {
-  const [paymentMethod, setPaymentMethod] = React.useState('card');
+  const [paymentMethod, setPaymentMethod] = React.useState("card");
 
   return (
     <DropdownMenu>

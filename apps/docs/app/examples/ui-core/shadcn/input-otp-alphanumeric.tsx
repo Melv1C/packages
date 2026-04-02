@@ -1,5 +1,5 @@
-import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from '@melv1c/ui-core';
-import { REGEXP_ONLY_DIGITS_AND_CHARS } from 'input-otp';
+import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from "@melv1c/ui-core";
+import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp";
 
 export default function InputOTPAlphanumeric() {
   return (

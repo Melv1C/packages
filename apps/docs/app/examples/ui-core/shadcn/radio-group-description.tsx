@@ -5,7 +5,7 @@ import {
   FieldLabel,
   RadioGroup,
   RadioGroupItem,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function RadioGroupDescription() {
   return (

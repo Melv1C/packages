@@ -9,8 +9,8 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from '@melv1c/ui-core';
-import { CopyIcon, FileCodeIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { CopyIcon, FileCodeIcon } from "lucide-react";
 
 export default function InputGroupBlockStart() {
   return (

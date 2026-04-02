@@ -1,8 +1,8 @@
-import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from '@melv1c/ui-core';
-import * as React from 'react';
+import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from "@melv1c/ui-core";
+import * as React from "react";
 
 export default function InputOTPInvalid() {
-  const [value, setValue] = React.useState('000000');
+  const [value, setValue] = React.useState("000000");
 
   return (
     <InputOTP maxLength={6} value={value} onChange={setValue}>

@@ -1,5 +1,5 @@
-import { Alert, AlertDescription, AlertTitle } from '@melv1c/ui-core';
-import { AlertCircleIcon } from 'lucide-react';
+import { Alert, AlertDescription, AlertTitle } from "@melv1c/ui-core";
+import { AlertCircleIcon } from "lucide-react";
 
 export default function AlertDestructive() {
   return (

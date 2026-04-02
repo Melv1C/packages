@@ -7,9 +7,9 @@ import {
   CommandItem,
   CommandList,
   CommandShortcut,
-} from '@melv1c/ui-core';
-import { Command, CreditCardIcon, SettingsIcon, UserIcon } from 'lucide-react';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import { Command, CreditCardIcon, SettingsIcon, UserIcon } from "lucide-react";
+import * as React from "react";
 
 export default function CommandWithShortcuts() {
   const [open, setOpen] = React.useState(false);

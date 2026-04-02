@@ -1,4 +1,4 @@
-import { Field, FieldLabel, Textarea } from '@melv1c/ui-core';
+import { Field, FieldLabel, Textarea } from "@melv1c/ui-core";
 
 export default function TextareaDisabled() {
   return (

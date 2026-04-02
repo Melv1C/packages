@@ -12,7 +12,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 import {
   ArchiveIcon,
   ArrowLeftIcon,
@@ -23,11 +23,11 @@ import {
   MoreHorizontalIcon,
   TagIcon,
   Trash2Icon,
-} from 'lucide-react';
-import * as React from 'react';
+} from "lucide-react";
+import * as React from "react";
 
 export default function ButtonGroupDemo() {
-  const [label, setLabel] = React.useState('personal');
+  const [label, setLabel] = React.useState("personal");
 
   return (
     <ButtonGroup>

@@ -10,8 +10,8 @@ import {
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@melv1c/ui-core';
-import { ChevronDownIcon, DotIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { ChevronDownIcon, DotIcon } from "lucide-react";
 
 export default function BreadcrumbDropdown() {
   return (

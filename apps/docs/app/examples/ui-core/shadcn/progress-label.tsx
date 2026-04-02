@@ -1,4 +1,4 @@
-import { Field, FieldLabel, Progress } from '@melv1c/ui-core';
+import { Field, FieldLabel, Progress } from "@melv1c/ui-core";
 
 export default function ProgressWithLabel() {
   return (

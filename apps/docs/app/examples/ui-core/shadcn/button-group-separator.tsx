@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, ButtonGroupSeparator } from '@melv1c/ui-core';
+import { Button, ButtonGroup, ButtonGroupSeparator } from "@melv1c/ui-core";
 
 export default function ButtonGroupSeparatorDemo() {
   return (

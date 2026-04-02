@@ -1,6 +1,5 @@
-import type { HTMLAttributes } from 'react';
-
-import { cn } from '@melv1c/ui-core';
+import { cn } from "@melv1c/ui-core";
+import type { HTMLAttributes } from "react";
 
 export type RichTextEditorToolbarProps = HTMLAttributes<HTMLDivElement>;
 
@@ -8,7 +7,7 @@ export function RichTextEditorToolbar({ className, ...props }: RichTextEditorToo
   return (
     <div
       data-slot="rich-text-editor-toolbar"
-      className={cn('border-border flex flex-wrap items-center gap-2 border-b p-2', className)}
+      className={cn("border-border flex flex-wrap items-center gap-2 border-b p-2", className)}
       {...props}
     />
   );

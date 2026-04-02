@@ -14,8 +14,8 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from '@melv1c/ui-core';
-import { ExternalLinkIcon, MailIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { ExternalLinkIcon, MailIcon } from "lucide-react";
 
 export default function InputGroupInCard() {
   return (

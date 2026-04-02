@@ -30,7 +30,7 @@ import {
   SidebarRail,
   SidebarTrigger,
   useSidebar,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 import {
   AudioWaveform,
   BadgeCheck,
@@ -55,134 +55,134 @@ import {
   Sparkles,
   SquareTerminal,
   Trash2,
-} from 'lucide-react';
-import * as React from 'react';
+} from "lucide-react";
+import * as React from "react";
 
 // This is sample data.
 const data = {
   user: {
-    name: 'shadcn',
-    email: 'm@example.com',
-    avatar: '/avatars/shadcn.jpg',
+    name: "shadcn",
+    email: "m@example.com",
+    avatar: "/avatars/shadcn.jpg",
   },
   teams: [
     {
-      name: 'Acme Inc',
+      name: "Acme Inc",
       logo: GalleryVerticalEnd,
-      plan: 'Enterprise',
+      plan: "Enterprise",
     },
     {
-      name: 'Acme Corp.',
+      name: "Acme Corp.",
       logo: AudioWaveform,
-      plan: 'Startup',
+      plan: "Startup",
     },
     {
-      name: 'Evil Corp.',
+      name: "Evil Corp.",
       logo: Command,
-      plan: 'Free',
+      plan: "Free",
     },
   ],
   navMain: [
     {
-      title: 'Playground',
-      url: '#',
+      title: "Playground",
+      url: "#",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: 'History',
-          url: '#',
+          title: "History",
+          url: "#",
         },
         {
-          title: 'Starred',
-          url: '#',
+          title: "Starred",
+          url: "#",
         },
         {
-          title: 'Settings',
-          url: '#',
+          title: "Settings",
+          url: "#",
         },
       ],
     },
     {
-      title: 'Models',
-      url: '#',
+      title: "Models",
+      url: "#",
       icon: Bot,
       items: [
         {
-          title: 'Genesis',
-          url: '#',
+          title: "Genesis",
+          url: "#",
         },
         {
-          title: 'Explorer',
-          url: '#',
+          title: "Explorer",
+          url: "#",
         },
         {
-          title: 'Quantum',
-          url: '#',
+          title: "Quantum",
+          url: "#",
         },
       ],
     },
     {
-      title: 'Documentation',
-      url: '#',
+      title: "Documentation",
+      url: "#",
       icon: BookOpen,
       items: [
         {
-          title: 'Introduction',
-          url: '#',
+          title: "Introduction",
+          url: "#",
         },
         {
-          title: 'Get Started',
-          url: '#',
+          title: "Get Started",
+          url: "#",
         },
         {
-          title: 'Tutorials',
-          url: '#',
+          title: "Tutorials",
+          url: "#",
         },
         {
-          title: 'Changelog',
-          url: '#',
+          title: "Changelog",
+          url: "#",
         },
       ],
     },
     {
-      title: 'Settings',
-      url: '#',
+      title: "Settings",
+      url: "#",
       icon: Settings2,
       items: [
         {
-          title: 'General',
-          url: '#',
+          title: "General",
+          url: "#",
         },
         {
-          title: 'Team',
-          url: '#',
+          title: "Team",
+          url: "#",
         },
         {
-          title: 'Billing',
-          url: '#',
+          title: "Billing",
+          url: "#",
         },
         {
-          title: 'Limits',
-          url: '#',
+          title: "Limits",
+          url: "#",
         },
       ],
     },
   ],
   projects: [
     {
-      name: 'Design Engineering',
-      url: '#',
+      name: "Design Engineering",
+      url: "#",
       icon: Frame,
     },
     {
-      name: 'Sales & Marketing',
-      url: '#',
+      name: "Sales & Marketing",
+      url: "#",
       icon: PieChart,
     },
     {
-      name: 'Travel',
-      url: '#',
+      name: "Travel",
+      url: "#",
       icon: Map,
     },
   ],
@@ -226,7 +226,7 @@ function TeamSwitcher({
           <DropdownMenuContent
             className="w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg"
             align="start"
-            side={isMobile ? 'bottom' : 'right'}
+            side={isMobile ? "bottom" : "right"}
             sideOffset={4}
           >
             <DropdownMenuGroup>
@@ -279,7 +279,7 @@ function NavMain({
     <SidebarGroup>
       <SidebarGroupLabel>Platform</SidebarGroupLabel>
       <SidebarMenu>
-        {items.map(item => (
+        {items.map((item) => (
           <Collapsible
             key={item.title}
             asChild
@@ -296,7 +296,7 @@ function NavMain({
               </CollapsibleTrigger>
               <CollapsibleContent>
                 <SidebarMenuSub>
-                  {item.items?.map(subItem => (
+                  {item.items?.map((subItem) => (
                     <SidebarMenuSubItem key={subItem.title}>
                       <SidebarMenuSubButton asChild>
                         <a href={subItem.url}>
@@ -330,7 +330,7 @@ function NavProjects({
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
       <SidebarGroupLabel>Projects</SidebarGroupLabel>
       <SidebarMenu>
-        {projects.map(item => (
+        {projects.map((item) => (
           <SidebarMenuItem key={item.name}>
             <SidebarMenuButton asChild>
               <a href={item.url}>
@@ -347,8 +347,8 @@ function NavProjects({
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 className="w-48 rounded-lg"
-                side={isMobile ? 'bottom' : 'right'}
-                align={isMobile ? 'end' : 'start'}
+                side={isMobile ? "bottom" : "right"}
+                align={isMobile ? "end" : "start"}
               >
                 <DropdownMenuGroup>
                   <DropdownMenuItem>
@@ -415,7 +415,7 @@ function NavUser({
           </DropdownMenuTrigger>
           <DropdownMenuContent
             className="w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg"
-            side={isMobile ? 'bottom' : 'right'}
+            side={isMobile ? "bottom" : "right"}
             align="end"
             sideOffset={4}
           >

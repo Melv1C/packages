@@ -1,26 +1,25 @@
-import { useEditorState } from '@tiptap/react';
-import { List, ListOrdered } from 'lucide-react';
-import type { ComponentProps } from 'react';
+import { Toggle, cn } from "@melv1c/ui-core";
+import { useEditorState } from "@tiptap/react";
+import { List, ListOrdered } from "lucide-react";
+import type { ComponentProps } from "react";
 
-import { Toggle, cn } from '@melv1c/ui-core';
-
-import { useRichTextEditor } from '../context';
+import { useRichTextEditor } from "../context";
 
 export type ListButtonProps = Omit<
   ComponentProps<typeof Toggle>,
-  'pressed' | 'defaultPressed' | 'onPressedChange'
+  "pressed" | "defaultPressed" | "onPressedChange"
 >;
 
 export function BulletListButton({
   children,
   className,
-  variant = 'outline',
+  variant = "outline",
   ...props
 }: ListButtonProps) {
   const { editor } = useRichTextEditor();
   const isActive = useEditorState({
     editor,
-    selector: ({ editor: e }) => e?.isActive('bulletList') ?? false,
+    selector: ({ editor: e }) => e?.isActive("bulletList") ?? false,
   });
 
   return (
@@ -30,7 +29,7 @@ export function BulletListButton({
       disabled={editor ? !editor.can().chain().focus().toggleBulletList().run() : true}
       onPressedChange={() => editor?.chain().focus().toggleBulletList().run()}
       variant={variant}
-      className={cn('shadow-none', className)}
+      className={cn("shadow-none", className)}
       {...props}
     >
       {children ?? <List />}
@@ -41,13 +40,13 @@ export function BulletListButton({
 export function OrderedListButton({
   children,
   className,
-  variant = 'outline',
+  variant = "outline",
   ...props
 }: ListButtonProps) {
   const { editor } = useRichTextEditor();
   const isActive = useEditorState({
     editor,
-    selector: ({ editor: e }) => e?.isActive('orderedList') ?? false,
+    selector: ({ editor: e }) => e?.isActive("orderedList") ?? false,
   });
 
   return (
@@ -57,7 +56,7 @@ export function OrderedListButton({
       disabled={editor ? !editor.can().chain().focus().toggleOrderedList().run() : true}
       onPressedChange={() => editor?.chain().focus().toggleOrderedList().run()}
       variant={variant}
-      className={cn('shadow-none', className)}
+      className={cn("shadow-none", className)}
       {...props}
     >
       {children ?? <ListOrdered />}

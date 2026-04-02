@@ -6,8 +6,8 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@melv1c/ui-core';
-import { PencilIcon, ShareIcon, TrashIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { PencilIcon, ShareIcon, TrashIcon } from "lucide-react";
 
 export default function DropdownMenuDestructive() {
   return (

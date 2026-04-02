@@ -1,4 +1,4 @@
-import { Button, Spinner } from '@melv1c/ui-core';
+import { Button, Spinner } from "@melv1c/ui-core";
 
 export default function SpinnerButton() {
   return (

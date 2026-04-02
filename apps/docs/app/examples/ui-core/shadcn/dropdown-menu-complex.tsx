@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Button,
@@ -17,7 +17,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 import {
   BellIcon,
   CreditCardIcon,
@@ -44,8 +44,8 @@ import {
   ShieldIcon,
   SunIcon,
   UserIcon,
-} from 'lucide-react';
-import * as React from 'react';
+} from "lucide-react";
+import * as React from "react";
 
 export default function DropdownMenuComplex() {
   const [notifications, setNotifications] = React.useState({
@@ -53,7 +53,7 @@ export default function DropdownMenuComplex() {
     sms: false,
     push: true,
   });
-  const [theme, setTheme] = React.useState('light');
+  const [theme, setTheme] = React.useState("light");
 
   return (
     <DropdownMenu>
@@ -136,7 +136,7 @@ export default function DropdownMenuComplex() {
           <DropdownMenuLabel>View</DropdownMenuLabel>
           <DropdownMenuCheckboxItem
             checked={notifications.email}
-            onCheckedChange={checked =>
+            onCheckedChange={(checked) =>
               setNotifications({ ...notifications, email: checked === true })
             }
           >
@@ -145,7 +145,7 @@ export default function DropdownMenuComplex() {
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
             checked={notifications.sms}
-            onCheckedChange={checked =>
+            onCheckedChange={(checked) =>
               setNotifications({ ...notifications, sms: checked === true })
             }
           >
@@ -220,7 +220,7 @@ export default function DropdownMenuComplex() {
                           <DropdownMenuLabel>Notification Types</DropdownMenuLabel>
                           <DropdownMenuCheckboxItem
                             checked={notifications.push}
-                            onCheckedChange={checked =>
+                            onCheckedChange={(checked) =>
                               setNotifications({
                                 ...notifications,
                                 push: checked === true,
@@ -232,7 +232,7 @@ export default function DropdownMenuComplex() {
                           </DropdownMenuCheckboxItem>
                           <DropdownMenuCheckboxItem
                             checked={notifications.email}
-                            onCheckedChange={checked =>
+                            onCheckedChange={(checked) =>
                               setNotifications({
                                 ...notifications,
                                 email: checked === true,

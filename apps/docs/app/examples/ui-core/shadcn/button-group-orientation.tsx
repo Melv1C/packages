@@ -1,5 +1,5 @@
-import { Button, ButtonGroup } from '@melv1c/ui-core';
-import { MinusIcon, PlusIcon } from 'lucide-react';
+import { Button, ButtonGroup } from "@melv1c/ui-core";
+import { MinusIcon, PlusIcon } from "lucide-react";
 
 export default function ButtonGroupOrientation() {
   return (

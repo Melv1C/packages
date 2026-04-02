@@ -1,11 +1,10 @@
-import { EditorContent } from '@tiptap/react';
-import type { ComponentProps, CSSProperties } from 'react';
+import { cn } from "@melv1c/ui-core";
+import { EditorContent } from "@tiptap/react";
+import type { ComponentProps, CSSProperties } from "react";
 
-import { cn } from '@melv1c/ui-core';
+import { useRichTextEditor } from "./context";
 
-import { useRichTextEditor } from './context';
-
-export type RichTextEditorContentProps = Omit<ComponentProps<typeof EditorContent>, 'editor'> & {
+export type RichTextEditorContentProps = Omit<ComponentProps<typeof EditorContent>, "editor"> & {
   /**
    * Minimum height of the editor content area.
    * Accepts a number (treated as pixels) or any valid CSS size string.
@@ -22,7 +21,7 @@ export type RichTextEditorContentProps = Omit<ComponentProps<typeof EditorConten
 
 function toSize(value: number | string | undefined): string | undefined {
   if (value === undefined) return undefined;
-  return typeof value === 'number' ? `${value}px` : value;
+  return typeof value === "number" ? `${value}px` : value;
 }
 
 export function RichTextEditorContent({
@@ -37,7 +36,7 @@ export function RichTextEditorContent({
   const heightStyles: CSSProperties = {
     minHeight: toSize(minHeight),
     maxHeight: toSize(maxHeight),
-    overflowY: maxHeight !== undefined ? 'auto' : undefined,
+    overflowY: maxHeight !== undefined ? "auto" : undefined,
   };
 
   return (
@@ -45,8 +44,8 @@ export function RichTextEditorContent({
       data-slot="rich-text-editor-content"
       editor={editor}
       className={cn(
-        'rich-text',
-        'text-foreground [&_.ProseMirror]:px-2 [&_.ProseMirror]:py-1 [&_.ProseMirror]:outline-none [&_.ProseMirror_p.is-editor-empty:first-child::before]:text-muted-foreground [&_.ProseMirror_p.is-editor-empty:first-child::before]:pointer-events-none [&_.ProseMirror_p.is-editor-empty:first-child::before]:float-left [&_.ProseMirror_p.is-editor-empty:first-child::before]:h-0 [&_.ProseMirror_p.is-editor-empty:first-child::before]:content-[attr(data-placeholder)]',
+        "rich-text",
+        "text-foreground [&_.ProseMirror]:px-2 [&_.ProseMirror]:py-1 [&_.ProseMirror]:outline-none [&_.ProseMirror_p.is-editor-empty:first-child::before]:text-muted-foreground [&_.ProseMirror_p.is-editor-empty:first-child::before]:pointer-events-none [&_.ProseMirror_p.is-editor-empty:first-child::before]:float-left [&_.ProseMirror_p.is-editor-empty:first-child::before]:h-0 [&_.ProseMirror_p.is-editor-empty:first-child::before]:content-[attr(data-placeholder)]",
         className,
       )}
       style={{ ...heightStyles, ...style }}

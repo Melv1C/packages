@@ -1,0 +1,62 @@
+{
+  "name": "@melv1c/toolchain",
+  "version": "0.0.0",
+  "files": [
+    "dist",
+    "tsconfigs",
+    "vscode"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json",
+    "./vscode/extensions.json": "./vscode/extensions.json",
+    "./vscode/settings.json": "./vscode/settings.json",
+    "./tsconfigs/base.json": "./tsconfigs/base.json",
+    "./tsconfigs/node.json": "./tsconfigs/node.json",
+    "./tsconfigs/react.json": "./tsconfigs/react.json"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch --no-clean"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "chalk": "^5.6.2",
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "peerDependencies": {
+    "oxfmt": ">=0.41.0",
+    "oxlint": ">=1.56.0",
+    "tsdown": ">=0.21.4",
+    "vite": ">=8"
+  },
+  "peerDependenciesMeta": {
+    "oxfmt": {
+      "optional": true
+    },
+    "oxlint": {
+      "optional": true
+    },
+    "tsdown": {
+      "optional": true
+    },
+    "vite": {
+      "optional": true
+    }
+  },
+  "inlinedDependencies": {
+    "chalk": "5.6.2"
+  }
+}

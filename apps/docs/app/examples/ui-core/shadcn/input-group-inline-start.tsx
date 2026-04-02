@@ -5,8 +5,8 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from '@melv1c/ui-core';
-import { SearchIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { SearchIcon } from "lucide-react";
 
 export default function InputGroupInlineStart() {
   return (

@@ -1,1 +1,1 @@
-export type SupportedLanguage = 'en' | 'fr' | 'nl' | 'es' | 'de' | 'it';
+export type SupportedLanguage = "en" | "fr" | "nl" | "es" | "de" | "it";

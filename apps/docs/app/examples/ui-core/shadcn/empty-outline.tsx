@@ -6,8 +6,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from '@melv1c/ui-core';
-import { Cloud } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { Cloud } from "lucide-react";
 
 export default function EmptyOutline() {
   return (

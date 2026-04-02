@@ -13,8 +13,8 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from '@melv1c/ui-core';
-import { RefreshCwIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { RefreshCwIcon } from "lucide-react";
 
 export default function InputOTPForm() {
   return (
@@ -22,7 +22,7 @@ export default function InputOTPForm() {
       <CardHeader>
         <CardTitle>Verify your login</CardTitle>
         <CardDescription>
-          Enter the verification code we sent to your email address:{' '}
+          Enter the verification code we sent to your email address:{" "}
           <span className="font-medium">m@example.com</span>.
         </CardDescription>
       </CardHeader>
@@ -59,7 +59,7 @@ export default function InputOTPForm() {
             Verify
           </Button>
           <div className="text-muted-foreground text-sm">
-            Having trouble signing in?{' '}
+            Having trouble signing in?{" "}
             <a
               href="#"
               className="hover:text-primary underline underline-offset-4 transition-colors"

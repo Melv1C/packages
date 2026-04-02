@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Button,
@@ -9,8 +9,8 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from '@melv1c/ui-core';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import * as React from "react";
 
 export default function CommandBasic() {
   const [open, setOpen] = React.useState(false);

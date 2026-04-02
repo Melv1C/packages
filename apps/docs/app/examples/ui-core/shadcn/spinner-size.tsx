@@ -1,4 +1,4 @@
-import { Spinner } from '@melv1c/ui-core';
+import { Spinner } from "@melv1c/ui-core";
 
 export default function SpinnerSize() {
   return (

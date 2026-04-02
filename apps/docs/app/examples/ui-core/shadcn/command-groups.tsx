@@ -8,7 +8,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 import {
   CalculatorIcon,
   CalendarIcon,
@@ -17,8 +17,8 @@ import {
   SettingsIcon,
   SmileIcon,
   UserIcon,
-} from 'lucide-react';
-import * as React from 'react';
+} from "lucide-react";
+import * as React from "react";
 
 export default function CommandWithGroups() {
   const [open, setOpen] = React.useState(false);

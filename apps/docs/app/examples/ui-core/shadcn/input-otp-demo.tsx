@@ -1,4 +1,4 @@
-import { InputOTP, InputOTPGroup, InputOTPSlot } from '@melv1c/ui-core';
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@melv1c/ui-core";
 
 export default function InputOTPDemo() {
   return (

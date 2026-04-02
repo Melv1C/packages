@@ -1,4 +1,4 @@
-import { Label, RadioGroup, RadioGroupItem } from '@melv1c/ui-core';
+import { Label, RadioGroup, RadioGroupItem } from "@melv1c/ui-core";
 
 export default function RadioGroupDemo() {
   return (

@@ -10,31 +10,31 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from '@melv1c/ui-core';
-import { PlusIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { PlusIcon } from "lucide-react";
 
 const people = [
   {
-    username: 'shadcn',
-    avatar: 'https://github.com/shadcn.png',
-    email: 'shadcn@vercel.com',
+    username: "shadcn",
+    avatar: "https://github.com/shadcn.png",
+    email: "shadcn@vercel.com",
   },
   {
-    username: 'maxleiter',
-    avatar: 'https://github.com/maxleiter.png',
-    email: 'maxleiter@vercel.com',
+    username: "maxleiter",
+    avatar: "https://github.com/maxleiter.png",
+    email: "maxleiter@vercel.com",
   },
   {
-    username: 'evilrabbit',
-    avatar: 'https://github.com/evilrabbit.png',
-    email: 'evilrabbit@vercel.com',
+    username: "evilrabbit",
+    avatar: "https://github.com/evilrabbit.png",
+    email: "evilrabbit@vercel.com",
   },
 ];
 
 export default function ItemGroupExample() {
   return (
     <ItemGroup className="max-w-sm">
-      {people.map(person => (
+      {people.map((person) => (
         <Item key={person.username} variant="outline">
           <ItemMedia>
             <Avatar>

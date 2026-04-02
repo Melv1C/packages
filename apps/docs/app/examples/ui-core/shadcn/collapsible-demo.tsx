@@ -1,6 +1,6 @@
-import { Button, Collapsible, CollapsibleContent, CollapsibleTrigger } from '@melv1c/ui-core';
-import { ChevronsUpDown } from 'lucide-react';
-import * as React from 'react';
+import { Button, Collapsible, CollapsibleContent, CollapsibleTrigger } from "@melv1c/ui-core";
+import { ChevronsUpDown } from "lucide-react";
+import * as React from "react";
 
 export default function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false);

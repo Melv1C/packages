@@ -8,7 +8,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function TabsDemo() {
   return (

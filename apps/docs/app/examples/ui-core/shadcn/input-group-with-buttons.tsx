@@ -6,8 +6,8 @@ import {
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from '@melv1c/ui-core';
-import { CopyIcon, TrashIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { CopyIcon, TrashIcon } from "lucide-react";
 
 export default function InputGroupWithButtons() {
   return (

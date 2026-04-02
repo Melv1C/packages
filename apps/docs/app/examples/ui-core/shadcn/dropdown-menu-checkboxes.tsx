@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Button,
@@ -8,8 +8,8 @@ import {
   DropdownMenuGroup,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@melv1c/ui-core';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import * as React from "react";
 
 export default function DropdownMenuCheckboxes() {
   const [showStatusBar, setShowStatusBar] = React.useState(true);

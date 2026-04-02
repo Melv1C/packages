@@ -9,8 +9,8 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@melv1c/ui-core';
-import { BadgeCheckIcon, BellIcon, CreditCardIcon, LogOutIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { BadgeCheckIcon, BellIcon, CreditCardIcon, LogOutIcon } from "lucide-react";
 
 export default function DropdownMenuAvatar() {
   return (

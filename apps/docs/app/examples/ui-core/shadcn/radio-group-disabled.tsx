@@ -1,4 +1,4 @@
-import { Field, FieldLabel, RadioGroup, RadioGroupItem } from '@melv1c/ui-core';
+import { Field, FieldLabel, RadioGroup, RadioGroupItem } from "@melv1c/ui-core";
 
 export default function RadioGroupDisabled() {
   return (

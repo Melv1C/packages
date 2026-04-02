@@ -7,27 +7,27 @@ import {
   SelectGroup,
   SelectItem,
   SelectTrigger,
-} from '@melv1c/ui-core';
-import { ArrowRightIcon } from 'lucide-react';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import { ArrowRightIcon } from "lucide-react";
+import * as React from "react";
 
 const CURRENCIES = [
   {
-    value: '$',
-    label: 'US Dollar',
+    value: "$",
+    label: "US Dollar",
   },
   {
-    value: '€',
-    label: 'Euro',
+    value: "€",
+    label: "Euro",
   },
   {
-    value: '£',
-    label: 'British Pound',
+    value: "£",
+    label: "British Pound",
   },
 ];
 
 export default function ButtonGroupSelect() {
-  const [currency, setCurrency] = React.useState('$');
+  const [currency, setCurrency] = React.useState("$");
 
   return (
     <ButtonGroup>
@@ -36,7 +36,7 @@ export default function ButtonGroupSelect() {
           <SelectTrigger className="font-mono">{currency}</SelectTrigger>
           <SelectContent className="min-w-24">
             <SelectGroup>
-              {CURRENCIES.map(currency => (
+              {CURRENCIES.map((currency) => (
                 <SelectItem key={currency.value} value={currency.value}>
                   {currency.value} <span className="text-muted-foreground">{currency.label}</span>
                 </SelectItem>

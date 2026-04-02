@@ -6,7 +6,7 @@ import {
   FieldSet,
   RadioGroup,
   RadioGroupItem,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function FieldRadio() {
   return (

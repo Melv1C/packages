@@ -1,10 +1,10 @@
-import { Badge, Field, FieldLabel, Input } from '@melv1c/ui-core';
+import { Badge, Field, FieldLabel, Input } from "@melv1c/ui-core";
 
 export default function InputBadge() {
   return (
     <Field>
       <FieldLabel htmlFor="input-badge">
-        Webhook URL{' '}
+        Webhook URL{" "}
         <Badge variant="secondary" className="ml-auto">
           Beta
         </Badge>

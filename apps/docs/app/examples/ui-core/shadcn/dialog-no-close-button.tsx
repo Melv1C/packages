@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function DialogNoCloseButton() {
   return (

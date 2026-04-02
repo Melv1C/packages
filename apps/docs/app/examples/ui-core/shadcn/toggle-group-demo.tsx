@@ -1,5 +1,5 @@
-import { ToggleGroup, ToggleGroupItem } from '@melv1c/ui-core';
-import { Bold, Italic, Underline } from 'lucide-react';
+import { ToggleGroup, ToggleGroupItem } from "@melv1c/ui-core";
+import { Bold, Italic, Underline } from "lucide-react";
 
 export default function ToggleGroupDemo() {
   return (

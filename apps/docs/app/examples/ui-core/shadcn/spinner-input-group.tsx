@@ -5,8 +5,8 @@ import {
   InputGroupInput,
   InputGroupTextarea,
   Spinner,
-} from '@melv1c/ui-core';
-import { ArrowUpIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { ArrowUpIcon } from "lucide-react";
 
 export default function SpinnerInputGroup() {
   return (

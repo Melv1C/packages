@@ -6,7 +6,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function BreadcrumbEllipsisDemo() {
   return (

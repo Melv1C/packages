@@ -8,10 +8,10 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from '@melv1c/ui-core';
-import { Minus, Plus } from 'lucide-react';
-import * as React from 'react';
-import { Bar, BarChart, ResponsiveContainer } from 'recharts';
+} from "@melv1c/ui-core";
+import { Minus, Plus } from "lucide-react";
+import * as React from "react";
+import { Bar, BarChart, ResponsiveContainer } from "recharts";
 
 const data = [
   {
@@ -107,7 +107,7 @@ export default function DrawerDemo() {
                     dataKey="goal"
                     style={
                       {
-                        fill: 'var(--chart-1)',
+                        fill: "var(--chart-1)",
                       } as React.CSSProperties
                     }
                   />

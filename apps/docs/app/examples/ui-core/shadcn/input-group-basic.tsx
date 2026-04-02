@@ -1,4 +1,4 @@
-import { Field, FieldGroup, FieldLabel, Input, InputGroup, InputGroupInput } from '@melv1c/ui-core';
+import { Field, FieldGroup, FieldLabel, Input, InputGroup, InputGroupInput } from "@melv1c/ui-core";
 
 export default function InputGroupBasic() {
   return (

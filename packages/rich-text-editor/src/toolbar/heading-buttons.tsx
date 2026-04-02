@@ -1,7 +1,3 @@
-import { useEditorState } from '@tiptap/react';
-import { Heading1, Heading2, Heading3 } from 'lucide-react';
-import type { ComponentProps } from 'react';
-
 import {
   Select,
   SelectContent,
@@ -10,17 +6,20 @@ import {
   SelectValue,
   Toggle,
   cn,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
+import { useEditorState } from "@tiptap/react";
+import { Heading1, Heading2, Heading3 } from "lucide-react";
+import type { ComponentProps } from "react";
 
-import { useRichTextEditor } from '../context';
+import { useRichTextEditor } from "../context";
 
 export type HeadingButtonProps = Omit<
   ComponentProps<typeof Toggle>,
-  'pressed' | 'defaultPressed' | 'onPressedChange'
+  "pressed" | "defaultPressed" | "onPressedChange"
 >;
 export type RichTextEditorHeadingLevel = 1 | 2 | 3;
 
-type HeadingValue = `heading-${RichTextEditorHeadingLevel}` | '';
+type HeadingValue = `heading-${RichTextEditorHeadingLevel}` | "";
 
 const ALL_HEADING_LEVELS: RichTextEditorHeadingLevel[] = [1, 2, 3];
 
@@ -31,23 +30,23 @@ const HEADING_ICONS: Record<RichTextEditorHeadingLevel, typeof Heading1> = {
 };
 
 const HEADING_LABELS: Record<RichTextEditorHeadingLevel, string> = {
-  1: 'Heading 1',
-  2: 'Heading 2',
-  3: 'Heading 3',
+  1: "Heading 1",
+  2: "Heading 2",
+  3: "Heading 3",
 };
 
 function HeadingButton({
   level,
   children,
   className,
-  variant = 'outline',
+  variant = "outline",
   ...props
 }: HeadingButtonProps & { level: RichTextEditorHeadingLevel }) {
   const { editor } = useRichTextEditor();
   const Icon = HEADING_ICONS[level];
   const isActive = useEditorState({
     editor,
-    selector: ({ editor: e }) => e?.isActive('heading', { level }) ?? false,
+    selector: ({ editor: e }) => e?.isActive("heading", { level }) ?? false,
   });
 
   return (
@@ -57,7 +56,7 @@ function HeadingButton({
       disabled={editor ? !editor.can().chain().focus().toggleHeading({ level }).run() : true}
       onPressedChange={() => editor?.chain().focus().toggleHeading({ level }).run()}
       variant={variant}
-      className={cn('shadow-none', className)}
+      className={cn("shadow-none", className)}
       {...props}
     >
       {children ?? <Icon />}
@@ -89,8 +88,8 @@ export type RichTextEditorHeadingSelectProps = {
 export function RichTextEditorHeadingSelect({
   levels,
   includeParagraphOption = true,
-  paragraphLabel = 'Paragraph',
-  selectPlaceholder = 'Select heading',
+  paragraphLabel = "Paragraph",
+  selectPlaceholder = "Select heading",
 }: RichTextEditorHeadingSelectProps) {
   const { editor } = useRichTextEditor();
   const resolvedLevels = levels ?? ALL_HEADING_LEVELS;
@@ -99,40 +98,42 @@ export function RichTextEditorHeadingSelect({
   const activeValue = useEditorState({
     editor,
     selector: ({ editor: e }): HeadingValue => {
-      if (!e) return '';
+      if (!e) return "";
       for (const level of ALL_HEADING_LEVELS) {
-        if (e.isActive('heading', { level })) return `heading-${level}`;
+        if (e.isActive("heading", { level })) return `heading-${level}`;
       }
-      return '';
+      return "";
     },
   });
 
   const paragraphItem = includeParagraphOption
     ? {
-        value: 'paragraph',
+        value: "paragraph",
         label: paragraphLabel,
         disabled: editor ? !editor.can().chain().focus().setParagraph().run() : true,
       }
     : null;
 
-  const headingItems = ALL_HEADING_LEVELS.filter(level => visibleLevels.has(level)).map(level => ({
-    value: `heading-${level}` as HeadingValue,
-    label: HEADING_LABELS[level],
-    disabled: editor ? !editor.can().chain().focus().setHeading({ level }).run() : true,
-  }));
+  const headingItems = ALL_HEADING_LEVELS.filter((level) => visibleLevels.has(level)).map(
+    (level) => ({
+      value: `heading-${level}` as HeadingValue,
+      label: HEADING_LABELS[level],
+      disabled: editor ? !editor.can().chain().focus().setHeading({ level }).run() : true,
+    }),
+  );
 
   const items = [...(paragraphItem ? [paragraphItem] : []), ...headingItems];
 
   return (
     <Select
-      value={activeValue || (includeParagraphOption ? 'paragraph' : undefined)}
-      onValueChange={value => {
+      value={activeValue || (includeParagraphOption ? "paragraph" : undefined)}
+      onValueChange={(value) => {
         if (!editor) return;
-        if (value === 'paragraph') {
+        if (value === "paragraph") {
           editor.chain().focus().setParagraph().run();
           return;
         }
-        const level = Number(value.replace('heading-', '')) as RichTextEditorHeadingLevel;
+        const level = Number(value.replace("heading-", "")) as RichTextEditorHeadingLevel;
         editor.chain().focus().setHeading({ level }).run();
       }}
     >
@@ -141,7 +142,7 @@ export function RichTextEditorHeadingSelect({
       </SelectTrigger>
 
       <SelectContent>
-        {items.map(item => (
+        {items.map((item) => (
           <SelectItem key={item.value} value={item.value} disabled={item.disabled}>
             {item.label}
           </SelectItem>

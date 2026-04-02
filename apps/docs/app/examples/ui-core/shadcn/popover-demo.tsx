@@ -1,4 +1,4 @@
-import { Button, Label, Input, Popover, PopoverContent, PopoverTrigger } from '@melv1c/ui-core';
+import { Button, Label, Input, Popover, PopoverContent, PopoverTrigger } from "@melv1c/ui-core";
 
 export default function PopoverDemo() {
   return (

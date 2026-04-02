@@ -8,17 +8,17 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
-const DRAWER_SIDES = ['top', 'right', 'bottom', 'left'] as const;
+const DRAWER_SIDES = ["top", "right", "bottom", "left"] as const;
 
 export default function DrawerWithSides() {
   return (
     <div className="flex flex-wrap gap-2">
-      {DRAWER_SIDES.map(side => (
+      {DRAWER_SIDES.map((side) => (
         <Drawer
           key={side}
-          direction={side === 'bottom' ? undefined : (side as 'top' | 'right' | 'left')}
+          direction={side === "bottom" ? undefined : (side as "top" | "right" | "left")}
         >
           <DrawerTrigger asChild>
             <Button variant="outline" className="capitalize">

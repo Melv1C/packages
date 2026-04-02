@@ -1,15 +1,15 @@
-import { Field, FieldDescription, FieldLabel, ToggleGroup, ToggleGroupItem } from '@melv1c/ui-core';
-import * as React from 'react';
+import { Field, FieldDescription, FieldLabel, ToggleGroup, ToggleGroupItem } from "@melv1c/ui-core";
+import * as React from "react";
 
 export default function ToggleGroupFontWeightSelector() {
-  const [fontWeight, setFontWeight] = React.useState('normal');
+  const [fontWeight, setFontWeight] = React.useState("normal");
   return (
     <Field>
       <FieldLabel>Font Weight</FieldLabel>
       <ToggleGroup
         type="single"
         value={fontWeight}
-        onValueChange={value => setFontWeight(value)}
+        onValueChange={(value) => setFontWeight(value)}
         variant="outline"
         spacing={2}
         size="lg"

@@ -1,4 +1,4 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@melv1c/ui-core';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@melv1c/ui-core";
 
 export default function AccordionDemo() {
   return (

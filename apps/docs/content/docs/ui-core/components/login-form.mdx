@@ -8,7 +8,7 @@ description: A pre-built authentication form with email/password fields, social 
 ## Usage
 
 ```tsx
-import { LoginForm } from '@melv1c/ui-core';
+import { LoginForm } from "@melv1c/ui-core";
 ```
 
 ```tsx
@@ -16,8 +16,8 @@ import { LoginForm } from '@melv1c/ui-core';
   onSubmit={async (email, password) => {
     await signIn(email, password);
   }}
-  onForgotPassword={() => router.push('/forgot-password')}
-  onSignUp={() => router.push('/sign-up')}
+  onForgotPassword={() => router.push("/forgot-password")}
+  onSignUp={() => router.push("/sign-up")}
 />
 ```
 
@@ -30,7 +30,7 @@ The `onSubmit` callback can throw an error to display an error message inside th
   onSubmit={async (email, password) => {
     const result = await signIn(email, password);
     if (!result.ok) {
-      throw new Error('Invalid email or password.');
+      throw new Error("Invalid email or password.");
     }
   }}
 />
@@ -110,5 +110,5 @@ See the [i18n docs](/docs/ui-core/i18n) for instructions on overriding these tra
 ### LoginProvider
 
 ```ts
-type LoginProvider = 'google' | 'github' | 'apple' | 'microsoft' | 'facebook';
+type LoginProvider = "google" | "github" | "apple" | "microsoft" | "facebook";
 ```

@@ -7,33 +7,33 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
-} from '@melv1c/ui-core';
-import { FrameIcon, LifeBuoyIcon, MapIcon, PieChartIcon, SendIcon, Sidebar } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { FrameIcon, LifeBuoyIcon, MapIcon, PieChartIcon, SendIcon, Sidebar } from "lucide-react";
 
 const projects = [
   {
-    name: 'Design Engineering',
-    url: '#',
+    name: "Design Engineering",
+    url: "#",
     icon: FrameIcon,
   },
   {
-    name: 'Sales & Marketing',
-    url: '#',
+    name: "Sales & Marketing",
+    url: "#",
     icon: PieChartIcon,
   },
   {
-    name: 'Travel',
-    url: '#',
+    name: "Travel",
+    url: "#",
     icon: MapIcon,
   },
   {
-    name: 'Support',
-    url: '#',
+    name: "Support",
+    url: "#",
     icon: LifeBuoyIcon,
   },
   {
-    name: 'Feedback',
-    url: '#',
+    name: "Feedback",
+    url: "#",
     icon: SendIcon,
   },
 ];
@@ -47,7 +47,7 @@ export default function AppSidebar() {
             <SidebarGroupLabel>Projects</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
-                {projects.map(project => (
+                {projects.map((project) => (
                   <SidebarMenuItem key={project.name}>
                     <SidebarMenuButton asChild>
                       <a href={project.url}>

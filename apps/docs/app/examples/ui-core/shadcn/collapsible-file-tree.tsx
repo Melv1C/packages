@@ -9,62 +9,62 @@ import {
   Tabs,
   TabsList,
   TabsTrigger,
-} from '@melv1c/ui-core';
-import { ChevronRightIcon, FileIcon, FolderIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react";
 
 type FileTreeItem = { name: string } | { name: string; items: FileTreeItem[] };
 
 export default function CollapsibleFileTree() {
   const fileTree: FileTreeItem[] = [
     {
-      name: 'components',
+      name: "components",
       items: [
         {
-          name: 'ui',
+          name: "ui",
           items: [
-            { name: 'button.tsx' },
-            { name: 'card.tsx' },
-            { name: 'dialog.tsx' },
-            { name: 'input.tsx' },
-            { name: 'select.tsx' },
-            { name: 'table.tsx' },
+            { name: "button.tsx" },
+            { name: "card.tsx" },
+            { name: "dialog.tsx" },
+            { name: "input.tsx" },
+            { name: "select.tsx" },
+            { name: "table.tsx" },
           ],
         },
-        { name: 'login-form.tsx' },
-        { name: 'register-form.tsx' },
+        { name: "login-form.tsx" },
+        { name: "register-form.tsx" },
       ],
     },
     {
-      name: 'lib',
-      items: [{ name: 'utils.ts' }, { name: 'cn.ts' }, { name: 'api.ts' }],
+      name: "lib",
+      items: [{ name: "utils.ts" }, { name: "cn.ts" }, { name: "api.ts" }],
     },
     {
-      name: 'hooks',
+      name: "hooks",
       items: [
-        { name: 'use-media-query.ts' },
-        { name: 'use-debounce.ts' },
-        { name: 'use-local-storage.ts' },
+        { name: "use-media-query.ts" },
+        { name: "use-debounce.ts" },
+        { name: "use-local-storage.ts" },
       ],
     },
     {
-      name: 'types',
-      items: [{ name: 'index.d.ts' }, { name: 'api.d.ts' }],
+      name: "types",
+      items: [{ name: "index.d.ts" }, { name: "api.d.ts" }],
     },
     {
-      name: 'public',
-      items: [{ name: 'favicon.ico' }, { name: 'logo.svg' }, { name: 'images' }],
+      name: "public",
+      items: [{ name: "favicon.ico" }, { name: "logo.svg" }, { name: "images" }],
     },
-    { name: 'app.tsx' },
-    { name: 'layout.tsx' },
-    { name: 'globals.css' },
-    { name: 'package.json' },
-    { name: 'tsconfig.json' },
-    { name: 'README.md' },
-    { name: '.gitignore' },
+    { name: "app.tsx" },
+    { name: "layout.tsx" },
+    { name: "globals.css" },
+    { name: "package.json" },
+    { name: "tsconfig.json" },
+    { name: "README.md" },
+    { name: ".gitignore" },
   ];
 
   const renderItem = (fileItem: FileTreeItem) => {
-    if ('items' in fileItem) {
+    if ("items" in fileItem) {
       return (
         <Collapsible key={fileItem.name}>
           <CollapsibleTrigger asChild>
@@ -80,7 +80,7 @@ export default function CollapsibleFileTree() {
           </CollapsibleTrigger>
           <CollapsibleContent className="style-lyra:ml-4 mt-1 ml-5">
             <div className="flex flex-col gap-1">
-              {fileItem.items.map(child => renderItem(child))}
+              {fileItem.items.map((child) => renderItem(child))}
             </div>
           </CollapsibleContent>
         </Collapsible>
@@ -110,7 +110,7 @@ export default function CollapsibleFileTree() {
         </Tabs>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-col gap-1">{fileTree.map(item => renderItem(item))}</div>
+        <div className="flex flex-col gap-1">{fileTree.map((item) => renderItem(item))}</div>
       </CardContent>
     </Card>
   );

@@ -9,8 +9,8 @@ import {
   InputGroupText,
   InputGroupTextarea,
   Textarea,
-} from '@melv1c/ui-core';
-import { ArrowUpIcon, CodeIcon, CopyIcon, InfoIcon, RefreshCwIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { ArrowUpIcon, CodeIcon, CopyIcon, InfoIcon, RefreshCwIcon } from "lucide-react";
 
 export default function InputGroupTextareaExamples() {
   return (

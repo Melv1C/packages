@@ -16,7 +16,7 @@ import {
   SelectTrigger,
   SelectValue,
   Textarea,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function FieldDemo() {
   return (

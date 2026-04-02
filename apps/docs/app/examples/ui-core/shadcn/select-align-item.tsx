@@ -11,8 +11,8 @@ import {
   SelectTrigger,
   SelectValue,
   Switch,
-} from '@melv1c/ui-core';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import * as React from "react";
 
 export default function SelectAlignItem() {
   const [alignItemWithTrigger, setAlignItemWithTrigger] = React.useState(true);
@@ -35,7 +35,7 @@ export default function SelectAlignItem() {
           <SelectTrigger>
             <SelectValue />
           </SelectTrigger>
-          <SelectContent position={alignItemWithTrigger ? 'item-aligned' : 'popper'}>
+          <SelectContent position={alignItemWithTrigger ? "item-aligned" : "popper"}>
             <SelectGroup>
               <SelectItem value="apple">Apple</SelectItem>
               <SelectItem value="banana">Banana</SelectItem>

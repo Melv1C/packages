@@ -1,4 +1,4 @@
-import { Toggle } from '@melv1c/ui-core';
+import { Toggle } from "@melv1c/ui-core";
 
 export default function ToggleDisabled() {
   return (

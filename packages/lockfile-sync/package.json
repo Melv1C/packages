@@ -1,0 +1,31 @@
+{
+  "name": "@melv1c/lockfile-sync",
+  "version": "0.0.0",
+  "description": "Sync workspace package versions into bun.lock",
+  "bin": "./dist/bin.mjs",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/bin.cjs",
+  "module": "./dist/bin.mjs",
+  "types": "./dist/bin.d.cts",
+  "exports": {
+    ".": {
+      "import": "./dist/bin.mjs",
+      "require": "./dist/bin.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch --no-clean",
+    "test": "vp test"
+  },
+  "devDependencies": {
+    "@melv1c/toolchain": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}

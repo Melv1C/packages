@@ -1,8 +1,9 @@
-import { cn } from '@/lib/cn';
-import { buttonVariants } from 'fumadocs-ui/components/ui/button';
-import { useCopyButton } from 'fumadocs-ui/utils/use-copy-button';
-import { Check, Copy } from 'lucide-react';
-import { useState } from 'react';
+import { buttonVariants } from "fumadocs-ui/components/ui/button";
+import { useCopyButton } from "fumadocs-ui/utils/use-copy-button";
+import { Check, Copy } from "lucide-react";
+import { useState } from "react";
+
+import { cn } from "@/lib/cn";
 
 const cache = new Map<string, string>();
 
@@ -14,7 +15,7 @@ export function LLMCopyButton({
 }: {
   markdownUrl: string;
 }) {
-  console.log('markdownUrl', markdownUrl);
+  console.log("markdownUrl", markdownUrl);
   const [isLoading, setLoading] = useState(false);
   const [checked, onClick] = useCopyButton(async () => {
     const cached = cache.get(markdownUrl);
@@ -25,7 +26,7 @@ export function LLMCopyButton({
     try {
       await navigator.clipboard.write([
         new ClipboardItem({
-          'text/plain': fetch(markdownUrl).then(async res => {
+          "text/plain": fetch(markdownUrl).then(async (res) => {
             const content = await res.text();
             cache.set(markdownUrl, content);
 
@@ -43,9 +44,9 @@ export function LLMCopyButton({
       disabled={isLoading}
       className={cn(
         buttonVariants({
-          color: 'secondary',
-          size: 'sm',
-          className: 'gap-2 [&_svg]:size-3.5 [&_svg]:text-fd-muted-foreground',
+          color: "secondary",
+          size: "sm",
+          className: "gap-2 [&_svg]:size-3.5 [&_svg]:text-fd-muted-foreground",
         }),
       )}
       onClick={onClick}

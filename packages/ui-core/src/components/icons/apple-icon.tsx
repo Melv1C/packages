@@ -1,42 +1,42 @@
-import { cva, type VariantProps } from 'class-variance-authority';
-import * as React from 'react';
+import { cva, type VariantProps } from "class-variance-authority";
+import * as React from "react";
 
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
-const appleIconVariants = cva('shrink-0 transition-all', {
+const appleIconVariants = cva("shrink-0 transition-all", {
   variants: {
     variant: {
-      default: '',
-      light: 'bg-white',
-      dark: 'bg-gray-900',
-      transparent: 'bg-transparent',
+      default: "",
+      light: "bg-white",
+      dark: "bg-gray-900",
+      transparent: "bg-transparent",
     },
     shape: {
-      default: 'rounded',
-      square: 'rounded-none',
-      rounded: 'rounded-full',
+      default: "rounded",
+      square: "rounded-none",
+      rounded: "rounded-full",
     },
     size: {
-      sm: 'size-6 p-1',
-      default: 'size-10 p-2',
-      lg: 'size-14 p-3',
-      xl: 'size-20 p-4',
+      sm: "size-6 p-1",
+      default: "size-10 p-2",
+      lg: "size-14 p-3",
+      xl: "size-20 p-4",
     },
   },
   defaultVariants: {
-    variant: 'default',
-    shape: 'default',
-    size: 'default',
+    variant: "default",
+    shape: "default",
+    size: "default",
   },
 });
 
 function AppleIcon({
   className,
-  variant = 'default',
-  shape = 'default',
-  size = 'default',
+  variant = "default",
+  shape = "default",
+  size = "default",
   ...props
-}: React.ComponentProps<'div'> & VariantProps<typeof appleIconVariants>) {
+}: React.ComponentProps<"div"> & VariantProps<typeof appleIconVariants>) {
   return (
     <div className={cn(appleIconVariants({ variant, shape, size, className }))} {...props}>
       <svg

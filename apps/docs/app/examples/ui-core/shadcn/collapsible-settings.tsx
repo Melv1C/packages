@@ -12,9 +12,9 @@ import {
   FieldGroup,
   FieldLabel,
   Input,
-} from '@melv1c/ui-core';
-import { MaximizeIcon, MinimizeIcon } from 'lucide-react';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import { MaximizeIcon, MinimizeIcon } from "lucide-react";
+import * as React from "react";
 
 export default function CollapsibleSettings() {
   const [isOpen, setIsOpen] = React.useState(false);

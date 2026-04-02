@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 import {
   AlertTriangleIcon,
   CheckIcon,
@@ -17,7 +17,7 @@ import {
   TrashIcon,
   UserRoundXIcon,
   VolumeOffIcon,
-} from 'lucide-react';
+} from "lucide-react";
 
 export default function ButtonGroupDropdown() {
   return (

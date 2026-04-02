@@ -4,7 +4,7 @@ import {
   ContextMenuGroup,
   ContextMenuItem,
   ContextMenuTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function ContextMenuBasic() {
   return (

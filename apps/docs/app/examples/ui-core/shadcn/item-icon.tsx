@@ -6,8 +6,8 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from '@melv1c/ui-core';
-import { ShieldAlertIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { ShieldAlertIcon } from "lucide-react";
 
 export default function ItemIcon() {
   return (

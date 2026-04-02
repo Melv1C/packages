@@ -7,11 +7,11 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
-} from '@melv1c/ui-core';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import * as React from "react";
 
 export default function DropdownMenuRadioGroupDemo() {
-  const [position, setPosition] = React.useState('bottom');
+  const [position, setPosition] = React.useState("bottom");
 
   return (
     <DropdownMenu>

@@ -1,6 +1,6 @@
-import { Button, Calendar, Card, CardContent, CardFooter } from '@melv1c/ui-core';
-import { addDays } from 'date-fns';
-import * as React from 'react';
+import { Button, Calendar, Card, CardContent, CardFooter } from "@melv1c/ui-core";
+import { addDays } from "date-fns";
+import * as React from "react";
 
 export default function CalendarWithPresets() {
   const [date, setDate] = React.useState<Date | undefined>(
@@ -25,12 +25,12 @@ export default function CalendarWithPresets() {
       </CardContent>
       <CardFooter className="flex flex-wrap gap-2 border-t">
         {[
-          { label: 'Today', value: 0 },
-          { label: 'Tomorrow', value: 1 },
-          { label: 'In 3 days', value: 3 },
-          { label: 'In a week', value: 7 },
-          { label: 'In 2 weeks', value: 14 },
-        ].map(preset => (
+          { label: "Today", value: 0 },
+          { label: "Tomorrow", value: 1 },
+          { label: "In 3 days", value: 3 },
+          { label: "In a week", value: 7 },
+          { label: "In 2 weeks", value: 14 },
+        ].map((preset) => (
           <Button
             key={preset.value}
             variant="outline"

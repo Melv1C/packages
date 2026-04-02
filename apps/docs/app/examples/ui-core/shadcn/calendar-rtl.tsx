@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Calendar } from '@melv1c/ui-core';
-import { arSA } from 'react-day-picker/locale';
+import { Calendar } from "@melv1c/ui-core";
+import * as React from "react";
+import { arSA } from "react-day-picker/locale";
 
 export default function CalendarRtl() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());

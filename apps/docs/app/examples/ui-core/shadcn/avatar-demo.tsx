@@ -5,7 +5,7 @@ import {
   AvatarGroup,
   AvatarGroupCount,
   AvatarImage,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function AvatarDemo() {
   return (

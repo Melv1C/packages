@@ -8,14 +8,14 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
-const SHEET_SIDES = ['top', 'right', 'bottom', 'left'] as const;
+const SHEET_SIDES = ["top", "right", "bottom", "left"] as const;
 
 export default function SheetSide() {
   return (
     <div className="flex flex-wrap gap-2">
-      {SHEET_SIDES.map(side => (
+      {SHEET_SIDES.map((side) => (
         <Sheet key={side}>
           <SheetTrigger asChild>
             <Button variant="outline" className="capitalize">

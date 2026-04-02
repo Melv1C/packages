@@ -1,5 +1,5 @@
-import { Toggle } from '@melv1c/ui-core';
-import { BoldIcon, ItalicIcon } from 'lucide-react';
+import { Toggle } from "@melv1c/ui-core";
+import { BoldIcon, ItalicIcon } from "lucide-react";
 
 export default function ToggleOutline() {
   return (

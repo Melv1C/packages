@@ -1,4 +1,4 @@
-import { Field, FieldContent, FieldDescription, FieldLabel, Switch } from '@melv1c/ui-core';
+import { Field, FieldContent, FieldDescription, FieldLabel, Switch } from "@melv1c/ui-core";
 
 export default function SwitchInvalid() {
   return (

@@ -1,4 +1,4 @@
-import { Skeleton } from '@melv1c/ui-core';
+import { Skeleton } from "@melv1c/ui-core";
 
 export default function SkeletonTable() {
   return (

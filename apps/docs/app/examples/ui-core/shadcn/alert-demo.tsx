@@ -1,5 +1,5 @@
-import { Alert, AlertDescription, AlertTitle } from '@melv1c/ui-core';
-import { CheckCircle2Icon, InfoIcon } from 'lucide-react';
+import { Alert, AlertDescription, AlertTitle } from "@melv1c/ui-core";
+import { CheckCircle2Icon, InfoIcon } from "lucide-react";
 
 export default function AlertDemo() {
   return (

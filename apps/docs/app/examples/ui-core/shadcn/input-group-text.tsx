@@ -4,7 +4,7 @@ import {
   InputGroupText,
   InputGroupInput,
   InputGroupTextarea,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function InputGroupTextExample() {
   return (

@@ -5,8 +5,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from '@melv1c/ui-core';
-import { DotIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { DotIcon } from "lucide-react";
 
 export default function BreadcrumbRtl() {
   return (

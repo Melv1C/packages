@@ -9,8 +9,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from '@melv1c/ui-core';
-import { PlusIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { PlusIcon } from "lucide-react";
 
 export default function EmptyAvatarGroup() {
   return (

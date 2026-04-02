@@ -7,12 +7,12 @@ import {
   ContextMenuRadioItem,
   ContextMenuSeparator,
   ContextMenuTrigger,
-} from '@melv1c/ui-core';
-import * as React from 'react';
+} from "@melv1c/ui-core";
+import * as React from "react";
 
 export default function ContextMenuRadio() {
-  const [user, setUser] = React.useState('pedro');
-  const [theme, setTheme] = React.useState('light');
+  const [user, setUser] = React.useState("pedro");
+  const [theme, setTheme] = React.useState("light");
 
   return (
     <ContextMenu>

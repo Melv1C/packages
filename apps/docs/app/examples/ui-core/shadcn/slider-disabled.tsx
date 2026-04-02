@@ -1,4 +1,4 @@
-import { Slider } from '@melv1c/ui-core';
+import { Slider } from "@melv1c/ui-core";
 
 export default function SliderDisabled() {
   return (

@@ -1,4 +1,4 @@
-import { Button, Field, Input } from '@melv1c/ui-core';
+import { Button, Field, Input } from "@melv1c/ui-core";
 
 export default function InputInline() {
   return (

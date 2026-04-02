@@ -6,13 +6,13 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@melv1c/ui-core';
+} from "@melv1c/ui-core";
 
 export default function CarouselOrientation() {
   return (
     <Carousel
       opts={{
-        align: 'start',
+        align: "start",
       }}
       orientation="vertical"
       className="w-full max-w-xs"

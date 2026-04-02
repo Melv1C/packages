@@ -10,8 +10,8 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
   Button,
-} from '@melv1c/ui-core';
-import { BluetoothIcon } from 'lucide-react';
+} from "@melv1c/ui-core";
+import { BluetoothIcon } from "lucide-react";
 
 export default function AlertDialogSmallWithMedia() {
   return (

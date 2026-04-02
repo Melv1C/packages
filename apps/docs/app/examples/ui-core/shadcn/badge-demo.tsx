@@ -1,4 +1,4 @@
-import { Badge } from '@melv1c/ui-core';
+import { Badge } from "@melv1c/ui-core";
 
 export default function BadgeDemo() {
   return (

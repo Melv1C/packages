@@ -1,5 +1,5 @@
-import { Item, ItemContent, ItemDescription, ItemMedia, ItemTitle } from '@melv1c/ui-core';
-import { InboxIcon } from 'lucide-react';
+import { Item, ItemContent, ItemDescription, ItemMedia, ItemTitle } from "@melv1c/ui-core";
+import { InboxIcon } from "lucide-react";
 
 export default function ItemVariant() {
   return (

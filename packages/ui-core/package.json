@@ -10,28 +10,28 @@
     "dist"
   ],
   "type": "module",
-  "main": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs",
-      "default": "./dist/index.mjs"
+      "require": "./dist/index.cjs"
     },
-    "./base.css": "./dist/base.css",
-    "./themes/*.css": "./dist/themes/*.css",
     "./locales": {
-      "types": "./dist/locales/index.d.ts",
       "import": "./dist/locales/index.mjs",
-      "default": "./dist/locales/index.mjs"
-    }
+      "require": "./dist/locales/index.cjs"
+    },
+    "./package.json": "./package.json",
+    "./base.css": "./dist/base.css",
+    "./themes/*.css": "./dist/themes/*.css"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "tsdown",
-    "dev": "tsdown --watch --no-clean"
+    "build": "vp pack",
+    "dev": "vp pack --watch --no-clean"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
@@ -66,14 +66,14 @@
     "cmdk": "^1.1.1",
     "date-fns": "^4.1.0",
     "embla-carousel-react": "^8.6.0",
-    "i18next": "^25.8.18",
+    "i18next": "^26.0.3",
     "input-otp": "^1.4.2",
-    "lucide-react": "^0.577.0",
+    "lucide-react": "^1.7.0",
     "next-themes": "^0.4.6",
     "radix-ui": "^1.4.3",
     "react-day-picker": "^9.14.0",
-    "react-hook-form": "^7.71.2",
-    "react-i18next": "^16.5.8",
+    "react-hook-form": "^7.72.0",
+    "react-i18next": "^17.0.2",
     "react-resizable-panels": "^4",
     "recharts": "2.15.4",
     "sonner": "^2.0.7",
@@ -82,13 +82,14 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@types/node": "^25.5.0",
-    "@types/react": "^19.2.14",
+    "@melv1c/toolchain": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
     "@types/react-dom": "^19.2.3",
-    "react": "^19.2.4",
+    "react": "catalog:",
     "react-dom": "^19.2.4",
-    "tsdown": "^0.21.2",
-    "typescript": "~5.9.3"
+    "tsdown": "catalog:",
+    "typescript": "catalog:"
   },
   "peerDependencies": {
     "react": ">=19",
