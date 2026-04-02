@@ -23,7 +23,8 @@
     "./tsconfigs/react.json": "./tsconfigs/react.json"
   },
   "scripts": {
-    "build": "vp pack"
+    "build": "vp pack",
+    "dev": "vp pack --watch --no-clean"
   },
   "devDependencies": {
     "@types/node": "catalog:",
